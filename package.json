@@ -1,0 +1,30 @@
+{
+  "name": "react-composition-presentation",
+  "version": "0.0.1",
+  "description": "A presentation about composition patterns in React.",
+  "main": "dist/slidedeck.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/limscoder/react-composition-presentation"
+  },
+  "scripts": {
+    "test": "test"
+  },
+  "keywords": [
+    "react",
+    "presentation"
+  ],
+  "author": "Dave Thompson",
+  "license": "MIT",
+  "devDependencies": {
+    "babel": "^5.6.14",
+    "babel-core": "^5.6.15",
+    "babel-loader": "^5.2.2",
+    "babel-runtime": "^5.6.15",
+    "file-loader": "^0.8.4",
+    "node-libs-browser": "^0.5.2",
+    "react": "^0.13.3",
+    "webpack": "^1.10.0",
+    "webpack-dev-server": "^1.10.1"
+  }
+}
