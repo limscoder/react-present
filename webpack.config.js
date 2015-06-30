@@ -2,12 +2,13 @@
 
 var path = require('path');
 var webpack = require('webpack');
+var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
   context: __dirname,
 
   entry: {
-    slidedeck: './lib/index.js'
+    index: './lib/index.jsx'
   },
 
   output: {
@@ -47,8 +48,8 @@ module.exports = {
         }
       },
       {
-        test: /\.scss$/,
-        loader: 'css-loader?-advanced!autoprefixer-loader?{browsers:["last 2 version", "ie >= 9"]}!sass-loader'
+        test: /\.css$/,
+        loader: ExtractTextPlugin.extract('style-loader', 'css-loader?-advanced!autoprefixer-loader?{browsers:["last 2 version", "ie >= 9"]}')
       },
       {
         test: /\.woff($|\?)/,
@@ -80,6 +81,7 @@ module.exports = {
   plugins: [
     new webpack.optimize.DedupePlugin(),
     new webpack.optimize.OccurenceOrderPlugin(true),
-    new webpack.optimize.AggressiveMergingPlugin()
+    new webpack.optimize.AggressiveMergingPlugin(),
+    new ExtractTextPlugin('./index.css', { allChunks: true, disable: false }),
   ]
 };
