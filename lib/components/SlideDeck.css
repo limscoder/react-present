@@ -7,6 +7,15 @@ a, a:hover, a:visited {
   text-decoration: none;
 }
 
+code {
+  color: black;
+  display: inline-block;
+  background-color: #555;
+  font-size: 1.6rem;
+  padding: 0.2rem;
+  border-radius: 0.2rem;
+}
+
 .rcp-SlideDeck {
   height: 100vh;
 }

@@ -10,6 +10,10 @@ import StrictProps from './StrictProps.jsx';
 import Children from './Children.jsx';
 import ElementProps from './ElementProps.jsx';
 import LiteralChildren from './LiteralChildren.jsx';
+import Styling from './Styling.jsx';
+import InlineStyling from './InlineStyling.jsx';
+import Namespacing from './Namespacing.jsx';
+import Other from './Other.jsx';
 
 export default [
   <Intro title="" />,
@@ -20,12 +24,13 @@ export default [
   <StrictProps title="Be strict with your props" />,
   <Children title="props.children: a component developer's best friend" />,
   <ElementProps title="Refactor element props into children" />,
-  <LiteralChildren title="Child elements don't have to be literal children" />
+  <LiteralChildren title="Child elements don't have to be literal children" />,
   // implementing cross cutting behavior
   // with: mixins
   // with: composition
   // with: wrapping
-  // why css sucks
-  // why inline styles suck
-  // how to use css namespacing
+  <Styling title="CSS: here be dragons" />,
+  <InlineStyling title="Inline styles: here be other dragons" />,
+  <Namespacing title="CSS Namespacing: the best of the worst" />,
+  <Other title="Other stuff reusable components should probably have" />
 ];

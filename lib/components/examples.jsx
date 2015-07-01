@@ -89,3 +89,19 @@ render() {
 
   ...
 }
+
+render() {
+  return (
+    <div>
+      <span className="label">Name</span>
+      <input />
+    </div>
+  );
+}
+
+<Table className="smb-DataTable">
+  <tr className="smb-DataTable-Row is-draggable">
+    <td className="smb-DataTable-Cell smb-DataTable-Cell--dragHandle" />
+    <td className="smb-DataTable-Cell smb-DataTable-Cell--name is-editable" />
+  </tr>
+</Table>
