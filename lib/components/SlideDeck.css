@@ -9,11 +9,20 @@ body {
 .rcp-SlideDeck-Body {
   color: white;
   font-family: helvetica;
-  font-size: 24px;
+  font-size: 28px;
   position: absolute;
   top: 0;
   left: 0;
   margin-top: 4rem;
   padding: 1.5rem 1rem;
   z-index: 100;
+}
+
+.rcp-SlideDeck-Body ul
+{
+    list-style-type: none;
+}
+
+.rcp-SlideDeck-Body li {
+  margin-top: 15px;
 }
