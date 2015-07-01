@@ -52,24 +52,12 @@ module.exports = {
         loader: ExtractTextPlugin.extract('style-loader', 'css-loader?-advanced!autoprefixer-loader?{browsers:["last 2 version", "ie >= 9"]}')
       },
       {
-        test: /\.woff($|\?)/,
-        loader: 'url?limit=10000&minetype=application/font-woff'
-      },
-      {
-        test: /\.ttf($|\?)/,
-        loader: 'file'
-      },
-      {
-        test: /\.eot($|\?)/,
-        loader: 'file'
-      },
-      {
-        test: /\.svg($|\?)/,
-        loader: 'file'
+        test: /\.gif$/,
+        loader: 'file?name=[name].[ext]'
       },
       {
         test: /\.png$/,
-        loader: 'file'
+        loader: 'file?name=[name].[ext]'
       },
       {
         test: /\.html$/,

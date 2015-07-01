@@ -2,6 +2,11 @@ body {
   margin: 0;
 }
 
+a, a:hover, a:visited {
+  color: #555;
+  text-decoration: none;
+}
+
 .rcp-SlideDeck {
   height: 100vh;
 }
@@ -13,9 +18,14 @@ body {
   position: absolute;
   top: 0;
   left: 0;
+  right: 0;
   margin-top: 4rem;
   padding: 1.5rem 1rem;
   z-index: 100;
+}
+
+.rcp-SlideDeck-Centered {
+  text-align: center;
 }
 
 .rcp-SlideDeck-Body ul
