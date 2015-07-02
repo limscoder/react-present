@@ -52,15 +52,7 @@ module.exports = {
         loader: ExtractTextPlugin.extract('style-loader', 'css-loader?-advanced!autoprefixer-loader?{browsers:["last 2 version", "ie >= 9"]}')
       },
       {
-        test: /\.gif$/,
-        loader: 'file?name=[name].[ext]'
-      },
-      {
-        test: /\.png$/,
-        loader: 'file?name=[name].[ext]'
-      },
-      {
-        test: /\.html$/,
+        test: /\.((gif)|(png)|(jpg)|(html))$/,
         loader: 'file?name=[name].[ext]'
       }
     ]

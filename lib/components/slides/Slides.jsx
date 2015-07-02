@@ -10,6 +10,10 @@ import StrictProps from './StrictProps.jsx';
 import Children from './Children.jsx';
 import ElementProps from './ElementProps.jsx';
 import LiteralChildren from './LiteralChildren.jsx';
+import CrossCuttingBehavior from './CrossCuttingBehavior.jsx';
+import Mixins from './Mixins.jsx';
+import Composition from './Composition.jsx';
+import ComponentWrapper from './ComponentWrapper.jsx';
 import Styling from './Styling.jsx';
 import InlineStyling from './InlineStyling.jsx';
 import Namespacing from './Namespacing.jsx';
@@ -25,12 +29,12 @@ export default [
   <Children title="props.children: a component developer's best friend" />,
   <ElementProps title="Refactor element props into children" />,
   <LiteralChildren title="Child elements don't have to be literal children" />,
-  // implementing cross cutting behavior
-  // with: mixins
-  // with: composition
-  // with: wrapping
+  <CrossCuttingBehavior title="Applying cross-cutting behavior to many components" />,
+  <Mixins title="I know what to do. Let's use a mixin." />,
+  <Composition title="props.children comes to the rescue again" />,
+  <ComponentWrapper title="Automate component composition with helper functions" />,
   <Styling title="CSS: here be dragons" />,
-  <InlineStyling title="Inline styles: here be other dragons" />,
+  <InlineStyling title="Inline styles: here be cuter dragons" />,
   <Namespacing title="CSS Namespacing: the best of the worst" />,
   <Other title="Other stuff reusable components should probably have" />
 ];

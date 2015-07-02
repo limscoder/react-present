@@ -49,7 +49,8 @@ export default React.createClass({
            onClick={ this._onClick }
            style={ style }>
         <NavBar title={ activeSlide.props.title }
-                activeSlideIdx={ this.state.activeSlideIdx } />
+                activeSlideIdx={ this.state.activeSlideIdx }
+                onSelectSlide={ this._setActiveSlide } />
         <div className="rcp-SlideDeck-Body">
           { activeSlide }
         </div>

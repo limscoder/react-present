@@ -99,9 +99,36 @@ render() {
   );
 }
 
-<Table className="smb-DataTable">
+<table className="smb-DataTable">
   <tr className="smb-DataTable-Row is-draggable">
     <td className="smb-DataTable-Cell smb-DataTable-Cell--dragHandle" />
     <td className="smb-DataTable-Cell smb-DataTable-Cell--name is-editable" />
   </tr>
-</Table>
+</table>
+
+<DataTable className="smb-DataTable--myAwesomeTheme" />
+
+
+<Validator getValidationMessage={ numberValidator }>
+  <NumberInput />
+</Validator>
+
+<Validator getValidationMessage={ colorValidator }>
+  <ColorPicker />
+</Validator>
+
+
+function withValidation(TargetComponent) {
+  return React.createClass({
+    displayName: TargetComponent.displayName + '-withValidation',
+
+    propTypes: assign({
+      getValidationError: React.PropTypes.func
+    }, TargetComponent.propTypes),
+
+    render() {
+      return <TargetComponent { ...this.props } />;
+    }
+}
+
+const ValidatingInput = withValidation(Input);
