@@ -10,6 +10,7 @@ export default React.createClass({
           <li>Use <code>react-a11y</code> to help detect accesibility problems.</li>
           <li>Use <code>react-intl</code> for internationalizing components.</li>
           <li>Documentation to describe available <code>PropTypes</code> and usage.</li>
+          <li>Checkout this presentation on github: https://github.com/limscoder/react-composition-presentation</li>
         </ul>
       </div>
     );

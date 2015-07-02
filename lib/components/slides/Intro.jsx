@@ -7,7 +7,7 @@ export default React.createClass({
         <h1>
           You won't believe how local React developers are implementing reusable components with these composition patterns that Angular developers hate!
         </h1>
-        <h3>Dave Thompson, Ben Wittenburg -- Rally Software</h3>
+        <h3>Dave Thompson @limscoder, Ben Wittenburg -- Rally Software</h3>
       </div>
     );
   }
