@@ -1,8 +1,7 @@
-import React from 'react';
+import React from 'react/addons';
+const ReactCSSTransitionGroup = React.addons.CSSTransitionGroup;
 import classnames from 'classnames';
 
-import NavBar from './NavBar.jsx';
-import SlideTransition from './SlideTransition.jsx';
 import Slides from './slides/Slides.jsx';
 
 require('./SlideDeck.css');
@@ -30,7 +29,7 @@ export default React.createClass({
     return {
       activeSlideIdx: 0,
       activeColorIdx: 0,
-      isInTransition: false,
+      lastColorIdx: 0
     }
   },
 
@@ -39,57 +38,42 @@ export default React.createClass({
   },
 
   render() {
-    const activeSlide = Slides[this.state.activeSlideIdx];
-    const style = {
+    const slideIdx = this.state.activeSlideIdx;
+    const activeSlide = Slides[slideIdx];
+    const deckStyle = {
+      backgroundColor: colors[this.state.lastColorIdx]
+    };
+    const slideStyle = {
       backgroundColor: colors[this.state.activeColorIdx]
     };
 
     return (
-      <div className="rcp-SlideDeck"
-           onClick={ this._onClick }
-           style={ style }>
-        <NavBar title={ activeSlide.props.title }
-                activeSlideIdx={ this.state.activeSlideIdx }
-                onSelectSlide={ this._setActiveSlide } />
-        <div className="rcp-SlideDeck-Body">
+      <ReactCSSTransitionGroup className="rcp-SlideDeck"
+                               component="div"
+                               transitionLeave={ false }
+                               onClick={ this._onClick }
+                               transitionName="nextSlide"
+                               style={ deckStyle }>
+        <div key={ slideIdx }
+             style={ slideStyle }
+             className="rcp-SlideDeck-Body">
           { activeSlide }
         </div>
-        <SlideTransition isActive={ this.state.isInTransition }
-                         color={ this._getTransitionColor() }/>
-      </div>
+      </ReactCSSTransitionGroup>
     );
   },
 
-  _getTransitionColor() {
-    return colors[this._getTransitionColorIdx()];
-  },
-
-  _getTransitionColorIdx() {
-    if (this.state.activeColorIdx === (colors.length - 1)) {
-      return 0;
-    }
-
-    return this.state.activeColorIdx + 1;
+  _getNextColorIdx() {
+    const nextIdx = this.state.activeColorIdx + 1;
+    return nextIdx >= colors.length ? 0 : nextIdx;
   },
 
   _setActiveSlide(slideIdx) {
-    if (this.transitionTimeoutId) {
-      window.clearTimeout(this.transitionTimeoutId);
-    }
-
     this.setState({
-      isInTransition: true
+      activeSlideIdx: slideIdx,
+      activeColorIdx: this._getNextColorIdx(),
+      lastColorIdx: this.state.activeColorIdx
     });
-
-    this.transitionTimeoutId = window.setTimeout(() => {
-      this.setState({
-        isInTransition: false,
-        activeSlideIdx: slideIdx,
-        activeColorIdx: this._getTransitionColorIdx()
-      });
-
-      this.transitionTimeoutId = null;
-    }, 500);
   },
 
   _onClick(e) {

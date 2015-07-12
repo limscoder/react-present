@@ -6,15 +6,11 @@ export default React.createClass({
   render() {
     return (
       <div>
-        <ul>
-          <li>Keep components as stateless as possible.</li>
-          <li>Remove mutating methods (like 'toggle').</li>
-          <li>Pass props instead.</li>
-        </ul>
+        <h1>PropTypes are the API</h1>
 
-        <div className="rcp-SlideDeck-Centered">
-          <img src={ statelessApiSrc } />
-        </div>
+        <p>Remove state and public mutating methods (like 'toggle').</p>
+
+        <img src={ statelessApiSrc } />
       </div>
     );
   }

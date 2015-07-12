@@ -132,3 +132,9 @@ function withValidation(TargetComponent) {
 }
 
 const ValidatingInput = withValidation(Input);
+
+
+React.createClass({
+  mixins: [ValidationMixin]
+
+  ...

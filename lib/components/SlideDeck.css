@@ -9,37 +9,59 @@ a, a:hover, a:visited {
 
 code {
   color: black;
-  display: inline-block;
-  background-color: #555;
   font-size: 1.6rem;
-  padding: 0.2rem;
-  border-radius: 0.2rem;
 }
 
 .rcp-SlideDeck {
   height: 100vh;
+  width: 100vw;
+  overflow: hidden;
 }
 
 .rcp-SlideDeck-Body {
   color: white;
   font-family: helvetica;
   font-size: 28px;
+  overflow: hidden;
   position: absolute;
   top: 0;
-  left: 0;
+  bottom: 0;
   right: 0;
-  margin-top: 4rem;
+  left: 0;
   padding: 1.5rem 1rem;
-  z-index: 100;
+  text-align: center;
+  z-index: 10;
 }
 
-.rcp-SlideDeck-Centered {
-  text-align: center;
+.rcp-SlideDeck-Body > div {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: calc(100vw - 1rem);
 }
+
+.nextSlide-enter {
+  border-bottom-right-radius: 75%;
+  height: 0;
+  width: 0;
+  transition: width .75s ease-out, height .75s ease-out;
+}
+
+.nextSlide-enter.nextSlide-enter-active {
+  height: 125%;
+  width: 125%;
+}
+
+.nextSlide-leave {
+  z-index: 1;
+}
+
+.nextSlide-leave.nextSlide-leave-active {}
 
 .rcp-SlideDeck-Body ul
 {
-    list-style-type: none;
+  list-style-type: none;
+  text-align: left;
 }
 
 .rcp-SlideDeck-Body li {

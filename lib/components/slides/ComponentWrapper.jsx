@@ -6,14 +6,11 @@ export default React.createClass({
   render() {
     return (
       <div>
-        <ul>
-          <li>Use a function to compose components for you.</li>
-          <li>Wrapped components get consistent API and behavior.</li>
-        </ul>
+        <h1>Composition with helper functions</h1>
 
-        <div className="rcp-SlideDeck-Centered">
-          <img src={ wrapperSrc } />
-        </div>
+        <p>Wrapped components get consistent API and behavior.</p>
+
+        <img src={ wrapperSrc } />
       </div>
     );
   }

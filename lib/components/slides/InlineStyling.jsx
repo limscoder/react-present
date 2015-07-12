@@ -6,16 +6,9 @@ export default React.createClass({
   render() {
     return (
       <div>
-        <ul>
-          <li>Complicated workarounds for psuedo-selectors.</li>
-          <li><code>:before</code>, <code>:after</code></li>
-          <li>Can't re-use with non-react markup.</li>
-          <li>Supporting multiple browsers and versions is tricky.</li>
-        </ul>
+        <h1>Inline styles: here be slightly cuter dragons</h1>
 
-        <div className="rcp-SlideDeck-Centered">
-          <img src={ dragonSrc } />
-        </div>
+        <img src={ dragonSrc } width={ 490 } height={ 320 }/>
       </div>
     );
   }

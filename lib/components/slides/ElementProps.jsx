@@ -6,13 +6,9 @@ export default React.createClass({
   render() {
     return (
       <div>
-        <ul>
-          <li>Lame</li>
-        </ul>
+        <h1>Refactor element props into children.</h1>
 
-        <div className="rcp-SlideDeck-Centered">
-          <img src={ elementPropsSrc } />
-        </div>
+        <img src={ elementPropsSrc } />
       </div>
     );
   }

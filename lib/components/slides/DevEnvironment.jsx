@@ -6,13 +6,9 @@ export default React.createClass({
   render() {
     return (
       <div>
-        <ul>
-          <li>Use a separate <a href="http://urro.ci.f4tech.com/job/sombrero/lastSuccessfulBuild/artifact/dist/demo/index.html">component demo app</a> for development.</li>
-        </ul>
+        <h1>Use a separate <a href="http://urro.ci.f4tech.com/job/sombrero/lastSuccessfulBuild/artifact/dist/demo/index.html">demo app</a> for development.</h1>
 
-        <div className="rcp-SlideDeck-Centered">
-          <img src={ imgSrc } />
-        </div>
+        <img src={ imgSrc } />
       </div>
     );
   }

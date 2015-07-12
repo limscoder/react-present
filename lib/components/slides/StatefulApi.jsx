@@ -6,9 +6,9 @@ export default React.createClass({
   render() {
     return (
       <div>
-        <div className="rcp-SlideDeck-Centered">
-          <img src={ statefulApiSrc } />
-        </div>
+        <h1>Mo' state Mo' problems</h1>
+
+        <img src={ statefulApiSrc } />
       </div>
     );
   }

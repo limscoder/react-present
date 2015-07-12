@@ -6,16 +6,11 @@ export default React.createClass({
   render() {
     return (
       <div>
-        <ul>
-          <li>The <code>cascading</code> nature of CSS makes it very brittle.</li>
-          <li>Automated CSS tests are difficult to write and run.</li>
-          <li>Global class names are a recipe for disaster.</li>
-          <li>I'm looking at you bootstrap.</li>
-        </ul>
+        <h1>CSS: here be dragons</h1>
 
-        <div className="rcp-SlideDeck-Centered">
-          <img src={ cssSrc } />
-        </div>
+        <p>Global class names are a recipe for disaster (here's looking at you bootstrap).</p>
+
+        <img src={ cssSrc } />
       </div>
     );
   }

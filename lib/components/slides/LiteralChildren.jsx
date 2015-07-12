@@ -7,11 +7,11 @@ export default React.createClass({
   render() {
     return (
       <div>
-        <div className="rcp-SlideDeck-Centered">
-          <img src={ literalChildrenSrc } />
-          <br />
-          <img src={ sortChildrenSrc } />
-        </div>
+        <h1>Child elements don't have to be literal children.</h1>
+
+        <img src={ literalChildrenSrc } />
+        <br />
+        <img src={ sortChildrenSrc } />
       </div>
     );
   }

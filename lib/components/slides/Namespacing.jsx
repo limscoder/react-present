@@ -7,23 +7,13 @@ export default React.createClass({
   render() {
     return (
       <div>
-        <ul>
-          <li>Use <code>suitcss</code> nameing conventions.</li>
-          <li>Fits into standard sass workflow.</li>
-          <li>Protects against style bleed with standard CSS.</li>
-        </ul>
+        <h1>CSS namespacing is the least painful option</h1>
 
-        <div className="rcp-SlideDeck-Centered">
-          <img src={ namespacingSrc } />
-        </div>
+        <img src={ namespacingSrc } />
 
-        <ul>
-          <li>Allow consumers to pass arbitrary class names for flexible customization.</li>
-        </ul>
+        <p>Allow consumers to pass arbitrary class names for flexible customization.</p>
 
-        <div className="rcp-SlideDeck-Centered">
-          <img src={ themeSrc } />
-        </div>
+        <img src={ themeSrc } />
       </div>
     );
   }

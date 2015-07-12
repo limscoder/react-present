@@ -6,13 +6,9 @@ export default React.createClass({
   render() {
     return (
       <div>
-        <ul>
-          <li>Extend components with composition.</li>
-        </ul>
+        <h1>props.children: your best friend</h1>
 
-        <div className="rcp-SlideDeck-Centered">
-          <img src={ formSrc } />
-        </div>
+        <img src={ formSrc } />
       </div>
     );
   }
