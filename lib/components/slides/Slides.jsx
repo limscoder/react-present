@@ -9,6 +9,7 @@ import StatefulApi from './StatefulApi.jsx';
 import StatelessApi from './StatelessApi.jsx';
 import DefaultProps from './DefaultProps.jsx';
 import StrictProps from './StrictProps.jsx';
+import ReactConf from './ReactConf.jsx';
 import Children from './Children.jsx';
 import ElementProps from './ElementProps.jsx';
 import LiteralChildren from './LiteralChildren.jsx';
@@ -31,6 +32,7 @@ export default [
   <StatefulApi />,
   <StatelessApi />,
   <StrictProps />,
+  <ReactConf />,
   <Children />,
   <ElementProps />,
   <LiteralChildren />,
