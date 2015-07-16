@@ -14,7 +14,7 @@ export default class Slide extends React.Component {
         <ul>
           <li>Mixins don't work with ES6 classes.</li>
           <li>One-per-component lifecycle method conflicts.</li>
-          <li><code>this.setState()</code> outside of component can be confusing.</li>
+          <li><code>this.setState()</code> in multiple files can be confusing.</li>
         </ul>
       </div>
     );

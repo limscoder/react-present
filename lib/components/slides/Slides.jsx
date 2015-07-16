@@ -18,6 +18,7 @@ import Mixins from './Mixins.jsx';
 import MixinProblems from './MixinProblems.jsx';
 import Composition from './Composition.jsx';
 import ComponentWrapper from './ComponentWrapper.jsx';
+import ComponentDecorator from './ComponentDecorator.jsx';
 import Styling from './Styling.jsx';
 import InlineStyling from './InlineStyling.jsx';
 import Namespacing from './Namespacing.jsx';
@@ -41,6 +42,7 @@ export default [
   <MixinProblems />,
   <Composition />,
   <ComponentWrapper />,
+  <ComponentDecorator />,
   <Styling />,
   <InlineStyling />,
   <Namespacing />,

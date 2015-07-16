@@ -31,10 +31,6 @@ export default class SlideDeck extends React.Component {
     lastColorIdx: 0
   }
 
-  constructor(props) {
-    super(props);
-  }
-
   componentDidMount = () => {
     window.addEventListener('keydown', this._onKeyDown);
   }

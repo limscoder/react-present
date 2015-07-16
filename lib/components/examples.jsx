@@ -109,6 +109,12 @@ render() {
 <DataTable className="smb-DataTable--myAwesomeTheme" />
 
 
+React.createClass({
+  mixins: [ValidationMixin]
+
+  ...
+
+
 <Validator getValidationMessage={ numberValidator }>
   <NumberInput />
 </Validator>
@@ -122,19 +128,62 @@ function withValidation(TargetComponent) {
   return React.createClass({
     displayName: TargetComponent.displayName + '-withValidation',
 
-    propTypes: assign({
-      getValidationError: React.PropTypes.func
+    propTypes: Object.assign({
+      getValidationMessage: React.PropTypes.func
     }, TargetComponent.propTypes),
 
+    getInitialState() {
+      return {
+        validationMessage: false
+      };
+    },
+
     render() {
-      return <TargetComponent { ...this.props } />;
+      const props = Object.assign({onChange: this._onChange}, this.props);
+      props.className = this.state.validationMessage ? 'is-invalid' : 'is-valid';
+      return <TargetComponent { ...props } />;
+    },
+
+    _onChange(val) {
+      const validationMessage = this.props.getValidationMessage && this.props.getValidationMessage(val);
+      this.setState({
+        validationMessage: validationMessage
+      });
     }
+  });
 }
 
 const ValidatingInput = withValidation(Input);
 
 
-React.createClass({
-  mixins: [ValidationMixin]
+function WithValidation(TargetComponent) {
+  return class WithValidation extends React.Component {
+    static displayName = TargetComponent.displayName + '-withValidation'
 
+    static propTypes = Object.assign({
+      getValidationMessage: React.PropTypes.func
+    }, TargetComponent.propTypes)
+
+    state = {
+      validationMessage: false
+    }
+
+    render = () => {
+      const props = Object.assign({onChange: this._onChange}, this.props);
+      props.className = this.state.validationMessage ? 'is-invalid' : 'is-valid';
+      return <TargetComponent { ...props } />;
+    }
+
+    _onChange = (val) => {
+      const validationMessage = this.props.getValidationMessage && this.props.getValidationMessage(val);
+      this.setState({
+        validationMessage: validationMessage
+      });
+    }
+  }
+}
+
+@WithValidation
+class TextInput extends React.Component {
   ...
+}

@@ -1,6 +1,7 @@
 import React from 'react';
 
 const wrapperSrc = require('../../images/wrapper.png');
+const wrapperCallSrc = require('../../images/wrapperCall.png');
 
 export default class Slide extends React.Component {
   render() {
@@ -8,8 +9,9 @@ export default class Slide extends React.Component {
       <div>
         <h1>Composition with helper functions</h1>
 
-        <p>Wrapped components get consistent API and behavior.</p>
-
+        <img src={ wrapperCallSrc } />
+        <br />
+        <br />
         <img src={ wrapperSrc } />
       </div>
     );
