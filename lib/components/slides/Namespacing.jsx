@@ -3,7 +3,7 @@ import React from 'react';
 const namespacingSrc = require('../../images/namespacing.png');
 const themeSrc = require('../../images/theme.png');
 
-export default React.createClass({
+export default class Slide extends React.Component {
   render() {
     return (
       <div>
@@ -17,4 +17,4 @@ export default React.createClass({
       </div>
     );
   }
-});
+}

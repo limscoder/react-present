@@ -24,20 +24,22 @@ const colors = [
   '#7832a5'
 ];
 
-export default React.createClass({
-  getInitialState() {
-    return {
-      activeSlideIdx: 0,
-      activeColorIdx: 0,
-      lastColorIdx: 0
-    }
-  },
+export default class SlideDeck extends React.Component {
+  state = {
+    activeSlideIdx: 0,
+    activeColorIdx: 0,
+    lastColorIdx: 0
+  }
 
-  componentDidMount() {
+  constructor(props) {
+    super(props);
+  }
+
+  componentDidMount = () => {
     window.addEventListener('keydown', this._onKeyDown);
-  },
+  }
 
-  render() {
+  render = () => {
     const slideIdx = this.state.activeSlideIdx;
     const activeSlide = Slides[slideIdx];
     const deckStyle = {
@@ -61,30 +63,30 @@ export default React.createClass({
         </div>
       </ReactCSSTransitionGroup>
     );
-  },
+  }
 
-  _getNextColorIdx() {
+  _getNextColorIdx = () => {
     const nextIdx = this.state.activeColorIdx + 1;
     return nextIdx >= colors.length ? 0 : nextIdx;
-  },
+  }
 
-  _setActiveSlide(slideIdx) {
+  _setActiveSlide = (slideIdx) => {
     this.setState({
       activeSlideIdx: slideIdx,
       activeColorIdx: this._getNextColorIdx(),
       lastColorIdx: this.state.activeColorIdx
     });
-  },
+  }
 
-  _onClick(e) {
+  _onClick = (e) => {
     if (e.button === 0) {
       this._nextSlide();
     } else if (e.button === 1) {
       this._prevSlide();
     }
-  },
+  }
 
-  _onKeyDown(e) {
+  _onKeyDown = (e) => {
     const keyCode = e.keyCode || e.which;
 
     if (keyCode === downArrow || keyCode === rightArrow) {
@@ -92,19 +94,19 @@ export default React.createClass({
     } else if (keyCode === upArrow || keyCode === leftArrow) {
       this._prevSlide();
     }
-  },
+  }
 
-  _nextSlide() {
+  _nextSlide = () => {
     const nextIdx = this.state.activeSlideIdx + 1;
     if (nextIdx < Slides.length) {
       this._setActiveSlide(nextIdx);
     }
-  },
+  }
 
-  _prevSlide() {
+  _prevSlide = () => {
     const prevIdx = this.state.activeSlideIdx - 1;
     if (prevIdx > -1) {
       this._setActiveSlide(prevIdx);
     }
   }
-});
+}

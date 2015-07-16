@@ -2,7 +2,7 @@ import React from 'react';
 
 const wtfSrc = require('../../images/wtf.jpg');
 
-export default React.createClass({
+export default class Slide extends React.Component {
   render() {
     return (
       <div>
@@ -19,4 +19,4 @@ export default React.createClass({
       </div>
     );
   }
-});
+}

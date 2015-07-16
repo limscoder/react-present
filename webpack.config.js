@@ -44,7 +44,7 @@ module.exports = {
         loader: 'babel',
         query: {
           optional: ['runtime'],
-          stage: 1
+          stage: 0
         }
       },
       {

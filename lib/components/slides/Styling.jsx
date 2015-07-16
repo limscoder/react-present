@@ -2,7 +2,7 @@ import React from 'react';
 
 const cssSrc = require('../../images/css.png');
 
-export default React.createClass({
+export default class Slide extends React.Component {
   render() {
     return (
       <div>
@@ -14,4 +14,4 @@ export default React.createClass({
       </div>
     );
   }
-});
+}

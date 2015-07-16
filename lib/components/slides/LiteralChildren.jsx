@@ -3,7 +3,7 @@ import React from 'react';
 const literalChildrenSrc = require('../../images/literalChildren.png');
 const sortChildrenSrc = require('../../images/sortChildren.png');
 
-export default React.createClass({
+export default class Slide extends React.Component {
   render() {
     return (
       <div>
@@ -15,4 +15,4 @@ export default React.createClass({
       </div>
     );
   }
-});
+}
