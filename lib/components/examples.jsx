@@ -36,6 +36,10 @@ export default React.createClass({
   }
 });
 
+console.warn = (warning) {
+  throw new Error('warning:', warning);
+}
+
 
 export default React.createClass({
   propTypes: {

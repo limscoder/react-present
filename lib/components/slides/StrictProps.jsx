@@ -1,7 +1,13 @@
 import React from 'react';
+import Highlight from 'react-highlight';
 
 const lintPropsSrc = require('../../images/lintProps.png');
-const escalateWarningsSrc = require('../../images/escalateWarnings.png');
+
+const escalateWarningsCode = `
+console.warn = (warning) {
+  throw new Error('warning:', warning);
+}
+`;
 
 export default class Slide extends React.Component {
   render() {
@@ -12,8 +18,9 @@ export default class Slide extends React.Component {
         <p>Lint your props</p>
         <img src={ lintPropsSrc } />
 
-        <p>Escalate warnings in your specs and dev environment</p>
-        <img src={ escalateWarningsSrc } />
+        <Highlight className="jsx">
+          { escalateWarningsCode }
+        </Highlight>
       </div>
     );
   }

@@ -1,6 +1,12 @@
 import React from 'react';
+import Highlight from 'react-highlight';
 
-const mixinSrc = require('../../images/mixin.png');
+const mixinCode = `
+React.createClass({
+  mixins: [ValidationMixin]
+
+  ...
+`;
 
 export default class Slide extends React.Component {
   render() {
@@ -8,7 +14,9 @@ export default class Slide extends React.Component {
       <div>
         <h1>That sounds like a mixin!</h1>
 
-        <img src={ mixinSrc } />
+        <Highlight className="jsx">
+          { mixinCode }
+        </Highlight>
       </div>
     );
   }

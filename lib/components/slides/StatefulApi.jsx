@@ -1,6 +1,29 @@
 import React from 'react';
+import Highlight from 'react-highlight';
 
-const statefulApiSrc = require('../../images/statefulApi.png');
+const statefulCode = `
+export default React.createClass({
+  propTypes: {
+    initiallyExpanded: React.PropTypes.bool
+  },
+
+  getInitialState() {
+    return {
+      expanded: this.props.initiallyExpanded
+    };
+  },
+
+  render() {
+    return <div onClick={ this.toggle } />;
+  }
+
+  toggle() {
+    this.setState({
+      expanded: !this.state.expanded
+    });
+  }
+});
+`;
 
 export default class Slide extends React.Component {
   render() {
@@ -8,7 +31,9 @@ export default class Slide extends React.Component {
       <div>
         <h1>Mo' state Mo' problems</h1>
 
-        <img src={ statefulApiSrc } />
+        <Highlight className='jsx'>
+          { statefulCode }
+        </Highlight>
       </div>
     );
   }

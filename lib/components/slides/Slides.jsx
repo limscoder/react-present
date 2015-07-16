@@ -7,7 +7,6 @@ import Characteristics from './Characteristics.jsx';
 import DevEnvironment from './DevEnvironment.jsx';
 import StatefulApi from './StatefulApi.jsx';
 import StatelessApi from './StatelessApi.jsx';
-import DefaultProps from './DefaultProps.jsx';
 import StrictProps from './StrictProps.jsx';
 import ReactConf from './ReactConf.jsx';
 import Children from './Children.jsx';

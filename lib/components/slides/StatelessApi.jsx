@@ -1,6 +1,23 @@
 import React from 'react';
+import Highlight from 'react-highlight';
 
-const statelessApiSrc = require('../../images/statelessApi.png');
+const statelessCode = `
+export default React.createClass({
+  propTypes: {
+    expanded: React.PropTypes.bool,
+    onClick: React.PropTypes.func
+  },
+
+  render() {
+    const clsName = classNames({
+      expanded: this.props.expanded
+    });
+
+    return <div className={ clsName }
+                onClick={ this.props.onClick } />;
+  }
+});
+`;
 
 export default class Slide extends React.Component {
   render() {
@@ -10,7 +27,9 @@ export default class Slide extends React.Component {
 
         <p>Remove state and public mutating methods (like 'toggle').</p>
 
-        <img src={ statelessApiSrc } />
+        <Highlight className="jsx">
+          { statelessCode }
+        </Highlight>
       </div>
     );
   }

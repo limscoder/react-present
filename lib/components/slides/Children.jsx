@@ -1,6 +1,13 @@
 import React from 'react';
+import Highlight from 'react-highlight';
 
-const formSrc = require('../../images/form.png');
+const childCode = `
+<Form>
+  <TextInput label="Name" />
+  <DropDown label="Favorite Pet" />
+  <ColorPicker label="Favorite Color" />
+</Form>
+`;
 
 export default class Slide extends React.Component {
   render() {
@@ -8,7 +15,9 @@ export default class Slide extends React.Component {
       <div>
         <h1>props.children: your best friend</h1>
 
-        <img src={ formSrc } />
+        <Highlight className="jsx">
+          { childCode }
+        </Highlight>
       </div>
     );
   }

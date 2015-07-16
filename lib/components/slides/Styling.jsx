@@ -1,6 +1,16 @@
 import React from 'react';
+import Highlight from 'react-highlight';
 
-const cssSrc = require('../../images/css.png');
+const cssCode = `
+render() {
+  return (
+    <div>
+      <span className="label">Name</span>
+      <input />
+    </div>
+  );
+}
+`;
 
 export default class Slide extends React.Component {
   render() {
@@ -10,7 +20,9 @@ export default class Slide extends React.Component {
 
         <p>Global class names are a recipe for disaster (here's looking at you bootstrap).</p>
 
-        <img src={ cssSrc } />
+        <Highlight className="jsx">
+          { cssCode }
+        </Highlight>
       </div>
     );
   }

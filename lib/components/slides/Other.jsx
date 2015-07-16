@@ -13,7 +13,7 @@ export default class Slide extends React.Component {
           <li>Use <code>react-a11y</code> to help detect accesibility problems.</li>
           <li>Use <code>react-intl</code> for internationalizing components.</li>
           <li>Documentation to describe available <code>PropTypes</code> and usage.</li>
-          <li>Presentation repo: <a href="https://github.com/limscoder/react-components-presentation">https://github.com/limscoder/react-components-presentation</a></li>
+          <li>Presentation repo: <a href="https://github.com/limscoder/react-components-presentation"><code>https://github.com/limscoder/react-components-presentation</code></a></li>
         </ul>
 
       </div>

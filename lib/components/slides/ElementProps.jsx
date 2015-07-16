@@ -1,6 +1,15 @@
 import React from 'react';
+import Highlight from 'react-highlight';
 
-const elementPropsSrc = require('../../images/elementProps.png');
+const elementPropsCode = `
+const DataTable = React.createClass({
+  propTypes: {
+    columns: React.PropTypes.element,
+    rows: React.PropTypes.element,
+    pager: React.PropTypes.element
+  }
+});
+`;
 
 export default class Slide extends React.Component {
   render() {
@@ -8,7 +17,9 @@ export default class Slide extends React.Component {
       <div>
         <h1>Refactor element props into children.</h1>
 
-        <img src={ elementPropsSrc } />
+        <Highlight className="jsx">
+          { elementPropsCode }
+        </Highlight>
       </div>
     );
   }

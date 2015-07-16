@@ -1,7 +1,18 @@
 import React from 'react';
+import Highlight from 'react-highlight';
 
-const namespacingSrc = require('../../images/namespacing.png');
-const themeSrc = require('../../images/theme.png');
+const namespacingCode = `
+<table className="smb-DataTable">
+  <tr className="smb-DataTable-Row is-draggable">
+    <td className="smb-DataTable-Cell smb-DataTable-Cell--dragHandle" />
+    <td className="smb-DataTable-Cell smb-DataTable-Cell--name is-editable" />
+  </tr>
+</table>
+`;
+
+const themeCode = `
+<DataTable className="smb-DataTable--myAwesomeTheme" />
+`;
 
 export default class Slide extends React.Component {
   render() {
@@ -9,11 +20,15 @@ export default class Slide extends React.Component {
       <div>
         <h1>CSS namespacing is the least painful option</h1>
 
-        <img src={ namespacingSrc } />
+        <Highlight className="jsx">
+          { namespacingCode }
+        </Highlight>
 
         <p>Allow consumers to pass arbitrary class names for flexible customization.</p>
 
-        <img src={ themeSrc } />
+        <Highlight className="jsx">
+          { themeCode }
+        </Highlight>
       </div>
     );
   }

@@ -1,6 +1,15 @@
 import React from 'react';
+import Highlight from 'react-highlight';
 
-const validatorCompositionSrc = require('../../images/validatorComposition.png');
+const compositionCode = `
+<Validator getValidationMessage={ numberValidator }>
+  <NumberInput />
+</Validator>
+
+<Validator getValidationMessage={ colorValidator }>
+  <ColorPicker />
+</Validator>
+`;
 
 export default class Slide extends React.Component {
   render() {
@@ -8,7 +17,9 @@ export default class Slide extends React.Component {
       <div>
         <h1>Use composition instead</h1>
 
-        <img src={ validatorCompositionSrc } />
+        <Highlight className="jsx">
+          { compositionCode }
+        </Highlight>
       </div>
     );
   }
