@@ -22,6 +22,7 @@ import Styling from './Styling.jsx';
 import InlineStyling from './InlineStyling.jsx';
 import Namespacing from './Namespacing.jsx';
 import Other from './Other.jsx';
+import Repo from './Repo.jsx';
 
 export default [
   <Intro />,
@@ -45,5 +46,6 @@ export default [
   <Styling />,
   <InlineStyling />,
   <Namespacing />,
-  <Other />
+  <Other />,
+  <Repo />
 ];
