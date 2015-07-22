@@ -14,6 +14,14 @@ const themeCode = `
 <DataTable className="smb-DataTable--myAwesomeTheme" />
 `;
 
+const requireCode = `
+require('./my-component.scss');
+
+class MyComponent extends React.Component {
+  ...
+}
+`;
+
 export default class Slide extends React.Component {
   render() {
     return (
@@ -28,6 +36,12 @@ export default class Slide extends React.Component {
 
         <Highlight className="jsx">
           { themeCode }
+        </Highlight>
+
+        <p>Keep the styles close to the component</p>
+
+        <Highlight className="jsx">
+          { requireCode }
         </Highlight>
       </div>
     );

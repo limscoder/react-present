@@ -9,6 +9,7 @@ export default class Slide extends React.Component {
         <ul>
           <li>Use <code>immutablejs</code> for prop values instead of mutable types <code>Object</code> and <code>Array</code>.</li>
           <li>Implement <code>shouldComponentUpdate</code> to make things faster.</li>
+          <li>Learn how to use React's performance tools -- <code>React.addons.Perf</code>.</li>
           <li>Degrade to direct DOM manipulation to solve performance bottlenecks.</li>
           <li>Use <code>react-a11y</code> to help detect accesibility problems.</li>
           <li>Use <code>react-intl</code> for internationalizing components.</li>

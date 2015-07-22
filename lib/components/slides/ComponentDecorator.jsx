@@ -40,7 +40,7 @@ export default class Slide extends React.Component {
   render() {
     return (
       <div>
-        <h1>Use decorators to replace mixins with ES6 classes</h1>
+        <h1>Use decorators to replace mixins</h1>
 
         <Highlight className="jsx">
           { decoratorCallCode }

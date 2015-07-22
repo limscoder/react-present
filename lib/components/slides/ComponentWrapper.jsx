@@ -1,7 +1,7 @@
 import React from 'react';
 import Highlight from 'react-highlight';
 
-const wrapperCallCode = `const ValidatingInput = withValidation(Input);`;
+const wrapperCallCode = `const ValidatingInput = withValidation(TextInput);`;
 const wrapperCode = `
 function withValidation(TargetComponent) {
   return React.createClass({
@@ -37,7 +37,7 @@ export default class Slide extends React.Component {
   render() {
     return (
       <div>
-        <h1>Composition with helper functions</h1>
+        <h1>Higher order component factory</h1>
 
         <Highlight className="jsx">
           { wrapperCallCode }
