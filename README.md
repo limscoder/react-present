@@ -1,5 +1,6 @@
 Slide deck for patterns for creating highly reusable React components.
 
+    > npm install
     > webpack
     > chrome dist/index.html
 
