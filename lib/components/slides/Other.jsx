@@ -13,6 +13,7 @@ export default class Slide extends React.Component {
           <li>Degrade to direct DOM manipulation to solve performance bottlenecks.</li>
           <li>Use <code>react-a11y</code> to help detect accesibility problems.</li>
           <li>Use <code>react-intl</code> for internationalizing components.</li>
+          <li>Don't use <code>jest</code>. It's slow and clunky.</li>
           <li>Documentation to describe available <code>PropTypes</code> and usage.</li>
         </ul>
 

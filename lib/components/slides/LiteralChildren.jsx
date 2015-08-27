@@ -17,7 +17,7 @@ render() {
   const rows = [];
   const pagers = [];
 
-  React.Children.forEach(children, (child) => {
+  React.Children.forEach(this.props.children, (child) => {
     if (child.type === Column) {
       columns.push(child);
     } else if (child.type === Row) {

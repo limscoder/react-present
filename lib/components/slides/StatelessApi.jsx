@@ -25,7 +25,7 @@ export default class Slide extends React.Component {
       <div>
         <h1>PropTypes are the API</h1>
 
-        <p>Remove state and public mutating methods (like 'toggle').</p>
+        <p>Remove state and mutating methods like 'toggle'.</p>
 
         <Highlight className="jsx">
           { statelessCode }
