@@ -5,29 +5,19 @@ const wrapperCallCode = `const ValidatingInput = withValidation(TextInput);`;
 const wrapperCode = `
 function withValidation(TargetComponent) {
   return React.createClass({
-    displayName: TargetComponent.displayName + '-withValidation',
-
-    propTypes: Object.assign({
-      getValidationMessage: React.PropTypes.func
-    }, TargetComponent.propTypes),
-
-    getInitialState() {
-      return {
-        validationMessage: false
-      };
-    },
+    ...
 
     render() {
-      const props = Object.assign({onChange: this._onChange}, this.props);
-      props.className = this.state.validationMessage ? 'is-invalid' : 'is-valid';
+      const props = Object.assign({
+        onChange: this._onChange,
+        className: this.state.validationMessage ? 'is-invalid' : 'is-valid'
+      }, this.props);
+
       return <TargetComponent { ...props } />;
     },
 
     _onChange(val) {
-      const validationMessage = this.props.getValidationMessage && this.props.getValidationMessage(val);
-      this.setState({
-        validationMessage: validationMessage
-      });
+      // validation logic goes here
     }
   });
 }

@@ -1,12 +1,12 @@
 import React from 'react';
 
-const wtfSrc = require('../../images/wtf.gif');
+const failSrc = require('../../images/squirrel-fail.gif');
 
 export default class Slide extends React.Component {
   render() {
     return (
       <div>
-        <img src={ wtfSrc } />
+        <img src={ failSrc } />
 
         <br />
         <br />

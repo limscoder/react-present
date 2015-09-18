@@ -96,6 +96,8 @@ export default class SlideDeck extends React.Component {
     const nextIdx = this.state.activeSlideIdx + 1;
     if (nextIdx < Slides.length) {
       this._setActiveSlide(nextIdx);
+    } else {
+      this._setActiveSlide(0);
     }
   }
 
@@ -103,6 +105,8 @@ export default class SlideDeck extends React.Component {
     const prevIdx = this.state.activeSlideIdx - 1;
     if (prevIdx > -1) {
       this._setActiveSlide(prevIdx);
+    } else {
+      this._setActiveSlide(Slides.length - 1);
     }
   }
 }

@@ -22,6 +22,7 @@ import Styling from './Styling.jsx';
 import InlineStyling from './InlineStyling.jsx';
 import Namespacing from './Namespacing.jsx';
 import Other from './Other.jsx';
+import Flux from './Flux.jsx';
 import Repo from './Repo.jsx';
 
 export default [
@@ -43,6 +44,7 @@ export default [
   <Composition />,
   <ComponentWrapper />,
   <ComponentDecorator />,
+  <Flux />,
   <Styling />,
   <InlineStyling />,
   <Namespacing />,

@@ -2,35 +2,30 @@ import React from 'react';
 import Highlight from 'react-highlight';
 
 const decoratorCallCode = `
+@PureRender
 @WithValidation
 class TextInput extends React.Component {
   ...
 }
 `;
+
 const decoratorCode = `
 function WithValidation(TargetComponent) {
   return class WithValidation extends React.Component {
-    static displayName = TargetComponent.displayName + '-withValidation'
-
-    static propTypes = Object.assign({
-      getValidationMessage: React.PropTypes.func
-    }, TargetComponent.propTypes)
-
-    state = {
-      validationMessage: false
-    }
+    ...
 
     render = () => {
-      const props = Object.assign({onChange: this._onChange}, this.props);
-      props.className = this.state.validationMessage ? 'is-invalid' : 'is-valid';
+      const props = {
+        ...this.props,
+        onChange: this._onChange.bind(this),
+        className: this.state.validationMessage ? 'is-invalid' : 'is-valid'
+      };
+
       return <TargetComponent { ...props } />;
     }
 
     _onChange = (val) => {
-      const validationMessage = this.props.getValidationMessage && this.props.getValidationMessage(val);
-      this.setState({
-        validationMessage: validationMessage
-      });
+      // validation logic goes here
     }
   }
 }
