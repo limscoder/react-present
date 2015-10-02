@@ -26,17 +26,22 @@ const colors = [
 
 export default class SlideDeck extends React.Component {
   state = {
-    activeSlideIdx: 0,
     activeColorIdx: 0,
     lastColorIdx: 0
   }
 
-  componentDidMount = () => {
+  componentDidMount() {
     window.addEventListener('keydown', this._onKeyDown);
   }
 
-  render = () => {
-    const slideIdx = this.state.activeSlideIdx;
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.params.slideIdx !== this.props.params.slideIdx) {
+      this._setNextColor();
+    }
+  }
+
+  render() {
+    const slideIdx = this._getActiveSlideIdx();
     const activeSlide = Slides[slideIdx];
     const deckStyle = {
       backgroundColor: colors[this.state.lastColorIdx]
@@ -61,17 +66,18 @@ export default class SlideDeck extends React.Component {
     );
   }
 
-  _getNextColorIdx = () => {
-    const nextIdx = this.state.activeColorIdx + 1;
-    return nextIdx >= colors.length ? 0 : nextIdx;
-  }
+  _setNextColor() {
+    const nextColorIdx = this.state.activeColorIdx + 1;
 
-  _setActiveSlide = (slideIdx) => {
     this.setState({
-      activeSlideIdx: slideIdx,
-      activeColorIdx: this._getNextColorIdx(),
+      activeColorIdx: (nextColorIdx >= colors.length ? 0 : nextColorIdx),
       lastColorIdx: this.state.activeColorIdx
     });
+  }
+
+  _setActiveSlide(slideIdx) {
+    const newPath = `/${slideIdx + 1}`;
+    this.props.history.pushState(null, newPath);
   }
 
   _onClick = (e) => {
@@ -92,8 +98,8 @@ export default class SlideDeck extends React.Component {
     }
   }
 
-  _nextSlide = () => {
-    const nextIdx = this.state.activeSlideIdx + 1;
+  _nextSlide() {
+    const nextIdx = this._getActiveSlideIdx() + 1;
     if (nextIdx < Slides.length) {
       this._setActiveSlide(nextIdx);
     } else {
@@ -101,12 +107,17 @@ export default class SlideDeck extends React.Component {
     }
   }
 
-  _prevSlide = () => {
-    const prevIdx = this.state.activeSlideIdx - 1;
+  _prevSlide() {
+    const prevIdx = this._getActiveSlideIdx() - 1;
     if (prevIdx > -1) {
       this._setActiveSlide(prevIdx);
     } else {
       this._setActiveSlide(Slides.length - 1);
     }
+  }
+
+  _getActiveSlideIdx() {
+    const userSlideIdx = this.props.params.slideIdx ? parseInt(this.props.params.slideIdx) : 1;
+    return userSlideIdx - 1;
   }
 }
