@@ -1,13 +1,11 @@
 import React from 'react';
-import Highlight from 'react-highlight';
+import CodeBlock from '../CodeBlock.jsx';
 
 const lintPropsSrc = require('../../images/lintProps.png');
 
-const escalateWarningsCode = `
-console.warn = (warning) {
+const escalateWarningsCode = `console.warn = (warning) {
   throw new Error('warning:', warning);
-}
-`;
+}`;
 
 export default class Slide extends React.Component {
   render() {
@@ -18,9 +16,9 @@ export default class Slide extends React.Component {
         <p>Lint your props</p>
         <img src={ lintPropsSrc } />
 
-        <Highlight className="jsx">
+        <CodeBlock>
           { escalateWarningsCode }
-        </Highlight>
+        </CodeBlock>
       </div>
     );
   }

@@ -1,18 +1,15 @@
 import React from 'react';
-import Highlight from 'react-highlight';
+import CodeBlock from '../CodeBlock.jsx';
 
-const childCode = `
-<DataTable>
+const childCode = `<DataTable>
   <Column title="Name" />
   <Column title="FavoriteColor" />
   <Row rowIndex={ 0 } name="Suzy" color="black" />
   <Row rowIndex={ 1 } name="Fred" color="brown" />
   <Pager pageSize={ 2 } startIndex={ 0 } />
-</DataTable>
-`;
+</DataTable>`;
 
-const sortChildCode = `
-render() {
+const sortChildCode = `render() {
   const columns = [];
   const rows = [];
   const pagers = [];
@@ -28,8 +25,7 @@ render() {
   });
 
   ...
-}
-`;
+}`;
 
 export default class Slide extends React.Component {
   render() {
@@ -37,13 +33,13 @@ export default class Slide extends React.Component {
       <div>
         <h1>Child elements don't have to be literal children.</h1>
 
-        <Highlight className="jsx">
+        <CodeBlock id="child">
           { childCode }
-        </Highlight>
+        </CodeBlock>
 
-        <Highlight className="jsx">
+        <CodeBlock id="sort-child">
           { sortChildCode }
-        </Highlight>
+        </CodeBlock>
       </div>
     );
   }

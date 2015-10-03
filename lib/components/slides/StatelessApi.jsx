@@ -1,8 +1,7 @@
 import React from 'react';
-import Highlight from 'react-highlight';
+import CodeBlock from '../CodeBlock.jsx';
 
-const statelessCode = `
-export default React.createClass({
+const statelessCode = `export default React.createClass({
   propTypes: {
     expanded: React.PropTypes.bool,
     onClick: React.PropTypes.func
@@ -16,8 +15,7 @@ export default React.createClass({
     return <div className={ clsName }
                 onClick={ this.props.onClick } />;
   }
-});
-`;
+});`;
 
 export default class Slide extends React.Component {
   render() {
@@ -27,9 +25,9 @@ export default class Slide extends React.Component {
 
         <p>Remove state and mutating methods like 'toggle'.</p>
 
-        <Highlight className="jsx">
+        <CodeBlock>
           { statelessCode }
-        </Highlight>
+        </CodeBlock>
       </div>
     );
   }

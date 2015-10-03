@@ -1,12 +1,10 @@
 import React from 'react';
-import Highlight from 'react-highlight';
+import CodeBlock from '../CodeBlock.jsx';
 
-const mixinCode = `
-React.createClass({
+const mixinCode = `React.createClass({
   mixins: [ValidationMixin]
 
-  ...
-`;
+  ...`;
 
 export default class Slide extends React.Component {
   render() {
@@ -14,9 +12,9 @@ export default class Slide extends React.Component {
       <div>
         <h1>That sounds like a mixin!</h1>
 
-        <Highlight className="jsx">
+        <CodeBlock>
           { mixinCode }
-        </Highlight>
+        </CodeBlock>
       </div>
     );
   }

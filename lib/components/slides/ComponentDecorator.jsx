@@ -1,15 +1,14 @@
 import React from 'react';
-import Highlight from 'react-highlight';
+import CodeBlock from '../CodeBlock.jsx';
 
-const decoratorCallCode = `
-@PureRender
+const decoratorCode = `@PureRender
 @WithValidation
 class TextInput extends React.Component {
   ...
 }
-`;
 
-const decoratorCode = `
+...
+
 function WithValidation(TargetComponent) {
   return class WithValidation extends React.Component {
     ...
@@ -28,8 +27,7 @@ function WithValidation(TargetComponent) {
       // validation logic goes here
     }
   }
-}
-`;
+}`;
 
 export default class Slide extends React.Component {
   render() {
@@ -37,13 +35,9 @@ export default class Slide extends React.Component {
       <div>
         <h1>Use decorators to replace mixins</h1>
 
-        <Highlight className="jsx">
-          { decoratorCallCode }
-        </Highlight>
-
-        <Highlight className="jsx">
+        <CodeBlock>
           { decoratorCode }
-        </Highlight>
+        </CodeBlock>
       </div>
     );
   }

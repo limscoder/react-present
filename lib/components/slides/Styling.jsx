@@ -1,18 +1,16 @@
 import React from 'react';
-import Highlight from 'react-highlight';
+import CodeBlock from '../CodeBlock.jsx';
 
 const wtfSrc = require('../../images/wtf.gif');
 
-const cssCode = `
-render() {
+const cssCode = `render() {
   return (
     <div>
       <span className="label">Name</span>
       <input />
     </div>
   );
-}
-`;
+}`;
 
 export default class Slide extends React.Component {
   render() {
@@ -24,9 +22,9 @@ export default class Slide extends React.Component {
 
         <img src={ wtfSrc } />
 
-        <Highlight className="jsx">
+        <CodeBlock>
           { cssCode }
-        </Highlight>
+        </CodeBlock>
       </div>
     );
   }

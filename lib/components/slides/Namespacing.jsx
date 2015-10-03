@@ -1,26 +1,20 @@
 import React from 'react';
-import Highlight from 'react-highlight';
+import CodeBlock from '../CodeBlock.jsx';
 
-const namespacingCode = `
-<table className="smb-DataTable">
+const namespacingCode = `<table className="smb-DataTable">
   <tr className="smb-DataTable-Row is-draggable">
     <td className="smb-DataTable-Cell smb-DataTable-Cell--dragHandle" />
     <td className="smb-DataTable-Cell smb-DataTable-Cell--name is-editable" />
   </tr>
-</table>
-`;
+</table>`;
 
-const themeCode = `
-<DataTable className="smb-DataTable--myAwesomeTheme" />
-`;
+const themeCode = `<DataTable className="smb-DataTable--myAwesomeTheme" />`;
 
-const requireCode = `
-require('./my-component.scss');
+const requireCode = `require('./my-component.scss');
 
 class MyComponent extends React.Component {
   ...
-}
-`;
+}`;
 
 export default class Slide extends React.Component {
   render() {
@@ -28,21 +22,21 @@ export default class Slide extends React.Component {
       <div>
         <h1>CSS namespacing is the least painful option</h1>
 
-        <Highlight className="jsx">
+        <CodeBlock id="namespacing">
           { namespacingCode }
-        </Highlight>
+        </CodeBlock>
 
         <p>Allow consumers to pass arbitrary class names for flexible customization.</p>
 
-        <Highlight className="jsx">
+        <CodeBlock id="theme">
           { themeCode }
-        </Highlight>
+        </CodeBlock>
 
         <p>Keep the styles close to the component</p>
 
-        <Highlight className="jsx">
+        <CodeBlock id="require">
           { requireCode }
-        </Highlight>
+        </CodeBlock>
       </div>
     );
   }

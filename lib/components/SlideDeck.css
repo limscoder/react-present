@@ -8,8 +8,7 @@ a, a:hover, a:visited {
 }
 
 code {
-  color: black;
-  font-size: 1.6rem;
+  color: #222;
 }
 
 .rcp-SlideDeck {
@@ -37,7 +36,7 @@ code {
   position: relative;
   top: 0;
   left: 0;
-  width: calc(100vw - 1rem);
+  width: calc(100vw - 2rem);
 }
 
 .nextSlide-enter {
@@ -65,124 +64,16 @@ code {
 }
 
 .rcp-SlideDeck-Body li {
-  margin-top: 15px;
+  margin-top: 1.5rem;
 }
 
-/** syntax theme **/
-
-pre {
-  margin: 2rem auto;
-  width: 1024px;
-}
-
-code.jsx {
-  font-size: 16px;
+.rcp-CodeBlock {
+  margin: 1.5rem auto 1.5rem auto;
+  padding: 0;
   text-align: left;
+  width: 50rem;
 }
 
-/*
-  IR_Black style (c) Vasily Mikhailitchenko <vaskas@programica.ru>
-*/
-
-.hljs {
-  display: block;
-  overflow-x: auto;
-  padding: 0.5em;
-  background: #000;
-  color: #f8f8f8;
-  -webkit-text-size-adjust: none;
-}
-
-.hljs-shebang,
-.hljs-comment {
-  color: #7c7c7c;
-}
-
-.hljs-keyword,
-.hljs-tag,
-.tex .hljs-command,
-.hljs-request,
-.hljs-status,
-.clojure .hljs-attribute {
-  color: #96cbfe;
-}
-
-.hljs-sub .hljs-keyword,
-.method,
-.hljs-list .hljs-title,
-.nginx .hljs-title {
-  color: #ffffb6;
-}
-
-.hljs-string,
-.hljs-tag .hljs-value,
-.hljs-cdata,
-.hljs-filter .hljs-argument,
-.hljs-attr_selector,
-.apache .hljs-cbracket,
-.hljs-date,
-.coffeescript .hljs-attribute {
-  color: #a8ff60;
-}
-
-.hljs-subst {
-  color: #daefa3;
-}
-
-.hljs-regexp {
-  color: #e9c062;
-}
-
-.hljs-title,
-.hljs-sub .hljs-identifier,
-.hljs-pi,
-.hljs-decorator,
-.tex .hljs-special,
-.hljs-type,
-.hljs-constant,
-.smalltalk .hljs-class,
-.hljs-doctag,
-.nginx .hljs-built_in {
-  color: #ffffb6;
-}
-
-.hljs-symbol,
-.ruby .hljs-symbol .hljs-string,
-.hljs-number,
-.hljs-variable,
-.vbscript,
-.hljs-literal,
-.hljs-name {
-  color: #c6c5fe;
-}
-
-.css .hljs-tag {
-  color: #96cbfe;
-}
-
-.css .hljs-rule .hljs-property,
-.css .hljs-id {
-  color: #ffffb6;
-}
-
-.css .hljs-class {
-  color: #fff;
-}
-
-.hljs-hexcolor {
-  color: #c6c5fe;
-}
-
-.hljs-number {
-  color:#ff73fd;
-}
-
-.coffeescript .javascript,
-.javascript .xml,
-.tex .hljs-formula,
-.xml .javascript,
-.xml .vbscript,
-.xml .css,
-.xml .hljs-cdata {
-  opacity: 0.7;
+.rcp-CodeBlock .ace_editor {
+  font-size: 16px;
 }

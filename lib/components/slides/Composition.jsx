@@ -1,15 +1,13 @@
 import React from 'react';
-import Highlight from 'react-highlight';
+import CodeBlock from '../CodeBlock.jsx';
 
-const compositionCode = `
-<Validator getValidationMessage={ numberValidator }>
+const compositionCode = `<Validator getValidationMessage={ numberValidator }>
   <NumberInput />
 </Validator>
 
 <Validator getValidationMessage={ colorValidator }>
   <ColorPicker />
-</Validator>
-`;
+</Validator>`;
 
 export default class Slide extends React.Component {
   render() {
@@ -17,9 +15,9 @@ export default class Slide extends React.Component {
       <div>
         <h1>Use composition instead</h1>
 
-        <Highlight className="jsx">
+        <CodeBlock>
           { compositionCode }
-        </Highlight>
+        </CodeBlock>
       </div>
     );
   }

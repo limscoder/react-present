@@ -1,13 +1,11 @@
 import React from 'react';
-import Highlight from 'react-highlight';
+import CodeBlock from '../CodeBlock.jsx';
 
-const childCode = `
-<Form>
+const childCode = `<Form>
   <TextInput label="Name" />
   <DropDown label="Favorite Pet" />
   <ColorPicker label="Favorite Color" />
-</Form>
-`;
+</Form>`;
 
 export default class Slide extends React.Component {
   render() {
@@ -15,9 +13,9 @@ export default class Slide extends React.Component {
       <div>
         <h1>props.children: your best friend</h1>
 
-        <Highlight className="jsx">
+        <CodeBlock>
           { childCode }
-        </Highlight>
+        </CodeBlock>
       </div>
     );
   }

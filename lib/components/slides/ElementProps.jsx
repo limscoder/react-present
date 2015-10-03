@@ -1,15 +1,13 @@
 import React from 'react';
-import Highlight from 'react-highlight';
+import CodeBlock from '../CodeBlock.jsx';
 
-const elementPropsCode = `
-const DataTable = React.createClass({
+const elementPropsCode = `const DataTable = React.createClass({
   propTypes: {
     columns: React.PropTypes.element,
     rows: React.PropTypes.element,
     pager: React.PropTypes.element
   }
-});
-`;
+});`;
 
 export default class Slide extends React.Component {
   render() {
@@ -17,9 +15,9 @@ export default class Slide extends React.Component {
       <div>
         <h1>Refactor element props into children.</h1>
 
-        <Highlight className="jsx">
+        <CodeBlock>
           { elementPropsCode }
-        </Highlight>
+        </CodeBlock>
       </div>
     );
   }

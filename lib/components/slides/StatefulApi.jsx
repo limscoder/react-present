@@ -1,8 +1,7 @@
 import React from 'react';
-import Highlight from 'react-highlight';
+import CodeBlock from '../CodeBlock.jsx';
 
-const statefulCode = `
-export default React.createClass({
+const statefulCode = `export default React.createClass({
   propTypes: {
     initiallyExpanded: React.PropTypes.bool
   },
@@ -22,8 +21,7 @@ export default React.createClass({
       expanded: !this.state.expanded
     });
   }
-});
-`;
+});`;
 
 export default class Slide extends React.Component {
   render() {
@@ -31,9 +29,9 @@ export default class Slide extends React.Component {
       <div>
         <h1>Mo' state Mo' problems</h1>
 
-        <Highlight className='jsx'>
+        <CodeBlock>
           { statefulCode }
-        </Highlight>
+        </CodeBlock>
       </div>
     );
   }

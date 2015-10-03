@@ -1,8 +1,7 @@
 import React from 'react';
-import Highlight from 'react-highlight';
+import CodeBlock from '../CodeBlock.jsx';
 
-const containerCode = `
-import { toggleExpand } from './ActionCreators';
+const containerCode = `import { toggleExpand } from './ActionCreators';
 
 function stateMapper(state) {
   return {
@@ -23,8 +22,7 @@ class ExpanderContainer extends React.Component {
   render() {
     return <Expander expanded={ this.props.expanded } onClick={ this.props.onClick } />;
   }
-}
-`;
+}`;
 
 export default class Slide extends React.Component {
   render() {
@@ -37,9 +35,7 @@ export default class Slide extends React.Component {
           <li>Separate <code>container</code> code from reusable component code with different directories or repos.</li>
         </ul>
 
-        <Highlight className="jsx">
-          { containerCode }
-        </Highlight>
+        <CodeBlock>{ containerCode }</CodeBlock>
       </div>
     );
   }

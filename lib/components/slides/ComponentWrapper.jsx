@@ -1,8 +1,10 @@
 import React from 'react';
-import Highlight from 'react-highlight';
+import CodeBlock from '../CodeBlock.jsx';
 
-const wrapperCallCode = `const ValidatingInput = withValidation(TextInput);`;
-const wrapperCode = `
+const wrapperCode = `const ValidatingInput = withValidation(TextInput);
+
+...
+
 function withValidation(TargetComponent) {
   return React.createClass({
     ...
@@ -20,8 +22,7 @@ function withValidation(TargetComponent) {
       // validation logic goes here
     }
   });
-}
-`;
+}`;
 
 export default class Slide extends React.Component {
   render() {
@@ -29,12 +30,9 @@ export default class Slide extends React.Component {
       <div>
         <h1>Higher order component factory</h1>
 
-        <Highlight className="jsx">
-          { wrapperCallCode }
-        </Highlight>
-        <Highlight className="jsx">
+        <CodeBlock>
           { wrapperCode }
-        </Highlight>
+        </CodeBlock>
       </div>
     );
   }
