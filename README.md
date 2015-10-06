@@ -1,6 +1,6 @@
 # react-present
 
-A simple framework for creating presentations using React components for slides.
+A super simple framework for creating presentations using React components for slides.
 
 Build and view the example presentation:
 
