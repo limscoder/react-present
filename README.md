@@ -15,7 +15,11 @@ Clone the repo and modify `index.jsx` to make your own presentation.
      ↓
     import slideList from './my-custom-slides/slideList';
     
-Slides can be written with JSX and ES6 or plain ol' Javascript. You're free to include whatever markup you'd like in your slides.
+Slides can be written with JSX and ES6 or plain ol' Javascript. You're free to include whatever markup and CSS you'd like in your slides.
+
+Require CSS directly from within slide source code.
+
+    require('./my-slide-styles.css');
 
 Use the `CodeBlock` component to get JSX syntax highlighting and code editing via `react-ace`.
 
