@@ -25,29 +25,33 @@ import Other from './Other';
 import Flux from './Flux';
 import Repo from './Repo';
 
-export default [
-  <Intro />,
-  <Why />,
-  <What />,
-  <Characteristics />,
-  <DevEnvironment />,
-  <ReactConf />,
-  <StatefulApi />,
-  <StatelessApi />,
-  <StrictProps />,
-  <Children />,
-  <ElementProps />,
-  <LiteralChildren />,
-  <CrossCuttingBehavior />,
-  <Mixins />,
-  <MixinProblems />,
-  <Composition />,
-  <ComponentWrapper />,
-  <ComponentDecorator />,
-  <Flux />,
-  <Styling />,
-  <InlineStyling />,
-  <Namespacing />,
-  <Other />,
-  <Repo />
+const slideComponents = [
+  Intro,
+  Why,
+  What,
+  Characteristics,
+  DevEnvironment,
+  ReactConf,
+  StatefulApi,
+  StatelessApi,
+  StrictProps,
+  Children,
+  ElementProps,
+  LiteralChildren,
+  CrossCuttingBehavior,
+  Mixins,
+  MixinProblems,
+  Composition,
+  ComponentWrapper,
+  ComponentDecorator,
+  Flux,
+  Styling,
+  InlineStyling,
+  Namespacing,
+  Other,
+  Repo
 ];
+
+export default slideComponents.map((SlideComponent, idx) => {
+  return <SlideComponent key={ idx } />;
+});

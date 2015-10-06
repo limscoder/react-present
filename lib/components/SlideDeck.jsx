@@ -3,29 +3,12 @@ const ReactCSSTransitionGroup = React.addons.CSSTransitionGroup;
 import classnames from 'classnames';
 
 import ProgressIndicator from './ProgressIndicator';
-import slides from './slides/slideList';
+import Slide from './Slide';
 require('./SlideDeck.css');
-
-const leftArrow = 37;
-const upArrow = 38;
-const rightArrow = 39;
-const downArrow = 40;
-
-const colors = [
-  '#00a9e0',
-  '#b81b10',
-  '#f6a900',
-  '#f66349',
-  '#8dc63f',
-  '#005eb8',
-  '#ff8200',
-  '#00b398',
-  '#da1884',
-  '#7832a5'
-];
 
 export default class SlideDeck extends React.Component {
   static propTypes = {
+    colors: React.PropTypes.array.isRequired,
     slideIndex: React.PropTypes.number.isRequired,
     onSlideChange: React.PropTypes.func.isRequired
   }
@@ -33,10 +16,6 @@ export default class SlideDeck extends React.Component {
   state = {
     activeColorIdx: 0,
     lastColorIdx: 0
-  }
-
-  componentDidMount() {
-    window.addEventListener('keydown', this._onKeyDown);
   }
 
   componentWillReceiveProps(nextProps) {
@@ -47,29 +26,26 @@ export default class SlideDeck extends React.Component {
 
   render() {
     const slideIdx = this.props.slideIndex;
-    const activeSlide = slides[slideIdx];
+    const activeSlide = this.props.children[slideIdx];
+    const activeBackgroundColor = this.props.colors[this.state.activeColorIdx];
     const deckStyle = {
-      backgroundColor: colors[this.state.lastColorIdx]
-    };
-    const slideStyle = {
-      backgroundColor: colors[this.state.activeColorIdx]
+      backgroundColor: this.props.colors[this.state.lastColorIdx]
     };
 
     return (
       <div>
-        <ProgressIndicator current={ this.props.slideIndex } total={ slides.length } />
+        <ProgressIndicator current={ this.props.slideIndex } total={ this.props.children.length } />
         <ReactCSSTransitionGroup className="rcp-SlideDeck"
                                  component="div"
                                  transitionLeave={ false }
-                                 onClick={ this._onClick }
                                  transitionName="nextSlide"
                                  style={ deckStyle }>
-
-          <div key={ slideIdx }
-               style={ slideStyle }
-               className="rcp-SlideDeck-Body">
+          <Slide key={ slideIdx }
+                 backgroundColor={ activeBackgroundColor }
+                 onNext={ this._onNextSlide }
+                 onPrev={ this._onPrevSlide }>
             { activeSlide }
-          </div>
+          </Slide>
         </ReactCSSTransitionGroup>
       </div>
     );
@@ -79,44 +55,33 @@ export default class SlideDeck extends React.Component {
     const nextColorIdx = this.state.activeColorIdx + 1;
 
     this.setState({
-      activeColorIdx: (nextColorIdx >= colors.length ? 0 : nextColorIdx),
+      activeColorIdx: (nextColorIdx >= this.props.colors.length ? 0 : nextColorIdx),
       lastColorIdx: this.state.activeColorIdx
     });
   }
 
-  _onClick = (e) => {
-    if (e.button === 0) {
-      this._nextSlide();
-    } else if (e.button === 1) {
-      this._prevSlide();
-    }
-  }
-
-  _onKeyDown = (e) => {
-    const keyCode = e.keyCode || e.which;
-
-    if (keyCode === downArrow || keyCode === rightArrow) {
-      this._nextSlide();
-    } else if (keyCode === upArrow || keyCode === leftArrow) {
-      this._prevSlide();
-    }
-  }
-
-  _nextSlide() {
+  _onNextSlide = () => {
     const nextIdx = this.props.slideIndex + 1;
-    if (nextIdx < slides.length) {
-      this.props.onSlideChange(nextIdx);
+    if (nextIdx < this.props.children.length) {
+      this._onSlideChange(nextIdx);
     } else {
-      this.props.onSlideChange(0);
+      this._onSlideChange(0);
     }
   }
 
-  _prevSlide() {
+  _onPrevSlide = () => {
     const prevIdx = this.props.slideIndex - 1;
     if (prevIdx > -1) {
-      this.props.onSlideChange(prevIdx);
+      this._onSlideChange(prevIdx);
     } else {
-      this.props.onSlideChange(slides.length - 1);
+      this._onSlideChange(this.props.children.length - 1);
+    }
+  }
+
+  _onSlideChange(newSlideIndex) {
+    const el = React.findDOMNode(this);
+    if (!el.querySelector('.nextSlide-enter')) {
+      this.props.onSlideChange(newSlideIndex);
     }
   }
 }

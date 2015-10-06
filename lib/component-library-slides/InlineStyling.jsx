@@ -1,6 +1,6 @@
 import React from 'react';
 
-const dragonSrc = require('../../images/dragons.gif');
+const dragonSrc = require('../images/dragons.gif');
 
 export default class Slide extends React.Component {
   render() {

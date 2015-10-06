@@ -1,6 +1,6 @@
 import React from 'react';
 
-const imgSrc = require('../../images/kitt.gif');
+const imgSrc = require('../images/kitt.gif');
 
 export default class Slide extends React.Component {
   render() {

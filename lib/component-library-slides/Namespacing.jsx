@@ -1,5 +1,5 @@
 import React from 'react';
-import CodeBlock from '../CodeBlock';
+import CodeBlock from '../components/CodeBlock';
 
 const namespacingCode = `<table className="smb-DataTable">
   <tr className="smb-DataTable-Row is-draggable">

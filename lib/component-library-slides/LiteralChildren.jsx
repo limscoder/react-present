@@ -1,5 +1,5 @@
 import React from 'react';
-import CodeBlock from '../CodeBlock';
+import CodeBlock from '../components/CodeBlock';
 
 const childCode = `<DataTable>
   <Column title="Name" />

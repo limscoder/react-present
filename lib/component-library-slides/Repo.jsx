@@ -7,7 +7,7 @@
         <div>
           <h1>Presentation repo</h1>
 
-          <p><a href="https://github.com/limscoder/react-components-presentation"><code>limscoder/react-components-presentation</code></a></p>
+          <p><a href="https://github.com/limscoder/react-present"><code>limscoder/react-present</code></a></p>
 
         </div>
       );

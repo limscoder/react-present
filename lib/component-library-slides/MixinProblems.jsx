@@ -1,6 +1,6 @@
 import React from 'react';
 
-const failSrc = require('../../images/squirrel-fail.gif');
+const failSrc = require('../images/squirrel-fail.gif');
 
 export default class Slide extends React.Component {
   render() {
