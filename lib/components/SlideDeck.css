@@ -77,3 +77,24 @@ code {
 .rcp-CodeBlock .ace_editor {
   font-size: 16px;
 }
+
+.rcp-ProgressIndicator {
+  background-color: lightgray;
+  display: flex;
+  flex-direction: row;
+  height: 0.5rem;
+  padding: 0;
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+}
+
+.rcp-ProgressIndicator-cell {
+  flex-grow: 1;
+  margin: 0;
+  transition: background-color .75s ease-out;
+}
+
+.rcp-ProgressIndicator-cell--active {
+  background-color: black;
+}

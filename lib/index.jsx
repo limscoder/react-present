@@ -11,6 +11,7 @@ import './index.html';
 
   const routes = (
     <Router>
+      <Redirect from="/" to="/1" />
       <Route path=":slideIdx" component={ App } />
     </Router>
   );

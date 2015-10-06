@@ -1,5 +1,5 @@
 import React from 'react';
-import SlideDeck from './SlideDeck.jsx';
+import SlideDeck from './SlideDeck';
 
 export default class App extends React.Component {
   render() {

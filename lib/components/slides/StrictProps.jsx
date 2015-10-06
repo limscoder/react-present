@@ -1,5 +1,5 @@
 import React from 'react';
-import CodeBlock from '../CodeBlock.jsx';
+import CodeBlock from '../CodeBlock';
 
 const lintPropsSrc = require('../../images/lintProps.png');
 

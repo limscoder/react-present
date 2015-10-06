@@ -29,7 +29,7 @@ module.exports = {
 
   resolve: {
     modulesDirectories: ['lib', 'node_modules'],
-    extensions: ['', '.js', '.html']
+    extensions: ['', '.js', '.jsx', '.html']
   },
 
   resolveLoader: {

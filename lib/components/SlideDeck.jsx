@@ -2,7 +2,8 @@ import React from 'react/addons';
 const ReactCSSTransitionGroup = React.addons.CSSTransitionGroup;
 import classnames from 'classnames';
 
-import slides from './slides/slideList.jsx';
+import ProgressIndicator from './ProgressIndicator';
+import slides from './slides/slideList';
 require('./SlideDeck.css');
 
 const leftArrow = 37;
@@ -55,18 +56,22 @@ export default class SlideDeck extends React.Component {
     };
 
     return (
-      <ReactCSSTransitionGroup className="rcp-SlideDeck"
-                               component="div"
-                               transitionLeave={ false }
-                               onClick={ this._onClick }
-                               transitionName="nextSlide"
-                               style={ deckStyle }>
-        <div key={ slideIdx }
-             style={ slideStyle }
-             className="rcp-SlideDeck-Body">
-          { activeSlide }
-        </div>
-      </ReactCSSTransitionGroup>
+      <div>
+        <ProgressIndicator current={ this.props.slideIndex } total={ slides.length } />
+        <ReactCSSTransitionGroup className="rcp-SlideDeck"
+                                 component="div"
+                                 transitionLeave={ false }
+                                 onClick={ this._onClick }
+                                 transitionName="nextSlide"
+                                 style={ deckStyle }>
+
+          <div key={ slideIdx }
+               style={ slideStyle }
+               className="rcp-SlideDeck-Body">
+            { activeSlide }
+          </div>
+        </ReactCSSTransitionGroup>
+      </div>
     );
   }
 
