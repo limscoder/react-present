@@ -4,7 +4,8 @@ import classnames from 'classnames';
 export default class ProgressIndicator extends React.Component {
   static propTypes = {
     current: React.PropTypes.number.isRequired,
-    total: React.PropTypes.number.isRequired
+    total: React.PropTypes.number.isRequired,
+    onSlideChange: React.PropTypes.func.isRequired
   }
 
   render() {
@@ -15,7 +16,9 @@ export default class ProgressIndicator extends React.Component {
         'rcp-ProgressIndicator-cell--active': i <= this.props.current
       });
 
-      cells.push(<div key={ i } className={ className } />);
+      cells.push(<div key={ i }
+                      className={ className }
+                      onClick={ () => { this.props.onSlideChange(i); } }/>);
     }
 
     return <div className="rcp-ProgressIndicator">{ cells }</div>;

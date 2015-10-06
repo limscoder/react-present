@@ -34,7 +34,9 @@ export default class SlideDeck extends React.Component {
 
     return (
       <div>
-        <ProgressIndicator current={ this.props.slideIndex } total={ this.props.children.length } />
+        <ProgressIndicator current={ this.props.slideIndex }
+                           total={ this.props.children.length }
+                           onSlideChange={ this.props.onSlideChange } />
         <ReactCSSTransitionGroup className="rcp-SlideDeck"
                                  component="div"
                                  transitionLeave={ false }

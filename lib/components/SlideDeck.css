@@ -90,6 +90,7 @@ code {
 }
 
 .rcp-ProgressIndicator-cell {
+  cursor: pointer;
   flex-grow: 1;
   margin: 0;
   transition: background-color .75s ease-out;
