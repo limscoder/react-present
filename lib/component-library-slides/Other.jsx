@@ -4,7 +4,7 @@ export default class Slide extends React.Component {
   render() {
     return (
       <div>
-        <h1>Other stuff components should probably have</h1>
+        <h1>Other stuff you should know</h1>
 
         <ul>
           <li>Use <code>immutablejs</code> for prop values instead of mutable types <code>Object</code> and <code>Array</code>.</li>

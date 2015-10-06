@@ -21,6 +21,7 @@ import ComponentDecorator from './ComponentDecorator';
 import Styling from './Styling';
 import InlineStyling from './InlineStyling';
 import Namespacing from './Namespacing';
+import NamespacingHelper from './NamespacingHelper';
 import Other from './Other';
 import Flux from './Flux';
 import Repo from './Repo';
@@ -48,6 +49,7 @@ const slideComponents = [
   Styling,
   InlineStyling,
   Namespacing,
+  NamespacingHelper,
   Other,
   Repo
 ];
