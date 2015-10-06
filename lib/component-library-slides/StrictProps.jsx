@@ -1,7 +1,7 @@
 import React from 'react';
 import CodeBlock from '../components/CodeBlock';
 
-const lintPropsSrc = require('../images/lintProps.png');
+const lintPropsSrc = require('./images/lintProps.png');
 
 const escalateWarningsCode = `console.warn = (warning) {
   throw new Error('warning:', warning);

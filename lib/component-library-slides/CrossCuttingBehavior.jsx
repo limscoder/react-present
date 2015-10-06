@@ -1,6 +1,6 @@
 import React from 'react';
 
-const validationSrc = require('../images/validation.png');
+const validationSrc = require('./images/validation.png');
 
 export default class Slide extends React.Component {
   render() {

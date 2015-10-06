@@ -1,7 +1,7 @@
 import React from 'react';
 import CodeBlock from '../components/CodeBlock';
 
-const wtfSrc = require('../images/wtf.gif');
+const wtfSrc = require('./images/wtf.gif');
 
 const cssCode = `render() {
   return (
