@@ -8,6 +8,7 @@
     "url": "https://github.com/limscoder/react-composition-presentation"
   },
   "scripts": {
+    "build": "./bin/build",
     "test": "test"
   },
   "keywords": [
@@ -31,13 +32,12 @@
     "node-sass": "^3.2.0",
     "react": "^0.13.3",
     "react-ace": "^2.5.0",
+    "react-hot-loader": "^1.2.7",
     "react-router": "^1.0.0-rc1",
     "sass-loader": "^1.0.2",
     "style-loader": "^0.12.3",
     "webpack": "^1.10.0",
     "webpack-dev-server": "^1.10.1"
   },
-  "dependencies": {
-    "react-highlight": "^0.5.0"
-  }
+  "dependencies": {}
 }

@@ -1,0 +1,10 @@
+#!/bin/bash
+
+SLIDE_LIST="$1"
+if [ -z $SLIDE_LIST ]
+then
+  SLIDE_LIST="component-library-slides/slideList"
+fi
+
+sed "s|--slide-list--|$SLIDE_LIST|g" ./lib/index.tpl.js > ./lib/index.js
+webpack-dev-server --contentBase "dist/" --port 9001 --keepalive true --host 0.0.0.0 --inline true

@@ -8,7 +8,7 @@ module.exports = {
   context: __dirname,
 
   entry: {
-    index: './lib/index.jsx'
+    index: './lib/index.js'
   },
 
   output: {
@@ -29,7 +29,7 @@ module.exports = {
 
   resolve: {
     modulesDirectories: ['lib', 'node_modules'],
-    extensions: ['', '.js', '.jsx', '.html']
+    extensions: ['', '.js', '.html']
   },
 
   resolveLoader: {
@@ -39,13 +39,9 @@ module.exports = {
   module: {
     loaders: [
       {
-        test: /\.js(x)?$/,
+        test: /\.js$/,
         exclude: /node_modules/,
-        loader: 'babel',
-        query: {
-          optional: ['runtime'],
-          stage: 0
-        }
+        loaders: ['react-hot', 'babel?cacheDirectory&loose=es6.classes&optional=runtime&stage=0']
       },
       {
         test: /\.css$/,

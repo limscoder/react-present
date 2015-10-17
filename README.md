@@ -1,30 +1,38 @@
 # react-present
 
-A super simple framework for creating presentations using React components for slides.
+A simple, lightweight framework for creating presentations quickly using React components for slides.
 
-Build and view the example presentation:
+## View example presentation
 
     > npm install
-    > webpack
-    > chrome dist/index.html
+    > npm run build
 
-Clone the repo and modify `index.jsx` to make your own presentation.
+Open `dist/index.html` in your browser.
 
-    // replace this line within index.jsx to use a custom slide list
-    import slideList from './component-library-slides/slideList';
-     ↓
-    import slideList from './my-custom-slides/slideList';
-    
-Slides can be written with JSX and ES6 or plain ol' Javascript. You're free to include whatever markup and CSS you'd like in your slides.
+## Create your own presentation
+
+Clone the repo then:
+
+    > npm install
+    > cp -r ./lib/component-library-slides ./lib/{your-presentation-title}
+    > npm run build {your-presentation-title}/slideList
+
+Navigate to `http://localhost:9001` in your browser. Make changes to `{your-presentation-title}/slideList`, and they should be hot-loaded into your browser whenever you save.
+
+## Create your slides
+
+Slides can be written with JSX and ES6. You're free to include whatever markup and CSS you'd like in your slides.
 
 Require CSS directly from within slide source code.
 
     require('./my-slide-styles.css');
 
-Use the `CodeBlock` component to get JSX syntax highlighting and code editing via `react-ace`.
+Use the `CodeBlock` component to get js syntax highlighting and code editing via `react-ace`.
 
-    import CodeBlock from '../components/CodeBlock'
-    
-    <CodeBlock>
+    import CodeBlock from '../components/CodeBlock';
+
+    const block = (
+      <CodeBlock>
         const foo = 'bar';
-    </CodeBlock>
+      </CodeBlock>
+    );
