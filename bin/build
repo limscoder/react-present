@@ -3,7 +3,7 @@
 SLIDE_LIST="$1"
 if [ -z $SLIDE_LIST ]
 then
-  SLIDE_LIST="rally-i18n"
+  SLIDE_LIST="component-library-slides"
 fi
 
 sed "s|--slide-list-dir--|$SLIDE_LIST|g" ./lib/index.tpl.js > ./lib/index.js
