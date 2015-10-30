@@ -11,7 +11,7 @@ Open `dist/index.html` in your browser.
 
 ## Create your own presentation
 
-Clone the repo then:
+Fork and clone the repo, then:
 
     > npm install
     > cp -r ./lib/component-library-slides ./lib/{your-presentation-directory}
