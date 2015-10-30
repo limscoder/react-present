@@ -1,6 +1,6 @@
-# react-present
+# rally-present
 
-A simple, lightweight framework for creating presentations quickly using React components for slides.
+A private Rally version of [react-present](https://github.com/limscoder/react-present) for internal presentations.
 
 ## View example presentation
 
