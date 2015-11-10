@@ -11,7 +11,7 @@ Uses hot module loading via `webpack` for easy presentation development. Keyboar
 
 Open `dist/index.html` in your browser.
 
-## Create your own presentation
+## Create your presentation
 
 Fork and clone the repo, then:
 
