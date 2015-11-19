@@ -4,6 +4,8 @@ A simple, lightweight framework for creating presentations quickly using React c
 
 Uses hot module loading via `webpack` for easy presentation development. Keyboard, mouse, gui, and url navigation between slides via `react-router`. Code highlighting and editing via `react-ace`. Presentation app can be viewed entirely from static files without any webserver or internet connection required.
 
+(video: see it in action)[https://www.youtube.com/watch?v=nQo0EdHNjto]
+
 ## View example presentation
 
     > npm install
