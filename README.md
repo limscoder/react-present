@@ -6,6 +6,11 @@ Uses hot module loading via `webpack` for easy presentation development. Keyboar
 
 [video: see it in action](https://www.youtube.com/watch?v=nQo0EdHNjto)
 
+## Presentations
+
+ * [i18n](http://rallysoftware.github.io/rally-present/pages/rally-i18n/index.html)
+ * [repo supremo](http://rallysoftware.github.io/rally-present/pages/repo-supremo/index.html)
+
 ## View example presentation
 
     > npm install
