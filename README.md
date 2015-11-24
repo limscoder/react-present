@@ -2,11 +2,12 @@
 
 A private Rally version of [react-present](https://github.com/limscoder/react-present) for internal presentations.
 
-Uses hot module loading via `webpack` for easy presentation development. Keyboard, mouse, gui, and url navigation between slides via `react-router`. Code highlighting and editing via `react-ace`. Presentation app can be viewed entirely from static files without any webserver or internet connection required.
+Uses hot module loading via `webpack` for easy presentation development. Keyboard, mouse, gui, and url navigation between slides via `react-router`. Code highlighting and editing via `react-ace`. Presentation app can be viewed entirely from static files without running a webserver, and can be easily hosted via [github pages](https://pages.github.com/).
 
-[video: see it in action](https://www.youtube.com/watch?v=nQo0EdHNjto)
+ * [Example presentation](https://limscoder.github.io/react-present/pages/component-library-slides/index.html)
+ * [See it in action (video)](https://www.youtube.com/watch?v=nQo0EdHNjto)
 
-## View example presentation
+## View example presentation locally
 
     > npm install
     > npm run build
