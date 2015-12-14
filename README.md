@@ -43,3 +43,10 @@ Use the `CodeBlock` component to get js syntax highlighting and code editing.
         const foo = 'bar';
       </CodeBlock>
     );
+
+## Package presentation as zip file
+
+Create a zip file containing a presentation within the `built-presentations` directory.
+Extract the zip file and open `index.html` to view the presentation. 
+
+    > npm run package {your-presentation-directory}
