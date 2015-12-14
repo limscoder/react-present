@@ -1,8 +1,23 @@
-import React, { Component} from 'react-native';
-import Start from './Start';
+import React, { Component } from 'react-native';
+import { connect } from 'react-redux/native';
+import { bindActionCreators } from 'redux';
+import SlideDeck from './SlideDeck';
+import { nextSlide, prevSlide } from '../../actions/SlideActions';
 
-module.exports = class App extends Component {
+function mapStateToProps(state) {
+  return state;
+}
+
+function mapDispatchToProps(dispatch) {
+  return bindActionCreators({
+    onNext: nextSlide,
+    onPrev: prevSlide
+  }, dispatch);
+}
+
+class App extends Component {
   render() {
-    return <Start />;
+    return <SlideDeck { ...this.props } />;
   }
 };
+module.exports = connect(mapStateToProps, mapDispatchToProps)(App);

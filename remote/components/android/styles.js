@@ -10,15 +10,26 @@ module.exports = StyleSheet.create({
     backgroundColor: '#F5FCFF',
   },
   h1: {
-    fontSize: 24,
+    fontSize: 56,
     textAlign: 'center',
     margin: 5,
     color: textColor
   },
   h2: {
-    fontSize: 18,
+    fontSize: 32,
+    textAlign: 'center',
+    margin: 5,
+    color: textColor
+  },
+  h3: {
+    fontSize: 24,
     textAlign: 'center',
     color: textColor,
     margin:5
   },
+  slideContent: {
+    flex: 1,
+    alignItems: 'center',
+    backgroundColor: '#F5FCFF',
+  }
 });
