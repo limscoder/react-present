@@ -20,7 +20,7 @@ Fork and clone the repo, then:
 
     > npm install
     > cp -r ./lib/component-library-slides ./lib/{your-presentation-directory}
-    > npm run build {your-presentation-directory}
+    > npm run build-dev {your-presentation-directory}
 
 Navigate to `http://localhost:9001` in your browser. Make changes to `{your-presentation-title}/slideList`, and they should be hot-loaded into your browser whenever you save.
 
@@ -43,3 +43,10 @@ Use the `CodeBlock` component to get js syntax highlighting and code editing.
         const foo = 'bar';
       </CodeBlock>
     );
+
+## Package presentation as zip file
+
+Create a zip file containing a presentation within the `built-presentations` directory.
+Extract the zip file and open `index.html` to view the presentation. 
+
+    > npm run package {your-presentation-directory}
