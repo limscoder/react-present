@@ -1,0 +1,4 @@
+#!/bin/bash
+
+npm run build $1
+webpack-dev-server --contentBase "dist/" --port 9001 --keepalive true --host 0.0.0.0 --inline true

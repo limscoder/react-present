@@ -9,6 +9,7 @@
   },
   "scripts": {
     "build": "./bin/build",
+    "build-dev": "./bin/build-dev",
     "test": "test"
   },
   "keywords": [
