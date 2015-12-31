@@ -1,15 +1,20 @@
-import { NEXT_SLIDE, PREV_SLIDE } from './ActionTypes';
+import { SLIDE_IDX_CHANGED_FROM_REMOTE } from './ActionTypes';
 
 module.exports = {
-  nextSlide() {
-    return {
-      type: NEXT_SLIDE
+  nextSlide(slideState, pairedState) {
+    let newSlide = slideState.currentSlide + 1;
+    if (newSlide >= slideState.totalSlides) {
+      newSlide = 0;
+    }
+
+    const action = {
+      type: SLIDE_IDX_CHANGED_FROM_REMOTE,
+      payload: newSlide
     };
+
+    pairedState.connection.publish(action);
+    return action;
   },
 
-  prevSlide() {
-    return {
-      type: PREV_SLIDE
-    };
-  }
+  prevSlide() {}
 };

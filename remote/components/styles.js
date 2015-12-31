@@ -25,11 +25,22 @@ module.exports = StyleSheet.create({
     fontSize: 24,
     textAlign: 'center',
     color: textColor,
-    margin:5
+    margin: 5
+  },
+  warning: {
+    fontSize: 24,
+    textAlign: 'center',
+    color: 'darkRed',
+    margin: 5
   },
   slideContent: {
     flex: 1,
     alignItems: 'center',
     backgroundColor: '#F5FCFF',
+  },
+  textInput: {
+    margin: 10,
+    marginLeft: 50,
+    marginRight: 50
   }
 });
