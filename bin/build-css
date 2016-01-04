@@ -1,0 +1,21 @@
+#!/bin/bash
+
+# react-native has no way to import raw files,
+# so we have to pre-build a module for including
+# CSS within the slide preview.
+CSS=$(cat ./lib/components/SlideDeck.css)
+
+echo "$CSS" | node -e "
+  var chunks = [];
+  var input = process.openStdin();
+  input.setEncoding('utf8');
+  input.on('data', function(chunk) {
+    chunks.push(chunk);
+  });
+  input.on('end', function() {
+    var code = chunks.join('\n');
+    var exportCode = 'module.exports = ' + JSON.stringify(code) + ';'
+    var fs = require('fs');
+    fs.writeFile('./remote/components/PreviewCss.js', exportCode);
+  });
+";

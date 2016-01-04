@@ -9,6 +9,7 @@
   },
   "scripts": {
     "build": "./bin/build",
+    "build-css": "./bin/build-css",
     "build-dev": "./bin/build-dev",
     "package": "./bin/package",
     "test": "test"

@@ -8,3 +8,4 @@ fi
 
 sed "s|--slide-list-dir--|$SLIDE_LIST|g" ./lib/index.tpl.js > ./lib/index.js
 webpack
+npm run build-css

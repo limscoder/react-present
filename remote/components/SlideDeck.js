@@ -6,6 +6,7 @@ module.exports = class SlideDeck extends Component {
   static propTypes = {
     currentSlide: PropTypes.number.isRequired,
     totalSlides: PropTypes.number.isRequired,
+    currentSlideHtml: PropTypes.string.isRequired,
     onNext: PropTypes.func.isRequired,
     onPrev: PropTypes.func.isRequired
   }
@@ -14,7 +15,8 @@ module.exports = class SlideDeck extends Component {
     return (
       <TouchableOpacity onPress={ this.props.onNext } style={ styles.content }>
         <Slide currentSlide={ this.props.currentSlide }
-               totalSlides={ this.props.totalSlides } />
+               totalSlides={ this.props.totalSlides }
+               currentSlideHtml={ this.props.currentSlideHtml } />
       </TouchableOpacity>
     );
   }

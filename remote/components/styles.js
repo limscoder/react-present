@@ -33,10 +33,28 @@ module.exports = StyleSheet.create({
     color: 'darkRed',
     margin: 5
   },
-  slideContent: {
+  slide: {
     flex: 1,
+    alignSelf: 'stretch',
     alignItems: 'center',
     backgroundColor: '#F5FCFF',
+  },
+  slideContent: {
+    margin: 5,
+    flex: 1,
+    flexDirection: 'row',
+    alignSelf: 'stretch'
+  },
+  previewContainer: {
+    backgroundColor: 'black',
+    height: 300,
+    flex: 1
+  },
+  preview: {
+    backgroundColor: 'green',
+    flex: 1,
+    alignSelf: 'stretch',
+    height: 300
   },
   textInput: {
     margin: 10,

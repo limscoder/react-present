@@ -47,7 +47,7 @@ function connect(channel, dispatch) {
       type: PAIRING_TIMEOUT,
       payload: channel
     });
-  }, 10000);
+  }, 15000);
 
   return {
     type: CHANNEL_CREATED,
