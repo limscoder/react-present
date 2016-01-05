@@ -3,7 +3,8 @@ import { REMOTE_PAIRED, SLIDE_IDX_CHANGED_FROM_PRESENTATION } from '../actions/A
 const initialState = {
   currentSlide: 0,
   totalSlides: 1,
-  currentSlideHtml: 'current slide html'
+  currentSlideHtml: 'current slide html',
+  currentSlideNotes: 'no notes'
 };
 
 function updateCurrentSlide(state, action) {

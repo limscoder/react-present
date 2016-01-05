@@ -7,7 +7,7 @@ module.exports = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#F5FCFF',
+    backgroundColor: 'white'
   },
   h1: {
     fontSize: 56,
@@ -36,22 +36,55 @@ module.exports = StyleSheet.create({
   slide: {
     flex: 1,
     alignSelf: 'stretch',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
+    alignItems: 'center'
   },
   slideContent: {
     margin: 5,
     flex: 1,
+    flexDirection: 'column',
+    alignSelf: 'stretch',
+    backgroundColor: 'white'
+  },
+  toggle: {
+    backgroundColor: 'grey',
     flexDirection: 'row',
-    alignSelf: 'stretch'
+    alignSelf: 'center',
+    height: 30
+  },
+  activeToggle: {
+    backgroundColor: '#009688',
+    borderBottomWidth: 2,
+    borderBottomColor: '#004D40'
+  },
+  inactiveToggle: {
+    backgroundColor: '#E0E0E0',
+    borderBottomWidth: 2,
+    borderBottomColor: '#9E9E9E'
+  },
+  activeToggleText: {
+    color: 'white',
+    fontSize: 18,
+    fontWeight: 'bold',
+    marginTop: 2,
+    marginBottom: 2,
+    marginLeft: 10,
+    marginRight: 10
+  },
+  inactiveToggleText: {
+    color: '#9E9E9E',
+    fontSize: 18,
+    fontWeight: 'bold',
+    marginTop: 2,
+    marginBottom: 2,
+    marginLeft: 10,
+    marginRight: 10
   },
   previewContainer: {
-    backgroundColor: 'black',
     height: 300,
-    flex: 1
+    flex: 1,
+    marginTop: 10
   },
   preview: {
-    backgroundColor: 'green',
     flex: 1,
     alignSelf: 'stretch',
     height: 300

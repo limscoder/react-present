@@ -6,7 +6,8 @@ module.exports = class Slide extends Component {
   static propTypes = {
     currentSlide: PropTypes.number.isRequired,
     totalSlides: PropTypes.number.isRequired,
-    currentSlideHtml: PropTypes.string.isRequired
+    currentSlideHtml: PropTypes.string.isRequired,
+    currentSlideNotes: PropTypes.string.isRequired
   }
 
   render() {
@@ -16,7 +17,8 @@ module.exports = class Slide extends Component {
           { this.props.currentSlide + 1 } / { this.props.totalSlides }
         </Text>
 
-        <SlideContent currentSlideHtml={ this.props.currentSlideHtml } />
+        <SlideContent currentSlideHtml={ this.props.currentSlideHtml }
+                      currentSlideNotes={ this.props.currentSlideNotes } />
       </View>
     );
   }

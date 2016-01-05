@@ -7,16 +7,21 @@ module.exports = class SlideDeck extends Component {
     currentSlide: PropTypes.number.isRequired,
     totalSlides: PropTypes.number.isRequired,
     currentSlideHtml: PropTypes.string.isRequired,
+    currentSlideNotes: PropTypes.string.isRequired,
     onNext: PropTypes.func.isRequired,
     onPrev: PropTypes.func.isRequired
   }
 
   render() {
+    const {
+      onNext,
+      onPrev,
+      ...slideProps
+    } = this.props;
+
     return (
       <TouchableOpacity onPress={ this.props.onNext } style={ styles.content }>
-        <Slide currentSlide={ this.props.currentSlide }
-               totalSlides={ this.props.totalSlides }
-               currentSlideHtml={ this.props.currentSlideHtml } />
+        <Slide { ...slideProps }/>
       </TouchableOpacity>
     );
   }

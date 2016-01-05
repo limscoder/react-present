@@ -9,7 +9,6 @@
   },
   "scripts": {
     "build": "./bin/build",
-    "build-css": "./bin/build-css",
     "build-dev": "./bin/build-dev",
     "package": "./bin/package",
     "test": "test"
@@ -43,6 +42,8 @@
     "webpack-dev-server": "^1.10.1"
   },
   "dependencies": {
-    "pubnub": "^3.7.18"
+    "markdown": "^0.5.0",
+    "pubnub": "^3.7.18",
+    "raw-loader": "^0.5.1"
   }
 }

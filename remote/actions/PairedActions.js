@@ -3,12 +3,34 @@ import {
   CHANGE_CHANNEL,
   CHANNEL_CREATED,
   REMOTE_CONNECTED,
+  PAIRING_PROGRESS,
   PAIRING_TIMEOUT,
   REMOTE_PAIRED,
   WARNING
 } from './ActionTypes';
 
 const channelValidator = new RegExp('\\d{4}');
+let isPaired = false;
+
+function connectionTimeout(timeoutIndex, channel, dispatch) {
+  dispatch({
+    type: PAIRING_PROGRESS,
+    payload: timeoutIndex
+  });
+
+  setTimeout(() => {
+    if (!isPaired) {
+      if (timeoutIndex > 10) {
+        dispatch({
+          type: PAIRING_TIMEOUT,
+          payload: channel
+        });
+      } else {
+        connectionTimeout(timeoutIndex + 1, channel, dispatch);
+      }
+    }
+  }, 1500);
+}
 
 function connect(channel, dispatch) {
   if (!channelValidator.test(channel)) {
@@ -27,6 +49,11 @@ function connect(channel, dispatch) {
     channel,
     message: (message) => {
       console.log('received message', message);
+
+      if (message.type === REMOTE_PAIRED) {
+        isPaired = true;
+      }
+
       dispatch(message);
     }
   });
@@ -42,12 +69,7 @@ function connect(channel, dispatch) {
     payload: true
   });
 
-  setTimeout(() => {
-    dispatch({
-      type: PAIRING_TIMEOUT,
-      payload: channel
-    });
-  }, 15000);
+  connectionTimeout(1, channel, dispatch);
 
   return {
     type: CHANNEL_CREATED,

@@ -5,7 +5,7 @@ import thunkMiddleware from 'redux-thunk'
 import AppReducer from '../reducers/AppReducer';
 import SlideDeckContainer from './SlideDeckContainer';
 import StartContainer from './StartContainer';
-import Pairing from '../components/Pairing';
+import PairingContainer from './PairingContainer';
 
 const createStoreWithMiddleware = applyMiddleware(thunkMiddleware)(createStore);
 const store = createStoreWithMiddleware(AppReducer);
@@ -20,7 +20,7 @@ class App extends Component {
       return <SlideDeckContainer />;
     }
     if (this.props.pairedState.isConnected) {
-      return <Pairing />;
+      return <PairingContainer />;
     }
 
     return <StartContainer />;

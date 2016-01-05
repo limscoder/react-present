@@ -1,6 +1,7 @@
 import {
   CHANGE_CHANNEL,
   CHANNEL_CREATED,
+  PAIRING_PROGRESS,
   PAIRING_TIMEOUT,
   REMOTE_PAIRED,
   WARNING
@@ -9,6 +10,7 @@ import {
 const initialState = {
   channel: null,
   warning: null,
+  pairingProgress: 1,
   isPaired: false,
   isConnected: false,
   connection: null
@@ -28,11 +30,22 @@ function warning(state, action) {
   };
 }
 
-function pair(state, action) {
+function pairingProgress(state, action) {
   return {
     ...state,
-    isPaired: true
+    pairingProgress: action.payload
   };
+}
+
+function pair(state, action) {
+  if (state.isConnected) {
+    return {
+      ...state,
+      isPaired: true
+    };
+  }
+
+  return state;
 }
 
 function connect(state, action) {
@@ -45,14 +58,12 @@ function connect(state, action) {
 }
 
 function timeout(state, action) {
-  if (state.channel === action.payload && !state.isPaired) {
-    return {
-      ...state,
-      warning: 'connection timed out',
-      isConnected: false,
-      connection: null
-    };
-  }
+  return {
+    ...state,
+    warning: 'connection timed out',
+    isConnected: false,
+    connection: null
+  };
 
   return state;
 }
@@ -70,6 +81,9 @@ module.exports = function(state = initialState, action) {
 
     case PAIRING_TIMEOUT:
       return timeout(state, action);
+
+    case PAIRING_PROGRESS:
+      return pairingProgress(state, action);
 
     case REMOTE_PAIRED:
       return pair(state, action);

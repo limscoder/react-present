@@ -1,7 +1,7 @@
 import React, { Component, Text, View  } from 'react-native';
 import styles from './styles';
 
-module.exports = class Start extends Component {
+module.exports = class Pairing extends Component {
   render() {
     return (
       <View style={ styles.content }>
