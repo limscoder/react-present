@@ -1,6 +1,7 @@
 import {
   CHANGE_CHANNEL,
   CHANNEL_CREATED,
+  CHANNEL_DISCONNECTED,
   PAIRING_PROGRESS,
   PAIRING_TIMEOUT,
   REMOTE_PAIRED,
@@ -78,6 +79,9 @@ module.exports = function(state = initialState, action) {
 
     case CHANNEL_CREATED:
       return connect(state, action);
+
+    case CHANNEL_DISCONNECTED:
+      return initialState;
 
     case PAIRING_TIMEOUT:
       return timeout(state, action);

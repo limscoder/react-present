@@ -1,6 +1,28 @@
 import { StyleSheet } from 'react-native';
 
 const textColor = '#222222';
+const androidGreen = '#009688';
+const activeButton = {
+  backgroundColor: androidGreen,
+  borderBottomWidth: 2,
+  borderBottomColor: '#004D40'
+};
+const inactiveButton = {
+  backgroundColor: '#E0E0E0'
+};
+const activeButtonText = {
+  color: 'white',
+  fontSize: 18,
+  fontWeight: 'bold',
+  marginTop: 2,
+  marginBottom: 2,
+  marginLeft: 10,
+  marginRight: 10
+};
+const inactiveButtonText = {
+  ...activeButtonText,
+  color: '#9E9E9E'
+};
 
 module.exports = StyleSheet.create({
   content: {
@@ -39,7 +61,10 @@ module.exports = StyleSheet.create({
     alignItems: 'center'
   },
   slideContent: {
-    margin: 5,
+    marginTop: 30,
+    marginRight: 5,
+    marginBottom: 5,
+    marginLeft: 5,
     flex: 1,
     flexDirection: 'column',
     alignSelf: 'stretch',
@@ -51,34 +76,20 @@ module.exports = StyleSheet.create({
     alignSelf: 'center',
     height: 30
   },
-  activeToggle: {
-    backgroundColor: '#009688',
-    borderBottomWidth: 2,
-    borderBottomColor: '#004D40'
+  activeButton: {
+    ...activeButton,
+    margin: 5
   },
-  inactiveToggle: {
-    backgroundColor: '#E0E0E0',
-    borderBottomWidth: 2,
-    borderBottomColor: '#9E9E9E'
+  inactiveButton: {
+    ...inactiveButton,
+    margin: 5
   },
-  activeToggleText: {
-    color: 'white',
-    fontSize: 18,
-    fontWeight: 'bold',
-    marginTop: 2,
-    marginBottom: 2,
-    marginLeft: 10,
-    marginRight: 10
-  },
-  inactiveToggleText: {
-    color: '#9E9E9E',
-    fontSize: 18,
-    fontWeight: 'bold',
-    marginTop: 2,
-    marginBottom: 2,
-    marginLeft: 10,
-    marginRight: 10
-  },
+  activeButtonText,
+  inactiveButtonText,
+  activeToggle: activeButton,
+  inactiveToggle: inactiveButton,
+  activeToggleText: activeButtonText,
+  inactiveToggleText: inactiveButtonText,
   previewContainer: {
     height: 300,
     flex: 1,
@@ -93,5 +104,22 @@ module.exports = StyleSheet.create({
     margin: 10,
     marginLeft: 50,
     marginRight: 50
+  },
+  control: {
+    alignSelf: 'stretch',
+    alignItems: 'flex-start',
+    flexDirection: 'row',
+    padding: 5
+  },
+  slider: {
+    flex: 1,
+    marginLeft: 10,
+    marginRight: 10
+  },
+  sliderTrack: {
+    backgroundColor: androidGreen
+  },
+  sliderThumb: {
+    backgroundColor: androidGreen
   }
 });

@@ -2,6 +2,7 @@ import PubNub from 'pubnub';
 import {
   CHANGE_CHANNEL,
   CHANNEL_CREATED,
+  CHANNEL_DISCONNECTED,
   REMOTE_CONNECTED,
   PAIRING_PROGRESS,
   PAIRING_TIMEOUT,
@@ -89,5 +90,12 @@ module.exports = {
     return dispatch => {
       dispatch(connect(channel, dispatch));
     }
+  },
+
+  disconnectChannel: (channel) => {
+    return {
+      type: CHANNEL_DISCONNECTED,
+      payload: channel
+    };
   }
 };
