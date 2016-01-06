@@ -3,11 +3,19 @@
 Mobile remote control.
 See slide previews and switch slides from your mobile device.
 
-## Pairing remote device
+![](../lib/monster-trucking/images/device.png)
 
-Both devices must be connected to the internet for pairing.
-Press the space bar in the main presentation window to view the pairing code.
-Enter the pairing code on the start page of the remote app.
+## Pairing mobile device
+
+The presentation browser and the remote device must both be connected to the internet for pairing.
+Press the space bar in the presentation browser to get a numeric pairing code.
+Enter the pairing code on the start page of the remote app and tap the screen.
+
+## How it works
+
+A [react-native](https://facebook.github.io/react-native/) app on the mobile device uses [PubNub](https://www.pubnub.com/) to communicate with the presentation running in a browser.
+
+![](../lib/monster-trucking/images/remote.png)
 
 ## Android development
 
@@ -24,7 +32,3 @@ Enter the pairing code on the start page of the remote app.
  * Build react-native
 
     > react-native run-android
-
- * Press `F2` to open emulator dev tools and select `Enable Live Reload`
- * Start editing within `/remote/components/android`
- * Debugging: press `F2` and select `Debug in Chrome`
