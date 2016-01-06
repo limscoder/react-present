@@ -1,6 +1,6 @@
 # react-present remote
 
-Mobile remote control.
+Mobile remote control for [react-present](../README.md).
 See slide previews and switch slides from your mobile device.
 
 ![](../lib/monster-trucking/images/device.png)
