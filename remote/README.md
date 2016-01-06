@@ -5,6 +5,8 @@ See slide previews and switch slides from your mobile device.
 
  * [Download the Android version from Google Play](https://play.google.com/apps/testing/com.github.limscoder.ReactPresent)
 
+## Screenshot
+
 ![](../lib/monster-trucking/images/device.png)
 
 ## Pairing mobile device
