@@ -3,6 +3,7 @@ package com.remote;
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.KeyEvent;
+import static android.view.WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON;
 
 import com.facebook.react.LifecycleState;
 import com.facebook.react.ReactInstanceManager;
@@ -33,6 +34,8 @@ public class MainActivity extends Activity implements DefaultHardwareBackBtnHand
         mReactRootView.startReactApplication(mReactInstanceManager, "remote", null);
 
         setContentView(mReactRootView);
+
+        getWindow().addFlags(FLAG_KEEP_SCREEN_ON);
     }
 
     @Override
