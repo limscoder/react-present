@@ -1,4 +1,4 @@
-package com.remote;
+package com.github.limscoder.ReactPresent;
 
 import android.app.Activity;
 import android.os.Bundle;
