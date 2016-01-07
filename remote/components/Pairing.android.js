@@ -5,7 +5,7 @@ import styles from './styles';
 module.exports = class Pairing extends Component {
   static propTypes = {
     progress: PropTypes.number.isRequired
-  }
+  };
 
   render() {
     return (

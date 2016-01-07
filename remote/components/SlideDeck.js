@@ -17,7 +17,7 @@ module.exports = class SlideDeck extends Component {
     onReset: PropTypes.func.isRequired,
     onSelectSlide: PropTypes.func.isRequired,
     onSlideEnd: PropTypes.func.isRequired
-  }
+  };
 
   render() {
     const {

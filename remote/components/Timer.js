@@ -4,7 +4,7 @@ import styles from './styles';
 module.exports = class Start extends Component {
   static propTypes = {
     elapsedTime: PropTypes.number.isRequired
-  }
+  };
 
   render() {
     const timeInSeconds = this.props.elapsedTime / 1000;
