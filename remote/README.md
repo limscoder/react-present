@@ -2,7 +2,7 @@
 
 Mobile remote control for [react-present](../README.md).
 
-Switch slides and view slide previews and notes from your mobile device.
+Switch slides, view slide previews and notes from your mobile device.
 
  * [Download the Android version from Google Play](https://play.google.com/apps/testing/com.github.limscoder.ReactPresent)
 
