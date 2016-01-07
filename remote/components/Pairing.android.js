@@ -1,4 +1,5 @@
 import React, { PropTypes, Component, Text, View, ProgressBarAndroid  } from 'react-native';
+import colors from './colors';
 import styles from './styles';
 
 module.exports = class Pairing extends Component {
@@ -13,7 +14,8 @@ module.exports = class Pairing extends Component {
           pairing with presentation
         </Text>
 
-        <ProgressBarAndroid progress={ this.props.progress } />
+        <ProgressBarAndroid progress={ this.props.progress }
+                            color={ colors.highlight } />
       </View>
     );
   }

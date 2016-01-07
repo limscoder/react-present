@@ -1,17 +1,16 @@
 import { StyleSheet } from 'react-native';
+import colors from './colors';
 
-const textColor = '#222222';
-const androidGreen = '#009688';
 const activeButton = {
-  backgroundColor: androidGreen,
+  backgroundColor: colors.highlight,
   borderBottomWidth: 2,
-  borderBottomColor: '#004D40'
+  borderBottomColor: colors.active
 };
 const inactiveButton = {
-  backgroundColor: '#E0E0E0'
+  backgroundColor: colors.inactive
 };
 const activeButtonText = {
-  color: 'white',
+  color: colors.text,
   fontSize: 18,
   fontWeight: 'bold',
   marginTop: 2,
@@ -21,7 +20,7 @@ const activeButtonText = {
 };
 const inactiveButtonText = {
   ...activeButtonText,
-  color: '#9E9E9E'
+  color: colors.inactiveText
 };
 
 module.exports = StyleSheet.create({
@@ -35,24 +34,24 @@ module.exports = StyleSheet.create({
     fontSize: 56,
     textAlign: 'center',
     margin: 5,
-    color: textColor
+    color: colors.text
   },
   h2: {
     fontSize: 32,
     textAlign: 'center',
     margin: 5,
-    color: textColor
+    color: colors.text
   },
   h3: {
     fontSize: 24,
     textAlign: 'center',
-    color: textColor,
+    color: colors.text,
     margin: 5
   },
   warning: {
     fontSize: 24,
     textAlign: 'center',
-    color: 'darkRed',
+    color: colors.validation,
     margin: 5
   },
   slide: {
@@ -73,23 +72,32 @@ module.exports = StyleSheet.create({
   toggle: {
     backgroundColor: 'grey',
     flexDirection: 'row',
-    alignSelf: 'center',
+    alignSelf: 'stretch',
     height: 30
   },
-  activeButton: {
-    ...activeButton,
-    margin: 5
-  },
-  inactiveButton: {
-    ...inactiveButton,
-    margin: 5
+  buttonIcon: {
+    width: 30,
+    height: 30,
+    marginTop: 3
   },
   activeButtonText,
   inactiveButtonText,
-  activeToggle: activeButton,
-  inactiveToggle: inactiveButton,
-  activeToggleText: activeButtonText,
-  inactiveToggleText: inactiveButtonText,
+  activeToggle: {
+    ...activeButton,
+    flex: 1
+  },
+  inactiveToggle: {
+    ...inactiveButton,
+    flex: 1
+  },
+  activeToggleText: {
+    ...activeButtonText,
+    alignSelf: 'center'
+  },
+  inactiveToggleText: {
+    ...inactiveButtonText,
+    alignSelf: 'center'
+  },
   previewContainer: {
     height: 300,
     flex: 1,
@@ -109,17 +117,26 @@ module.exports = StyleSheet.create({
     alignSelf: 'stretch',
     alignItems: 'flex-start',
     flexDirection: 'row',
-    padding: 5
+    backgroundColor: colors.highlight,
+    padding: 5,
+    paddingRight: 10
   },
   slider: {
     flex: 1,
     marginLeft: 10,
+    marginRight: 5
+  },
+  sliderText: {
+    fontSize: 24,
+    textAlign: 'center',
+    color: colors.text,
+    marginTop: 1,
     marginRight: 10
   },
   sliderTrack: {
-    backgroundColor: androidGreen
+    backgroundColor: colors.text
   },
   sliderThumb: {
-    backgroundColor: androidGreen
+    backgroundColor: colors.text
   }
 });

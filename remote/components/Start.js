@@ -1,4 +1,5 @@
 import React, { PropTypes, Component, Text, TextInput, TouchableOpacity  } from 'react-native';
+import colors from './colors';
 import styles from './styles';
 
 module.exports = class Start extends Component {
@@ -14,7 +15,7 @@ module.exports = class Start extends Component {
       null;
 
     return (
-      <TouchableOpacity onPress={ this.onStart } style={ styles.content }>
+      <TouchableOpacity onPress={ this._onStart } style={ styles.content }>
         <Text style={ styles.h1 }>
           react-present
         </Text>
@@ -24,18 +25,23 @@ module.exports = class Start extends Component {
         <Text style={ styles.h3 }>
           swipe right to reverse
         </Text>
+        <Text style={ styles.h3 }>
+          get pair code: press space in browser
+        </Text>
         { warning }
         <TextInput style={ styles.textInput }
+                   underlineColorAndroid={ colors.highlight }
                    autoFocus={ true }
                    placeholder="enter pair code"
                    maxLength={ 4 }
                    keyboardType="numeric"
-                   onChangeText={ this.props.onChannelChange } />
+                   onChangeText={ this.props.onChannelChange }
+                   onSubmitEditing={ this._onStart } />
       </TouchableOpacity>
     );
   }
 
-  onStart = () => {
+  _onStart = () => {
     this.props.onStart(this.props.channel);
   }
 };
