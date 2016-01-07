@@ -22,18 +22,25 @@ A [react-native](https://facebook.github.io/react-native/) app on the mobile dev
 
 ![](../lib/monster-trucking/images/remote.png)
 
-## Android development
+## Development
 
- * Follow [android setup instructions](https://facebook.github.io/react-native/docs/android-setup.html)
+ * Follow native setup instructions
+  * [android setup instructions](https://facebook.github.io/react-native/docs/android-setup.html)
+  * OR
+  * [iOS setup instructions](https://facebook.github.io/react-native/docs/getting-started.html#content)
  * `cd` to `/remote`
  * Install dependencies
 
-    > npm install
+    > npm i
 
- * Start emulator
+ * Start emulator or connect device
 
     > emulator -avd ...
+    
+    OR
+    
+    > open /Applications/Xcode.app/Contents/Developer/Applications/Simulator.app
 
- * Build react-native
+ * Run app in emulator or connected device
 
     > react-native run-android
