@@ -10,7 +10,7 @@ module.exports = class Slide extends Component {
     currentSlideHtml: PropTypes.string.isRequired,
     currentSlideNotes: PropTypes.string.isRequired,
     elapsedTime: PropTypes.number.isRequired
-  }
+  };
 
   render() {
     return (

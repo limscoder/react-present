@@ -12,7 +12,7 @@ module.exports = class Control extends Component {
     onReset: PropTypes.func.isRequired,
     onSelectSlide: PropTypes.func.isRequired,
     onSlideEnd: PropTypes.func.isRequired
-  }
+  };
 
   render() {
     return (

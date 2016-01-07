@@ -6,7 +6,7 @@ import styles from './styles';
 module.exports = class Button extends Component {
   static propTypes = {
     icon: PropTypes.string.isRequired
-  }
+  };
 
   render() {
     return (

@@ -6,7 +6,7 @@ module.exports = class Toggle extends Component {
     labels: PropTypes.array.isRequired,
     selectedIndex: PropTypes.number.isRequired,
     onChange: PropTypes.func.isRequired
-  }
+  };
 
   render() {
     return (
@@ -34,5 +34,5 @@ module.exports = class Toggle extends Component {
     const isLastIdx = this.props.selectedIndex === this.props.labels.length - 1;
     const newIndex = isLastIdx ? 0 : this.props.selectedIndex + 1;
     this.props.onChange(newIndex);
-  }
+  };
 };

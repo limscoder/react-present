@@ -7,7 +7,7 @@ module.exports = class Start extends Component {
     warning: PropTypes.string,
     onChannelChange: PropTypes.func.isRequired,
     onStart: PropTypes.func.isRequired
-  }
+  };
 
   render() {
     const warning = this.props.warning ?
@@ -43,5 +43,5 @@ module.exports = class Start extends Component {
 
   _onStart = () => {
     this.props.onStart(this.props.channel);
-  }
+  };
 };

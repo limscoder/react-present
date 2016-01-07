@@ -14,7 +14,7 @@ module.exports = class SlideContent extends Component {
   static propTypes = {
     currentSlideHtml: PropTypes.string.isRequired,
     currentSlideNotes: PropTypes.string.isRequired
-  }
+  };
 
   render() {
     const html = this.state.viewIndex === 0 ? this.props.currentSlideHtml : this.props.currentSlideNotes;
@@ -33,5 +33,5 @@ module.exports = class SlideContent extends Component {
 
   _onViewChange = (viewIndex) => {
     this.setState({ viewIndex });
-  }
+  };
 };
