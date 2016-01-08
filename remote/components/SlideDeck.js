@@ -4,6 +4,7 @@ import Slide from './Slide';
 import Control from './Control';
 
 module.exports = class SlideDeck extends Component {
+
   static propTypes = {
     currentSlide: PropTypes.number.isRequired,
     totalSlides: PropTypes.number.isRequired,
@@ -31,15 +32,19 @@ module.exports = class SlideDeck extends Component {
     } = this.props;
 
     return (
-      <TouchableOpacity onPress={ onNext } style={ styles.content }>
+      <View style={ styles.content }>
         <Control currentSlide={ this.props.selectedSlide }
                  totalSlides={ this.props.totalSlides }
                  onRePair={ onRePair }
                  onReset={ onReset }
                  onSelectSlide={ onSelectSlide }
                  onSlideEnd={ onSlideEnd }/>
-        <Slide { ...slideProps }/>
-      </TouchableOpacity>
+        <Slide onNext={ onNext }
+               onPrev={ onPrev }
+               { ...slideProps }/>
+      </View >
     );
   }
+
+
 };

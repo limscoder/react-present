@@ -26,6 +26,7 @@ function mergeProps(stateProps, dispatchProps, ownProps) {
     ...dispatchProps,
     ...ownProps,
     onNext: dispatchProps.onNext.bind(null, stateProps.slideState, stateProps.pairedState),
+    onPrev: dispatchProps.onPrev.bind(null, stateProps.slideState, stateProps.pairedState),
     onReset: dispatchProps.onReset.bind(null, stateProps.pairedState),
     onSlideEnd: dispatchProps.onSlideEnd.bind(null, stateProps.pairedState)
   };
