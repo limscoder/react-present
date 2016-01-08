@@ -1,4 +1,4 @@
-import React, { Component, PanResponder, PropTypes, Text, View, WebView  } from 'react-native';
+import React, { Component, PropTypes, Text, View, WebView  } from 'react-native';
 import Toggle from './Toggle';
 import styles from './styles';
 
@@ -9,18 +9,6 @@ module.exports = class SlideContent extends Component {
     this.state = {
       viewIndex: 0
     };
-  }
-
-  componentWillMount() {
-    this._panResponder = PanResponder.create({
-      onStartShouldSetPanResponder: (evt, gestureState) => true,
-      onStartShouldSetPanResponderCapture: (evt, gestureState) => true,
-      onMoveShouldSetPanResponder: (evt, gestureState) => true,
-      onMoveShouldSetPanResponderCapture: (evt, gestureState) => true,
-      onPanResponderRelease: (evt, gestureState) => {
-        (gestureState.dx < 0 ? this.props.onPrev : this.props.onNext)();
-      }
-    });
   }
 
   static propTypes = {
@@ -36,7 +24,7 @@ module.exports = class SlideContent extends Component {
         <Toggle labels={ ['slide', 'notes'] }
                 selectedIndex={ this.state.viewIndex }
                 onChange={ this._onViewChange } />
-        <View style={ styles.previewContainer} {...this._panResponder.panHandlers}>
+        <View style={ styles.previewContainer}>
           <WebView key={ html } ref="webView" style={ styles.preview } html={ html } />
         </View>
       </View>

@@ -10,7 +10,7 @@ module.exports = class Toggle extends Component {
 
   render() {
     return (
-      <TouchableOpacity onPress={ this._onPress } style={ styles.toggle }>
+      <TouchableOpacity key="notes-toggle" onPress={ this._onPress } style={ styles.toggle }>
         { this._renderLabels() }
       </TouchableOpacity>
     );

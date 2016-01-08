@@ -1,6 +1,7 @@
 import {
   REMOTE_PAIRED,
   TIMER_TICK,
+  SLIDE_IDX_CHANGED_FROM_REMOTE,
   SLIDE_IDX_CHANGED_FROM_PRESENTATION,
   SLIDE_DECK_RESET,
   SELECTED_SLIDE_CHANGED
@@ -10,6 +11,7 @@ const initialState = {
   currentSlide: 0,
   totalSlides: 10,
   selectedSlide: 0,
+  isLoadingSlide: true,
   currentSlideHtml: 'current slide html',
   currentSlideNotes: 'no notes',
   elapsedTime: 0
@@ -26,7 +28,15 @@ function updateCurrentSlide(state, action) {
   return {
     ...state,
     ...action.payload,
-    selectedSlide: action.payload.currentSlide
+    selectedSlide: action.payload.currentSlide,
+    isLoadingSlide: false
+  };
+}
+
+function updateCurrentSlideIdx(state, action) {
+  return {
+    ...state,
+    isLoadingSlide: true
   };
 }
 
@@ -41,7 +51,8 @@ function reset(state, action) {
   return {
     ...state,
     currentSlide: 0,
-    elapsedTime: 0
+    elapsedTime: 0,
+    isLoadingSlide: true
   }
 }
 
@@ -59,6 +70,9 @@ module.exports = function(state = initialState, action) {
 
     case REMOTE_PAIRED:
       return paired(state, action);
+
+    case SLIDE_IDX_CHANGED_FROM_REMOTE:
+      return updateCurrentSlideIdx(state, action);
 
     case SLIDE_IDX_CHANGED_FROM_PRESENTATION:
       return updateCurrentSlide(state, action);

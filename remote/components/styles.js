@@ -99,14 +99,14 @@ module.exports = StyleSheet.create({
     alignSelf: 'center'
   },
   previewContainer: {
-    height: 300,
+    height: 275,
     flex: 1,
     marginTop: 10
   },
   preview: {
     flex: 1,
     alignSelf: 'stretch',
-    height: 300
+    height: 275
   },
   textInput: {
     margin: 10,
@@ -138,5 +138,11 @@ module.exports = StyleSheet.create({
   },
   sliderThumb: {
     backgroundColor: colors.text
+  },
+  loading: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginTop: 30
   }
 });

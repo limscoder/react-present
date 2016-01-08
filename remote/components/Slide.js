@@ -1,4 +1,5 @@
-import React, { Component, PanResponder, PropTypes, Text, View } from 'react-native';
+import React, { Component, PanResponder, PropTypes, Text, TouchableOpacity, View } from 'react-native';
+import Loading from './Loading';
 import SlideContent from './SlideContent';
 import Timer from './Timer';
 import styles from './styles';
@@ -12,36 +13,56 @@ module.exports = class Slide extends Component {
     totalSlides: PropTypes.number.isRequired,
     currentSlideHtml: PropTypes.string.isRequired,
     currentSlideNotes: PropTypes.string.isRequired,
+    isLoadingSlide: PropTypes.bool.isRequired,
     elapsedTime: PropTypes.number.isRequired
   };
 
   componentWillMount() {
-    this._panResponder = PanResponder.create({
-      onStartShouldSetPanResponder: (evt, gestureState) => true,
-      onStartShouldSetPanResponderCapture: (evt, gestureState) => true,
-      onMoveShouldSetPanResponder: (evt, gestureState) => true,
-      onMoveShouldSetPanResponderCapture: (evt, gestureState) => true,
+    const isSwiping =  (ext, gestureState) => Math.abs(gestureState.dx) > 3;
+
+    this.panResponder = PanResponder.create({
+      onMoveShouldSetPanResponder: isSwiping,
+      onMoveShouldSetPanResponderCapture: isSwiping,
+      onPanResponderTerminationRequest: (evt, gestureState) => true,
       onPanResponderRelease: (evt, gestureState) => {
-        (gestureState.dx < 0 ? this.props.onPrev : this.props.onNext)();
+        if (!this.props.isLoadingSlide) {
+          (gestureState.dx < 0 ? this.props.onPrev : this.props.onNext)();
+        }
       }
     });
   }
 
   render() {
+    const onNext = this.props.isLoadingSlide ? () => {} : this.props.onNext;
+    const touchProps = {
+      onPress: onNext,
+      style: {
+        alignSelf: 'stretch'
+      }
+    };
+
     return (
-      <View style={ styles.slide }>
-        <View {...this._panResponder.panHandlers} >
+      <View style={ styles.slide } { ...this.panResponder.panHandlers }>
+        <TouchableOpacity { ...touchProps }>
           <Text style={ styles.h1 }>
             { this.props.currentSlide + 1 } / { this.props.totalSlides }
           </Text>
 
           <Timer elapsedTime={ this.props.elapsedTime } />
-        </View>
-        <SlideContent currentSlideHtml={ this.props.currentSlideHtml }
-                      currentSlideNotes={ this.props.currentSlideNotes }
-                      onNext={ this.props.onNext }
-                      onPrev={ this.props.onPrev } />
+        </TouchableOpacity>
+        <TouchableOpacity { ...touchProps }>
+          { this._renderSlideContent() }
+        </TouchableOpacity>
       </View>
     );
+  }
+
+  _renderSlideContent() {
+    if (this.props.isLoadingSlide) {
+      return <Loading />;
+    }
+
+    return  <SlideContent currentSlideHtml={ this.props.currentSlideHtml }
+                          currentSlideNotes={ this.props.currentSlideNotes } />;
   }
 };

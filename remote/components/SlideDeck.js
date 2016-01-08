@@ -11,6 +11,7 @@ module.exports = class SlideDeck extends Component {
     selectedSlide: PropTypes.number.isRequired,
     currentSlideHtml: PropTypes.string.isRequired,
     currentSlideNotes: PropTypes.string.isRequired,
+    isLoadingSlide: PropTypes.bool.isRequired,
     elapsedTime: PropTypes.number.isRequired,
     onNext: PropTypes.func.isRequired,
     onPrev: PropTypes.func.isRequired,
