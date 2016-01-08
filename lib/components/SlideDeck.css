@@ -100,3 +100,30 @@ code {
 .rcp-ProgressIndicator-cell--active {
   background-color: black;
 }
+
+# styles when displayed within remote mobile app
+
+.remote {
+  background-color: red;
+}
+
+.remote img {
+  background-color: magenta;
+  border: 1px solid grey;
+  width: 40px;
+  height: 40px;
+}
+
+.remote .rcp-SlideDeck-Body {
+  position: relative;
+  height: 300px;
+  width: 100%;
+  font-size: 12px;
+}
+
+.remote .rcp-CodeBlock {
+  background-color: blue;
+  border: 1px solid grey;
+  width: 40px;
+  height: 40px;
+}

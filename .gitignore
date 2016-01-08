@@ -2,3 +2,5 @@ lib/index.js
 dist
 node_modules
 .DS_Store
+*.keystore
+npm-debug.log

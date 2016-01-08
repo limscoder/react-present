@@ -44,10 +44,6 @@ module.exports = {
         loaders: ['react-hot', 'babel?cacheDirectory&loose=es6.classes&optional=runtime&stage=0']
       },
       {
-        test: /\.css$/,
-        loader: ExtractTextPlugin.extract('style-loader', 'css-loader?-advanced!autoprefixer-loader?{browsers:["last 2 version", "ie >= 9"]}')
-      },
-      {
         test: /\.((gif)|(png)|(jpg)|(html))$/,
         loader: 'file?name=[name].[ext]'
       }
@@ -57,7 +53,6 @@ module.exports = {
   plugins: [
     new webpack.optimize.DedupePlugin(),
     new webpack.optimize.OccurenceOrderPlugin(true),
-    new webpack.optimize.AggressiveMergingPlugin(),
-    new ExtractTextPlugin('./index.css', { allChunks: true, disable: false }),
+    new webpack.optimize.AggressiveMergingPlugin()
   ]
 };

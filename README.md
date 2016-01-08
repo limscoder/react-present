@@ -6,6 +6,7 @@ Uses hot module loading via `webpack` for easy presentation development. Keyboar
 
  * [Example presentation](https://limscoder.github.io/react-present/pages/component-library-slides/index.html)
  * [See it in action (video)](https://www.youtube.com/watch?v=nQo0EdHNjto)
+ * Control presentations from a mobile device with the [remote control app](remote/README.md)
 
 ## View example presentation locally
 
@@ -47,6 +48,6 @@ Use the `CodeBlock` component to get js syntax highlighting and code editing.
 ## Package presentation as zip file
 
 Create a zip file containing a presentation within the `built-presentations` directory.
-Extract the zip file and open `index.html` to view the presentation. 
+Extract the zip file and open `index.html` to view the presentation.
 
     > npm run package {your-presentation-directory}
