@@ -26,7 +26,14 @@ module.exports = {
     return changeSlide(pairedState, newSlide);
   },
 
-  prevSlide() {},
+  prevSlide(slideState, pairedState) {
+    let newSlide = slideState.currentSlide - 1;
+    if (newSlide < 0 ) {
+      newSlide = slideState.totalSlides - 1;
+    }
+
+    return changeSlide(pairedState, newSlide);
+  },
 
   reset(pairedState) {
     changeSlide(pairedState, 0);
