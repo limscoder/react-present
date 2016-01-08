@@ -4,7 +4,7 @@ Mobile remote control for [react-present](../README.md).
 
 Switch slides, view slide previews and notes from your mobile device.
 
- * [Download the Android version from Google Play](https://play.google.com/apps/testing/com.github.limscoder.ReactPresent)
+ * [Download the Android version from Google Play](https://play.google.com/store/apps/details?id=com.github.limscoder.ReactPresent)
 
 ## Screenshot
 
@@ -36,9 +36,9 @@ A [react-native](https://facebook.github.io/react-native/) app on the mobile dev
  * Start emulator or connect device
 
     > emulator -avd ...
-    
+
     OR
-    
+
     > open /Applications/Xcode.app/Contents/Developer/Applications/Simulator.app
 
  * Run app in emulator or connected device
