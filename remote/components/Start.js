@@ -23,10 +23,10 @@ module.exports = class Start extends Component {
           tap or swipe to advance
         </Text>
         <Text style={ styles.h3 }>
-          swipe right to reverse
+          to get pair code:
         </Text>
         <Text style={ styles.h3 }>
-          get pair code: press space in browser
+          press space in browser
         </Text>
         { warning }
         <TextInput style={ styles.textInput }
