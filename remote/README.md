@@ -4,15 +4,12 @@ Mobile remote control for [react-present](../README.md).
 
 Switch slides, view slide previews and notes from your mobile device.
 
+ * [See it in action on iOS (video)](https://youtu.be/y7Jlh85SpAs)
  * [Download the Android version from Google Play](https://play.google.com/store/apps/details?id=com.github.limscoder.ReactPresent)
 
 ## Screenshot
 
 ![](../lib/monster-trucking/images/device.png)
-
-## See the remote in action
-
-[![See the remote in action](http://img.youtube.com/vi/y7Jlh85SpAs/0.jpg)](https://youtu.be/y7Jlh85SpAs")
 
 ## Pairing mobile device
 
