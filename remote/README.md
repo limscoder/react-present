@@ -10,6 +10,10 @@ Switch slides, view slide previews and notes from your mobile device.
 
 ![](../lib/monster-trucking/images/device.png)
 
+## See the remote in action
+
+[![See the remote in action](http://img.youtube.com/vi/y7Jlh85SpAs/0.jpg)](https://youtu.be/y7Jlh85SpAs")
+
 ## Pairing mobile device
 
 The presentation browser and the remote device must both be connected to the internet for pairing.
