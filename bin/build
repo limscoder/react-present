@@ -3,8 +3,8 @@
 SLIDE_LIST="$1"
 if [ -z $SLIDE_LIST ]
 then
-  SLIDE_LIST="component-library-slides"
+  SLIDE_LIST="component-library"
 fi
 
-sed "s|--slide-list-dir--|$SLIDE_LIST|g" ./lib/index.tpl.js > ./lib/index.js
+sed "s|--slide-list-dir--|../presentations/$SLIDE_LIST|g" ./lib/index.tpl.js > ./lib/index.js
 webpack

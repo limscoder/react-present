@@ -20,7 +20,7 @@ Open `dist/index.html` in your browser.
 Fork and clone the repo, then:
 
     > npm install
-    > cp -r ./lib/component-library-slides ./lib/{your-presentation-directory}
+    > cp -r ./presentations/component-library-slides ./presentations/{your-presentation-directory}
     > npm run build-dev {your-presentation-directory}
 
 Navigate to `http://localhost:9001` in your browser. Make changes to `{your-presentation-title}/slideList`, and they should be hot-loaded into your browser whenever you save.

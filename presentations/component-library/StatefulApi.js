@@ -1,5 +1,5 @@
 import React from 'react';
-import CodeBlock from '../components/CodeBlock';
+import CodeBlock from '../../lib/components/CodeBlock';
 
 const statefulCode = `export default React.createClass({
   propTypes: {
