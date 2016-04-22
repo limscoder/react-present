@@ -1,11 +1,11 @@
 {
-  "name": "react-composition-presentation",
+  "name": "react-present",
   "version": "0.0.1",
-  "description": "A presentation about composition patterns in React.",
-  "main": "dist/slidedeck.js",
+  "description": "A simple, lightweight framework for creating presentations quickly using React components for slides.",
+  "main": "lib/index.html",
   "repository": {
     "type": "git",
-    "url": "https://github.com/limscoder/react-composition-presentation"
+    "url": "https://github.com/limscoder/react-present"
   },
   "scripts": {
     "build": "./bin/build",
