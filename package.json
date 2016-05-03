@@ -19,7 +19,7 @@
   ],
   "author": "Dave Thompson",
   "license": "MIT",
-  "devDependencies": {
+  "dependencies": {
     "autoprefixer-loader": "^2.0.0",
     "babel": "^5.6.14",
     "babel-core": "^5.6.15",
@@ -30,21 +30,21 @@
     "css-loader": "^0.15.1",
     "extract-text-webpack-plugin": "^0.8.2",
     "file-loader": "^0.8.4",
+    "history": "^1.17.0",
+    "markdown": "^0.5.0",
     "node-libs-browser": "^0.5.2",
     "node-sass": "^3.2.0",
-    "react": "^0.13.3",
-    "react-ace": "^2.5.0",
+    "pubnub": "^3.7.18",
+    "raw-loader": "^0.5.1",
+    "react": "^15.0.2",
+    "react-ace": "^3.4.1",
+    "react-addons-css-transition-group": "^15.0.2",
+    "react-dom": "^15.0.2",
     "react-hot-loader": "^1.2.7",
     "react-router": "^1.0.0-rc1",
     "sass-loader": "^1.0.2",
     "style-loader": "^0.12.3",
     "webpack": "^1.10.0",
     "webpack-dev-server": "^1.10.1"
-  },
-  "dependencies": {
-    "history": "^1.17.0",
-    "markdown": "^0.5.0",
-    "pubnub": "^3.7.18",
-    "raw-loader": "^0.5.1"
   }
 }
