@@ -54,5 +54,5 @@ Extract the zip file and open `index.html` to view the presentation.
 
 ## Screen sharing and remote meetings
 
-Slide transitions cause some screen sharing apps like WebEx have significant lag.
+Slide transitions cause some screen sharing apps like WebEx to have significant lag.
 Disable transitions by pressing `ctrl-t`.

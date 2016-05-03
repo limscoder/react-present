@@ -9,6 +9,7 @@ import RuntimePlatformCode from './RuntimePlatformCode';
 import PlatformCode from './PlatformCode';
 import NativeCode from './NativeCode';
 import NativeComponents from './NativeComponents';
+import Gestures from './Gestures';
 import WebView from './WebView';
 import Fetch from './Fetch';
 import Reuse from './Reuse';
@@ -27,6 +28,7 @@ const slideComponents = [
   PlatformCode,
   NativeCode,
   NativeComponents,
+  Gestures,
   WebView,
   Fetch,
   Reuse,
