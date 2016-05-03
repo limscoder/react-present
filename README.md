@@ -51,3 +51,8 @@ Create a zip file containing a presentation within the `built-presentations` dir
 Extract the zip file and open `index.html` to view the presentation.
 
     > npm run package {your-presentation-directory}
+
+## Screen sharing and remote meetings
+
+Slide transitions cause some screen sharing apps like WebEx have significant lag.
+Disable transitions by pressing `ctrl-t`.
