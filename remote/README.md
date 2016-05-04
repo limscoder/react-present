@@ -21,7 +21,7 @@ Enter the pairing code on the start page of the remote app and tap the screen.
 
 A [react-native](https://facebook.github.io/react-native/) app on the mobile device uses [PubNub](https://www.pubnub.com/) to communicate with the presentation running in a browser.
 
-![](../lib/monster-trucking/images/remote.png)
+![](../presentations/monster-trucking/images/remote.png)
 
 ## Development
 
