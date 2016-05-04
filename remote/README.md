@@ -9,7 +9,7 @@ Switch slides, view slide previews and notes from your mobile device.
 
 ## Screenshot
 
-![](../lib/monster-trucking/images/device.png)
+![](../presentations/monster-trucking/images/device.png)
 
 ## Pairing mobile device
 
