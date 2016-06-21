@@ -1,8 +1,11 @@
 import React from 'react';
 
 import Intro from './Intro';
+import Reducks from './Reducks';
+import Wtf from './Wtf';
 import Glue from './Glue';
 import Support from './Support';
+import Present from './Present';
 import JSX from './JSX';
 import Styles from './Styles';
 import RuntimePlatformCode from './RuntimePlatformCode';
@@ -16,12 +19,17 @@ import Reuse from './Reuse';
 import Update from './Update';
 import Testing from './Testing';
 import Debugging from './Debugging';
-import Maturity from './Maturity';
+import Distribution from './Distribution';
+import ParticleSun from './ParticleSun';
+import Outro from './Outro';
 
 const slideComponents = [
   Intro,
+  Reducks,
+  Wtf,
   Glue,
   Support,
+  Present,
   JSX,
   Styles,
   RuntimePlatformCode,
@@ -33,9 +41,11 @@ const slideComponents = [
   Fetch,
   Reuse,
   Debugging,
-  Update,
   Testing,
-  Maturity
+  Distribution,
+  Update,
+  ParticleSun,
+  Outro
 ];
 
 export default slideComponents.map((SlideComponent, idx) => {

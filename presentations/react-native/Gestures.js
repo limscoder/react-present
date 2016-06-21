@@ -4,7 +4,7 @@ export default class Slide extends React.Component {
   render() {
     return (
       <div>
-        <h1>How to respond to touch events and gestures?</h1>
+        <h1>touch events and gestures</h1>
 
         <ul>
           <li>Low-level multi-touch gesture interface in JS: Touchable component</li>

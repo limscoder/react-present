@@ -16,7 +16,7 @@ export default class Slide extends React.Component {
   render() {
     return (
       <div>
-        <h1>How do you use platform specific JS at run time?</h1>
+        <h1>platform specific JS at runtime</h1>
 
         <CodeBlock>
           { platformCode }

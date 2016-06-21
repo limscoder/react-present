@@ -4,12 +4,11 @@ export default class Slide extends React.Component {
   render() {
     return (
       <div>
-        <h1>What can you reuse between web and native?</h1>
+        <h1>reused between web and native</h1>
 
         <ul>
           <li><h3>Everything except the views and routing</h3></li>
           <li>Data fetches</li>
-          <li>Business logic</li>
           <li>Redux reducers, selectors, and actions</li>
         </ul>
 

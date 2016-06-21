@@ -4,7 +4,7 @@ export default class Slide extends React.Component {
   render() {
     return (
       <div>
-        <h1>Native UI Views Glued Together with Javascript</h1>
+        <h1>native UI views glued together with javascript</h1>
 
         <ul>
           <li>Native views implement an interface so they can be consumed as a React component</li>

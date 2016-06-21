@@ -26,7 +26,7 @@ export default class Slide extends React.Component {
   render() {
     return (
       <div>
-        <h1>How do you style a component?</h1>
+        <h1>styling components</h1>
 
         <CodeBlock>
           { componentCode }

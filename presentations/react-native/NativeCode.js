@@ -18,7 +18,7 @@ export default class Slide extends React.Component {
   render() {
     return (
       <div>
-        <h1>How is a native function called?</h1>
+        <h1>native functions</h1>
 
         <CodeBlock>
           { nativeCode }

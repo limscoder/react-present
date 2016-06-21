@@ -30,7 +30,7 @@ export default class Slide extends React.Component {
   render() {
     return (
       <div>
-        <h1>How is a native component created?</h1>
+        <h1>native components</h1>
 
         <CodeBlock>
           { nativeCode }

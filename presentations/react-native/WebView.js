@@ -17,7 +17,7 @@ export default class Slide extends React.Component {
   render() {
     return (
       <div>
-        <h1>Can HTML content be embedded within a native app?</h1>
+        <h1>embedding HTML</h1>
 
         <CodeBlock id="html">
           { htmlCode }
