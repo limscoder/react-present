@@ -7,22 +7,22 @@ export default class Slide extends React.Component {
   render() {
     return (
       <div>
-        <h1>platform specific modules at build time</h1>
+        <h1>Platform specific builds</h1>
 
-        <CodeBlock>
-          { importCode }
-        </CodeBlock>
-
-        <ul>
+        <ul style={ {} }>
           <li>
             <pre>/components</pre>
             <ul>
               <li><pre>-- AvatarPicker.ios.js</pre></li>
               <li><pre>-- AvatarPicker.android.js</pre></li>
-              <li><pre>-- AvatarPicker.osx.js</pre></li>
+              <li><pre>-- AvatarPicker.macos.js</pre></li>
             </ul>
           </li>
         </ul>
+
+        <CodeBlock>
+          { importCode }
+        </CodeBlock>
       </div>
     );
   }

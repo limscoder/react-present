@@ -1,17 +1,15 @@
 import React from 'react';
+import ListBlock from '../../lib/components/ListBlock';
 
-export default class Slide extends React.Component {
-  render() {
-    return (
-      <div>
-        <h1>native UI views glued together with javascript</h1>
+export default function Slide() {
+  const props = {
+    title: 'Native UI + JS logic',
+    items: [
+      <span>Native UI widgets <span className="rcp-Highlight">-></span> React components</span>,
+      <span>UI composed with <span className="rcp-Highlight">JSX</span> elements</span>,
+      <span><span className="rcp-Highlight">JS</span> for state, data fetching, and other logic</span>
+    ]
+  };
 
-        <ul>
-          <li>Native views implement an interface so they can be consumed as a React component</li>
-          <li>UI is composed with JSX and automatically updated when props change</li>
-          <li>Data fetching, state storage, business logic is in Javascript</li>
-        </ul>
-      </div>
-    );
-  }
+  return <ListBlock { ...props } />;
 }

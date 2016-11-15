@@ -1,24 +1,28 @@
 import React from 'react';
+import ListBlock from '../../lib/components/ListBlock';
 
-export default class Slide extends React.Component {
-  render() {
-    return (
-      <div>
-        <ul>
-          <li><h3>Officially Supported Platforms</h3></li>
-          <li>Android</li>
-          <li>iOS</li>
-          <li>Announced: Universal Windows Platform (Windows, Windows Mobile, XBox)</li>
-        </ul>
+export default function Slide() {
+  const officialProps = {
+    title: 'Official Platforms',
+    items: [
+      'iOS',
+      'Android'
+    ]
+  };
 
-        <br />
-        <br />
+  const communityProps = {
+    title: 'Community Platforms',
+    items: [
+      'Universal Windows Platform (Windows, Windows Mobile, XBox)',
+      'MacOS'
+    ]
+  };
 
-        <ul>
-          <li><h3>Community Supported Platforms</h3></li>
-          <li>OSX/Cocoa</li>
-        </ul>
-      </div>
-    );
-  }
+  return (
+    <div>
+      <ListBlock { ...officialProps } />
+      <br />
+      <ListBlock { ...communityProps } />
+    </div>
+  );
 }

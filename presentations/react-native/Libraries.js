@@ -3,10 +3,11 @@ import ListBlock from '../../lib/components/ListBlock';
 
 export default function Slide() {
   const props = {
-    title: 'Testing',
+    title: 'Component libraries',
     items: [
-      <span>Native code -> native test frameworks</span>,
-      <span>Test JS code with <span className="rcp-Highlight">Jest snapshots</span></span>
+      'NativeBase',
+      'React Native Elements',
+      'MaterialKit'
     ]
   };
 

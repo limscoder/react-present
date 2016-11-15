@@ -1,4 +1,5 @@
 body {
+  background-color: #1c1c1c;
   margin: 0;
   overflow: hidden;
 }
@@ -8,8 +9,24 @@ a, a:hover, a:visited {
   text-decoration: none;
 }
 
+h1 {
+  font-size: 70px;
+}
+
 code {
   color: #222;
+}
+
+.rcp-SlideDeck .ace_gutter-cell, .rcp-SlideDeck .ace_content {
+  background-color: #1c1c1c;
+}
+
+.rcp-SlideDeck .ace-cobalt .ace_marker-layer .ace_active-line {
+  background: none;
+}
+
+.rcp-Highlight {
+  color: #80FFBB
 }
 
 .rcp-SlideDeck {
@@ -19,9 +36,12 @@ code {
 }
 
 .rcp-SlideDeck-Body {
+  align-items: center;
   color: white;
+  display: flex;
   font-family: helvetica;
   font-size: 28px;
+  justify-content: center;
   overflow: hidden;
   position: absolute;
   top: 0;
@@ -33,23 +53,15 @@ code {
   z-index: 10;
 }
 
-.rcp-SlideDeck-Body > div {
-  position: relative;
-  top: 0;
-  left: 0;
-  width: calc(100vw - 2rem);
-}
-
 .nextSlide-enter {
-  border-bottom-right-radius: 75%;
-  height: 0;
-  width: 0;
-  transition: width .75s ease-out, height .75s ease-out;
+  opacity: 0;
+  transform: translateX(30px);
+  transition: transform .75s ease-out, opacity .75s ease-out;
 }
 
 .nextSlide-enter.nextSlide-enter-active {
-  height: 125%;
-  width: 125%;
+  opacity: 1;
+  transform: translateX(0);
 }
 
 .nextSlide-leave {
@@ -65,7 +77,23 @@ code {
 }
 
 .rcp-SlideDeck-Body li {
-  margin-top: 1.5rem;
+  font-size: 40px;
+  margin: 1.5rem 0;
+}
+
+.rcp-ListBlock--List li:before {
+  content: "◈ ";
+  color: #80FFBB;
+}
+
+.rcp-ListBlock--Title {
+  border-bottom: solid #5b5b5b 1px;
+  padding: 0 2rem 0.3rem 1rem;
+  text-align: left;
+}
+
+.rcp-ListBlock--List {
+  padding: 0 1rem;
 }
 
 .rcp-CodeBlock {
@@ -76,7 +104,7 @@ code {
 }
 
 .rcp-CodeBlock .ace_editor {
-  font-size: 18px;
+  font-size: 22px;
 }
 
 .rcp-ProgressIndicator {
@@ -98,7 +126,7 @@ code {
 }
 
 .rcp-ProgressIndicator-cell--active {
-  background-color: black;
+  background-color: #FF80E1;
 }
 
 # styles when displayed within remote mobile app
@@ -116,9 +144,23 @@ code {
 
 .remote .rcp-SlideDeck-Body {
   position: relative;
-  height: 300px;
   width: 100%;
-  font-size: 12px;
+  margin: 0;
+  padding: 0;
+}
+
+.remote .rcp-SlideDeck-Body h1 {
+  font-size: 16px;
+}
+
+.remote .rcp-SlideDeck-Body,
+.remote .rcp-SlideDeck-Body li,
+.remote .rcp-ListBlock--List li {
+  font-size: 14px;
+}
+
+.remote .rcp-ListBlock--List li:before {
+  content: ''
 }
 
 .remote .rcp-CodeBlock {

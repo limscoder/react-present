@@ -6,7 +6,7 @@ export default class Slide extends React.Component {
   render() {
     return (
       <div>
-        <h1>react-native and IoT devices</h1>
+        <h1><span className="rcp-Highlight">react-native</span> and IoT devices</h1>
         <img src={ imgSrc } />
       </div>
     );

@@ -6,12 +6,7 @@ export default class Slide extends React.Component {
   render() {
     return (
       <div>
-        <h1>debugging</h1>
-
-        <ul>
-          <li>JS only code changes are hot patched with no compilation required</li>
-          <li>In-app debugger + remote debugging in Chrome for JS code</li>
-        </ul>
+        <h1>Debugging in <span className="rcp-Highlight">chrome</span></h1>
 
         <video src={ videoSrc }
                autoPlay

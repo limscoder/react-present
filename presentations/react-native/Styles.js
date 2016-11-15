@@ -5,7 +5,7 @@ const componentCode = `/**
  * StyleSheets are defined in Javascript
  * and support a common subset of CSS.
  *
- * A simplified version of flexbox is the only layout option.
+ * Layout uses s simplified version of flexbox.
  */
 const styles = StyleSheet.create({
   content: {
@@ -16,17 +16,15 @@ const styles = StyleSheet.create({
   }
 });
 
-class NativeComponent extends React.Component {
-  render() {
-    return <View style={ styles.content } />;
-  }
+function StyledComponent() {
+  return <View style={ styles.content } />;
 }`;
 
 export default class Slide extends React.Component {
   render() {
     return (
       <div>
-        <h1>styling components</h1>
+        <h1>Styling components</h1>
 
         <CodeBlock>
           { componentCode }

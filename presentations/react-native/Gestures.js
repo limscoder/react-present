@@ -1,16 +1,16 @@
 import React from 'react';
 
-export default class Slide extends React.Component {
-  render() {
-    return (
-      <div>
-        <h1>touch events and gestures</h1>
+import ListBlock from '../../lib/components/ListBlock';
 
-        <ul>
-          <li>Low-level multi-touch gesture interface in JS: Touchable component</li>
-          <li>May need to drop down to native level for more complicated gestures</li>
-        </ul>
-      </div>
-    );
-  }
+export default function Slide() {
+  const props = {
+    title: 'Touch events and gestures',
+    items: [
+      <span>Taps: <span className="rcp-Highlight">TouchableHighlight</span></span>,
+      <span>Lower-level touch: <span className="rcp-Highlight">PanResponder</span></span>,
+      'May need to drop down to native level'
+    ]
+  };
+
+  return <ListBlock { ...props } />;
 }

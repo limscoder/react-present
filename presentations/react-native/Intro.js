@@ -1,12 +1,14 @@
 import React from 'react';
 
-const imgSrc = require('./images/cell-phone.gif');
+const phoneSrc = require('./images/cell-phone.gif');
+const reactSrc = require('./images/react.png');
 
 export default class Slide extends React.Component {
   render() {
     return (
       <div>
-        <img style={ {marginTop: 200} } src={ imgSrc } />
+        <img src={ reactSrc } style={ {marginRight: '2rem'} }/>
+        <img src={ phoneSrc } />
       </div>
     );
   }

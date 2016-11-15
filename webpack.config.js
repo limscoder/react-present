@@ -44,7 +44,7 @@ module.exports = {
         loaders: ['react-hot', 'babel?cacheDirectory&loose=es6.classes&optional=runtime&stage=0']
       },
       {
-        test: /\.((gif)|(png)|(jpg)|(html)|(mov))$/,
+        test: /\.((gif)|(png)|(jpg)|(html)|(mp4)|(mov))$/,
         loader: 'file?name=[name].[ext]'
       }
     ]

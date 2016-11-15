@@ -9,7 +9,7 @@ const htmlCode = `class NativeComponent extends React.Component {
 
 const urlCode = `class NativeComponent extends React.Component {
   render {
-    return <WebView url="http://rallydev.com" />;
+    return <WebView url="http://ca.com" />;
   }
 }`;
 
@@ -17,7 +17,7 @@ export default class Slide extends React.Component {
   render() {
     return (
       <div>
-        <h1>embedding HTML</h1>
+        <h1>Embedding HTML</h1>
 
         <CodeBlock id="html">
           { htmlCode }

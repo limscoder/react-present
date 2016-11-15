@@ -1,17 +1,14 @@
 import React from 'react';
 
-const videoSrc = require('./images/quack.mov');
+const videoSrc = require('./images/quack.mp4');
 
 export default class Slide extends React.Component {
   render() {
-    const highlightStyle = {
-      color: 'black'
-    };
-
     return (
       <div>
-        <h1><span style={ highlightStyle }>r</span>evolving <span style={ highlightStyle }>duck</span> <span style={ highlightStyle }>s</span>imulator</h1>
+        <h1><span className="rcp-Highlight">r</span>evolving <span className="rcp-Highlight">duck</span> <span className="rcp-Highlight">s</span>imulator</h1>
         <video src={ videoSrc }
+               height={ 300 }
                autoPlay
                loop
                muted />

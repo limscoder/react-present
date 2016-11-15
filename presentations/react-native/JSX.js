@@ -1,7 +1,7 @@
 import React from 'react';
 import CodeBlock from '../../lib/components/CodeBlock';
 
-const componentCode = `class NativeComponent extends React.Component {
+const componentCode = `class ComposedComponent extends React.Component {
   render {
     <View>
       <Text>{ this.props.name }</Text>
@@ -15,7 +15,7 @@ export default class Slide extends React.Component {
   render() {
     return (
       <div>
-        <h1>react-native component</h1>
+        <h1><span className="rcp-Highlight">react-native</span> component</h1>
 
         <CodeBlock>
           { componentCode }

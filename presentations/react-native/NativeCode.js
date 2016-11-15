@@ -4,21 +4,19 @@ import CodeBlock from '../../lib/components/CodeBlock';
 const nativeCode = `// Use the @ReactMethod annotation to
 // expose a native Android method.
 //
-// JS types bool, string, number, object, and array
-// are automatically converted to the correct type.
+// react-native automatically coerces arguments
+// and return value types between JS and native
 @ReactMethod
-public String getAvatarBytes(int xResolution, int yResolution) {
-  return NativeAndroidApi.takePhoto()
-                         .resize(xResolution, yResolution)
-                         .base64();
-}
-`;
+public void sendText(String message, int to) {
+  SmsManager smsManager = SmsManager.getDefault();
+  smsManager.sendTextMessage(to, message);
+}`;
 
 export default class Slide extends React.Component {
   render() {
     return (
       <div>
-        <h1>native functions</h1>
+        <h1>Native functions</h1>
 
         <CodeBlock>
           { nativeCode }
