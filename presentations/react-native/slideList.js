@@ -27,6 +27,7 @@ import Update from './Update';
 import Testing from './Testing';
 import Jest from './Jest';
 import Debugging from './Debugging';
+import RunningOnDevice from './RunningOnDevice';
 import Performance from './Performance';
 import PerformanceFlameChart from './PerformanceFlameChart';
 import Distribution from './Distribution';
@@ -57,6 +58,7 @@ const slideComponents = [
   StateManagement,
   Fetch,
   Reuse,
+  RunningOnDevice,
   Debugging,
   Performance,
   PerformanceFlameChart,
