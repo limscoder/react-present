@@ -1,17 +1,17 @@
 import React from 'react';
+import ListBlock from 'components/ListBlock';
 
-const notes = `
- * remember to make fun of angular
- * more notes
-`;
+const listItems = [
+  'What problem are we solving?',
+  'What are the options?',
+  'What is React?',
+];
 
 export default class Slide extends React.Component {
-  static notes = notes
-
   render() {
     return (
       <div>
-        <h1>React.js by Facebook</h1>
+        <ListBlock title="What" items={ listItems }/>
       </div>
     );
   }

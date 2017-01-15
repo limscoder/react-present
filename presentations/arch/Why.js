@@ -1,17 +1,15 @@
 import React from 'react';
+import ListBlock from 'components/ListBlock';
 
-const notes = `
- * remember to make fun of angular
- * more notes
-`;
+const listItems = [
+  '?',
+];
 
 export default class Slide extends React.Component {
-  static notes = notes
-
   render() {
     return (
       <div>
-        <h1>"Hertyhujklello world"</h1>
+        <ListBlock title="What" items={ listItems }/>
       </div>
     );
   }

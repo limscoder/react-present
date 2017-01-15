@@ -1,15 +1,19 @@
 import React from 'react';
 
-import Intro from './Intro';
+import Title from './Title';
 import What from './What';
-import Questions from './Questions';
-import Why from './Why';
+import Intro from './Intro';
+import TheProblem from './TheProblem';
+import TheOptions from './TheOptions';
+import TheReactWay from './TheReactWay';
 
 const slideComponents = [
-  Intro,
-  Questions,
-  Why,
+  Title,
   What,
+  Intro,
+  TheProblem,
+  TheOptions,
+  TheReactWay,
 ];
 
 export default slideComponents.map((SlideComponent, idx) => {

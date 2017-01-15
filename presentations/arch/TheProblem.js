@@ -5,7 +5,7 @@ export default class Slide extends React.Component {
   render() {
     return (
       <div>
-        <h1>What</h1>
+        <h2>What</h2>
       </div>
     );
   }
