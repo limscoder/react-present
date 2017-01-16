@@ -7,9 +7,11 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin');
 module.exports = {
   context: __dirname,
 
-  entry: {
-    index: './lib/index.js'
-  },
+  entry: [
+    'webpack-dev-server/client?http://0.0.0.0:9001', // WebpackDevServer host and port
+    'webpack/hot/only-dev-server', 
+    './lib/index.js'
+  ],
 
   output: {
     publicPath: '',
