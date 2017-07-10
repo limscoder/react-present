@@ -11,7 +11,7 @@ Uses hot module loading via `webpack` for easy presentation development. Keyboar
 ## View example presentation locally
 
     > npm install
-    > npm run build
+    > npm start
 
 Open `dist/index.html` in your browser.
 

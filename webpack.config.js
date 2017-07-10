@@ -1,26 +1,23 @@
-'use strict';
-
-var path = require('path');
-var webpack = require('webpack');
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
+var path = require("path");
+var webpack = require("webpack");
+var ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 module.exports = {
   context: __dirname,
 
   entry: {
-    index: './lib/index.js'
+    index: "./lib/index.js"
   },
 
   output: {
-    publicPath: '',
-    path: 'dist/',
-    filename: 'index.js',
-    library: 'index',
-    libraryTarget: 'var'
+    publicPath: "",
+    path: path.join(__dirname, "dist/"),
+    filename: "index.js",
+    library: "index",
+    libraryTarget: "var"
   },
 
-  debug: true,
-  devtool: 'source-map',
+  devtool: "source-map",
 
   stats: {
     colors: true,
@@ -28,12 +25,15 @@ module.exports = {
   },
 
   resolve: {
-    modulesDirectories: ['lib', 'node_modules'],
-    extensions: ['', '.js', '.html']
+    modules: [
+      path.join(__dirname, "lib"),
+      path.join(__dirname, "node_modules")
+    ],
+    extensions: [".js", ".html"]
   },
 
   resolveLoader: {
-    root: path.join(__dirname, 'node_modules')
+    modules: [path.join(__dirname, "node_modules")]
   },
 
   module: {
@@ -41,18 +41,19 @@ module.exports = {
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        loaders: ['react-hot', 'babel?cacheDirectory&loose=es6.classes&optional=runtime&stage=0']
+        loaders: ["babel-loader"]
       },
       {
         test: /\.((gif)|(png)|(jpg)|(html)|(mp4)|(mov))$/,
-        loader: 'file?name=[name].[ext]'
+        loader: "file-loader?name=[name].[ext]"
       }
     ]
   },
 
   plugins: [
-    new webpack.optimize.DedupePlugin(),
-    new webpack.optimize.OccurenceOrderPlugin(true),
+    new webpack.LoaderOptionsPlugin({
+      debug: true
+    }),
     new webpack.optimize.AggressiveMergingPlugin()
   ]
 };
