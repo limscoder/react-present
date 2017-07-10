@@ -1,6 +1,6 @@
 {
   "name": "react-present",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "A simple, lightweight framework for creating presentations quickly using React components for slides.",
   "main": "lib/index.html",
   "repository": {
@@ -28,7 +28,7 @@
     "prop-types": "^15.5.10",
     "pubnub": "^3.7.18",
     "react": "^15.6.1",
-    "react-ace": "^5.1.0",
+    "react-ace": "^3.4.1",
     "react-addons-css-transition-group": "^15.0.2",
     "react-dom": "^15.6.1",
     "react-router": "^3.0.5"
