@@ -47,7 +47,7 @@ module.exports = {
         loaders: ["babel-loader"]
       },
       {
-        test: /\.((gif)|(png)|(jpg)|(html)|(mp4)|(mov))$/,
+        test: /\.((gif)|(png)|(jpg)|(html)|(mp4)|(mov)|(m4a))$/,
         loader: "file-loader?name=[name].[ext]"
       }
     ]

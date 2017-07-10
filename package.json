@@ -23,6 +23,8 @@
   "dependencies": {
     "brace": "^0.5.1",
     "classnames": "^2.1.2",
+    "glamor": "^3.0.0-2",
+    "glamorous": "^3.23.5",
     "history": "^3.3.0",
     "markdown": "^0.5.0",
     "prop-types": "^15.5.10",
