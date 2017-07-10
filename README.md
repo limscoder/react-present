@@ -13,7 +13,7 @@ Uses hot module loading via `webpack` for easy presentation development. Keyboar
     > npm install
     > npm start
 
-Open `dist/index.html` in your browser.
+Open `http://localhost:9001` in your browser.
 
 ## Create your presentation
 
@@ -27,13 +27,13 @@ Navigate to `http://localhost:9001` in your browser. Make changes to `{your-pres
 
 ## Create your slides
 
-Slides are normal React components that can be written with JSX and ES6. You're free to include whatever markup and CSS you'd like in your slides.
+Slides are normal React components that can be written with JSX and ES6. You're free to include whatever markup and styles you'd like.
 
 Include and order slides within `{your-presentation-title}/slideList`.
 
-Require CSS directly from within slide source code.
+I recommend using [glamorous](https://github.com/paypal/glamorous) to style slides, but CSS can also be imported from within slide source code.
 
-    require('./my-slide-styles.css');
+    import './my-slide-styles.css';
 
 Use the `CodeBlock` component to get js syntax highlighting and code editing.
 
