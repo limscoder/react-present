@@ -1,9 +1,9 @@
-import React from 'react';
-import CodeBlock from '../../lib/components/CodeBlock';
+import React from "react";
+import CodeBlock from "../../lib/components/CodeBlock";
 
 const statefulCode = `export default React.createClass({
   propTypes: {
-    initiallyExpanded: React.PropTypes.bool
+    initiallyExpanded: PropTypes.bool
   },
 
   getInitialState() {
@@ -30,7 +30,7 @@ export default class Slide extends React.Component {
         <h1>Mo' state Mo' problems</h1>
 
         <CodeBlock>
-          { statefulCode }
+          {statefulCode}
         </CodeBlock>
       </div>
     );

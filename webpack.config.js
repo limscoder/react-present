@@ -17,6 +17,9 @@ module.exports = {
     libraryTarget: "var"
   },
 
+  devServer: {
+    historyApiFallback: true
+  },
   devtool: "source-map",
 
   stats: {

@@ -1,5 +1,5 @@
-import React from 'react';
-import CodeBlock from '../../lib/components/CodeBlock';
+import React from "react";
+import CodeBlock from "../../lib/components/CodeBlock";
 
 const statelessCode = `export default class Expander extends React.Component {
   render() {
@@ -13,8 +13,8 @@ const statelessCode = `export default class Expander extends React.Component {
 }
 
 Expander.propTypes = {
-  expanded: React.PropTypes.bool,
-  onClick: React.PropTypes.func
+  expanded: PropTypes.bool,
+  onClick: PropTypes.func
 };`;
 
 export default class Slide extends React.Component {
@@ -26,7 +26,7 @@ export default class Slide extends React.Component {
         <p>Remove state and mutating methods like <code>toggle</code></p>
 
         <CodeBlock>
-          { statelessCode }
+          {statelessCode}
         </CodeBlock>
       </div>
     );

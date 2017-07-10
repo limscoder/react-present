@@ -1,11 +1,11 @@
-import React from 'react';
-import CodeBlock from '../../lib/components/CodeBlock';
+import React from "react";
+import CodeBlock from "../../lib/components/CodeBlock";
 
 const statelessCode = `import immutable from 'immutable';
 
 DropDown.propTypes = {
-  options: React.PropTypes.instanceOf(Immutable.Map),
-  items: React.PropTypes.instanceOf(Immutable.Array)
+  options: PropTypes.instanceOf(Immutable.Map),
+  items: PropTypes.instanceOf(Immutable.Array)
 };`;
 
 export default class Slide extends React.Component {
@@ -15,12 +15,28 @@ export default class Slide extends React.Component {
         <h1>Props should be immutable</h1>
 
         <ul>
-          <li>Use <code>immutablejs</code> data structures instead of <code>Object</code> and <code>Array</code></li>
-          <li>Harder to make mistakes, easier to debug, and easier to implement <code>shouldComponentUpdate</code></li>
+          <li>
+            Use
+            {" "}
+            <code>immutablejs</code>
+            {" "}
+            data structures instead of
+            {" "}
+            <code>Object</code>
+            {" "}
+            and
+            {" "}
+            <code>Array</code>
+          </li>
+          <li>
+            Harder to make mistakes, easier to debug, and easier to implement
+            {" "}
+            <code>shouldComponentUpdate</code>
+          </li>
         </ul>
 
         <CodeBlock>
-          { statelessCode }
+          {statelessCode}
         </CodeBlock>
       </div>
     );
