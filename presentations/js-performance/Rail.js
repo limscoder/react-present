@@ -1,5 +1,6 @@
 import React from 'react';
 import glamorous from 'glamorous';
+import Attribution from './components/Attribution';
 import Slide from './components/Slide';
 import Title from './components/Title';
 
@@ -26,5 +27,6 @@ export default function () {
         <Label><Emphasis>A</Emphasis>nimation</Label>
         <Label><Emphasis>R</Emphasis>esponse</Label>
       </Measurement>
+      <Attribution>- Paul Irish + Paul Lewis @ Google</Attribution>
     </Slide>);
 }

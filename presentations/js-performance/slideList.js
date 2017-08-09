@@ -16,6 +16,7 @@ import Response from './Response';
 import Animation from './Animation';
 import Plan from './Plan';
 import OptimizeLoad from './OptimizeLoad';
+import LargeImage from './LargeImage';
 import OptimizeNetwork from './OptimizeNetwork';
 import RemoveSequential from './RemoveSequential';
 import SequentialCode from './SequentialCode';
@@ -24,10 +25,14 @@ import LazyCode from './LazyCode';
 import OptimizeResponse from './OptimizeResponse';
 import OptimizeIdle from './OptimizeIdle';
 import OptimizeFramerate from './OptimizeFramerate';
+import SlowAnimationCode from './SlowAnimationCode';
+import FasterAnimationCode from './FasterAnimationCode';
 import OptimizedApp from './OptimizedApp';
 import WebPageTest from './WebPageTest';
 import PageSpeedTools from './PageSpeedTools';
+import RealLife from './RealLife';
 import FrameworkSpecific from './FrameworkSpecific';
+import Resources from './Resources';
 import Summary from './Summary';
 
 const slideComponents = [
@@ -39,14 +44,15 @@ const slideComponents = [
   DaveQuote,
   Measurement,
   UserExpectation,
-  Sparkle,
   Rail,
+  Sparkle,
   Load,
   Idle,
   Response,
   Animation,
   Plan,
   OptimizeLoad,
+  LargeImage,
   OptimizeNetwork,
   RemoveSequential,
   SequentialCode,
@@ -55,10 +61,14 @@ const slideComponents = [
   OptimizeResponse,
   OptimizeIdle,
   OptimizeFramerate,
+  SlowAnimationCode,
+  FasterAnimationCode,
   OptimizedApp,
+  RealLife,
   WebPageTest,
   PageSpeedTools,
   FrameworkSpecific,
+  Resources,
   Summary
 ];
 

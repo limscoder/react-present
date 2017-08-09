@@ -9,6 +9,6 @@ export default function () {
       <img src={freshSrc} alt="freshtracks" />
       <div><Link href="https://freshtracks.io/">freshtracks.io</Link></div>
       <br />
-      <div><Link href="https://github.com/limscoder/react-present">slides made with react-present: https://github.com/limscoder/react-present</Link></div>
+      <div><Link href="https://github.com/limscoder/react-present">slides made with react-present: <br /> https://github.com/limscoder/react-present</Link></div>
     </Slide>);
 }

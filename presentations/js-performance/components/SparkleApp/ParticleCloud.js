@@ -84,9 +84,9 @@ export default class ParticleCloud {
   animate() {
     this.activeParticles = (this.activeParticles || []).concat(initParticles(this.config));
 
-    if (!this._animate) {
-      this._animate = () => {
-        if (this._animate) {
+    if (!this.animateParticles) {
+      this.animateParticles = () => {
+        if (this.animateParticles) {
           const { ctx } = this.config;
           
           drawBackground(this.config);
@@ -94,14 +94,14 @@ export default class ParticleCloud {
             return drawParticle(this.config, particle);
           });
 
-          window.requestAnimationFrame(this._animate);
+          window.requestAnimationFrame(this.animateParticles);
         }
       };
-      this._animate();
+      this.animateParticles();
     }
   }
 
   end() {
-    this._animate = null;
+    this.animateParticles = null;
   }
 }
