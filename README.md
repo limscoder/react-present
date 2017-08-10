@@ -4,9 +4,14 @@ A simple, lightweight framework for creating presentations quickly using React c
 
 Uses hot module loading via `webpack` for easy presentation development. Keyboard, mouse, gui, and url navigation between slides via `react-router`. Code highlighting and editing via `react-ace`. Presentation app can be viewed entirely from static files without running a webserver, and can be easily hosted via [github pages](https://pages.github.com/).
 
- * [Example presentation](https://limscoder.github.io/react-present/pages/react-native)
+Presentations can be controlled from a mobile device with the [remote control app](remote/README.md).
+
+## Presentations
+
+ * [JS Performance](https://limscoder.github.io/react-present/pages/js-performance)
+ * [React Native](https://limscoder.github.io/react-present/pages/react-native)
+ * [React Component Library](https://limscoder.github.io/react-present/pages/component-library)
  * [See it in action (video)](https://www.youtube.com/watch?v=nQo0EdHNjto)
- * Control presentations from a mobile device with the [remote control app](remote/README.md)
 
 ## View example presentation locally
 
