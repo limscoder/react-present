@@ -50,6 +50,8 @@ Use the `CodeBlock` component to get js syntax highlighting and code editing.
       </CodeBlock>
     );
 
+Take a look at the [js performance slides](presentations/js-performance/slideList.js) for a best-practices example.
+
 ## Package presentation as zip file
 
 Create a zip file containing a presentation within the `built-presentations` directory.
