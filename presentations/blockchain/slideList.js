@@ -16,6 +16,7 @@ import NetworkParameters from './slides/NetworkParameters';
 import TransactionDetails from './slides/TransactionDetail';
 import Ethereum from './slides/Ethereum';
 import SmartContract from './slides/SmartContract';
+import Solidity from './slides/Solidity';
 import Uses from './slides/Uses';
 import Links from './slides/Links';
 
@@ -36,6 +37,7 @@ const slideComponents = [
   TransactionDetails,
   Ethereum,
   SmartContract,
+  Solidity,
   Uses,
   Links
 ];

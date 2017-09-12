@@ -8,8 +8,8 @@ export default function () {
     <Background>
       <Title>Link Dump</Title>
       <ul>
+<li>https://bitcoin.org/bitcoin.pdf</li>
 <li>https://www.ethereum.org/token </li>
-<li>https://proofofexistence.com/about </li>
 <li>https://blockchain.info/ </li>
 <li>https://en.bitcoin.it/wiki/Main_Page </li>
 <li>https://github.com/bitcoinbook/bitcoinbook </li>
