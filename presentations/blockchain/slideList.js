@@ -13,6 +13,7 @@ import Mining from './slides/Mining';
 import MineTransation from './slides/MineTransaction';
 import BlockBroadcast from './slides/BlockBroadcast';
 import NetworkParameters from './slides/NetworkParameters';
+import Forks from './slides/Forks';
 import TransactionDetails from './slides/TransactionDetail';
 import Ethereum from './slides/Ethereum';
 import SmartContract from './slides/SmartContract';
@@ -34,6 +35,7 @@ const slideComponents = [
   MineTransation,
   BlockBroadcast,
   NetworkParameters,
+  Forks,
   TransactionDetails,
   Ethereum,
   SmartContract,
