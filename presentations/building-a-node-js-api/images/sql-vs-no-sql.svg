@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="1400"
+   height="900"
+   viewBox="0 0 370.41666 238.12501"
+   version="1.1"
+   id="svg8"
+   inkscape:version="0.92.1 r15371"
+   sodipodi:docname="sql-vs-no-sql.svg"
+   inkscape:export-filename="/home/victor/dev/react-present/presentations/building-a-node-js-api/images/sql-vs-no-sql.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96">
+  <defs
+     id="defs2">
+    <symbol
+       id="icon-table"
+       viewBox="0 0 26 28">
+      <title
+         id="title69803">table</title>
+      <path
+         style="stroke-width:1"
+         inkscape:connector-curvature="0"
+         d="m 2.1166667,5.6885417 v -0.79375 C 2.1166667,4.8204437 2.0587229,4.7625 1.984375,4.7625 H 0.66145833 c -0.0743479,0 -0.13229166,0.057944 -0.13229166,0.1322917 v 0.79375 c 0,0.074348 0.0579438,0.1322916 0.13229166,0.1322916 H 1.984375 c 0.074348,0 0.1322917,-0.057944 0.1322917,-0.1322916 z m 0,-1.5875 v -0.79375 C 2.1166667,3.2329437 2.0587229,3.175 1.984375,3.175 H 0.66145833 c -0.0743479,0 -0.13229166,0.057944 -0.13229166,0.1322917 v 0.79375 c 0,0.074348 0.0579438,0.1322916 0.13229166,0.1322916 H 1.984375 c 0.074348,0 0.1322917,-0.057944 0.1322917,-0.1322916 z m 2.1166666,1.5875 v -0.79375 C 4.2333333,4.8204437 4.1753896,4.7625 4.1010417,4.7625 H 2.778125 c -0.074348,0 -0.1322917,0.057944 -0.1322917,0.1322917 v 0.79375 c 0,0.074348 0.057944,0.1322916 0.1322917,0.1322916 h 1.3229167 c 0.074348,0 0.1322916,-0.057944 0.1322916,-0.1322916 z m -2.1166666,-3.175 v -0.79375 C 2.1166667,1.6454437 2.0587229,1.5875 1.984375,1.5875 H 0.66145833 c -0.0743479,0 -0.13229166,0.057944 -0.13229166,0.1322917 v 0.79375 c 0,0.074348 0.0579438,0.1322916 0.13229166,0.1322916 H 1.984375 c 0.074348,0 0.1322917,-0.057944 0.1322917,-0.1322916 z m 2.1166666,1.5875 v -0.79375 C 4.2333333,3.2329437 4.1753896,3.175 4.1010417,3.175 H 2.778125 c -0.074348,0 -0.1322917,0.057944 -0.1322917,0.1322917 v 0.79375 c 0,0.074348 0.057944,0.1322916 0.1322917,0.1322916 h 1.3229167 c 0.074348,0 0.1322916,-0.057944 0.1322916,-0.1322916 z M 6.35,5.6885417 v -0.79375 C 6.35,4.8204437 6.2920562,4.7625 6.2177083,4.7625 H 4.8947917 C 4.8204437,4.7625 4.7625,4.8204437 4.7625,4.8947917 v 0.79375 c 0,0.074348 0.057944,0.1322916 0.1322917,0.1322916 H 6.2177083 C 6.2920562,5.8208333 6.35,5.7628896 6.35,5.6885417 Z m -2.1166667,-3.175 v -0.79375 C 4.2333333,1.6454437 4.1753896,1.5875 4.1010417,1.5875 H 2.778125 c -0.074348,0 -0.1322917,0.057944 -0.1322917,0.1322917 v 0.79375 c 0,0.074348 0.057944,0.1322916 0.1322917,0.1322916 h 1.3229167 c 0.074348,0 0.1322916,-0.057944 0.1322916,-0.1322916 z M 6.35,4.1010417 v -0.79375 C 6.35,3.2329437 6.2920562,3.175 6.2177083,3.175 H 4.8947917 C 4.8204437,3.175 4.7625,3.2329437 4.7625,3.3072917 v 0.79375 c 0,0.074348 0.057944,0.1322916 0.1322917,0.1322916 H 6.2177083 C 6.2920562,4.2333333 6.35,4.1753896 6.35,4.1010417 Z m 0,-1.5875 v -0.79375 C 6.35,1.6454437 6.2920562,1.5875 6.2177083,1.5875 H 4.8947917 C 4.8204437,1.5875 4.7625,1.6454437 4.7625,1.7197917 v 0.79375 c 0,0.074348 0.057944,0.1322916 0.1322917,0.1322916 H 6.2177083 C 6.2920562,2.6458333 6.35,2.5878896 6.35,2.5135417 Z M 6.8791667,1.190625 V 5.6885417 C 6.8791667,6.0523437 6.5815104,6.35 6.2177083,6.35 H 0.66145833 C 0.29765625,6.35 0,6.0523437 0,5.6885417 V 1.190625 C 0,0.82682292 0.29765625,0.52916667 0.66145833,0.52916667 H 6.2177083 c 0.3638021,0 0.6614584,0.29765625 0.6614584,0.66145833 z"
+         id="path69805" />
+    </symbol>
+    <symbol
+       id="icon-file-text-o"
+       viewBox="0 0 24 28">
+      <title
+         id="title69988">file-text-o</title>
+      <path
+         style="stroke-width:1"
+         inkscape:connector-curvature="0"
+         d="M 6.0687479,1.5710958 C 6.2216771,1.724025 6.3497354,2.0298833 6.3497354,2.2489583 v 4.7625 c 0,0.219075 -0.1778,0.396875 -0.396875,0.396875 H 0.39661042 c -0.219075,0 -0.39687500333,-0.1778 -0.39687500333,-0.396875 V 0.396875 C -2.6458333e-4,0.1778 0.17753542,0 0.39661042,0 H 4.1007771 c 0.219075,0 0.5249333,0.12805833 0.6778625,0.2809875 z M 4.2333333,0.56223958 V 2.1166667 H 5.7877604 C 5.7628896,2.0462875 5.7258479,1.9761729 5.6967437,1.9470687 L 4.4026667,0.65299167 C 4.3738271,0.62415208 4.3034479,0.58684583 4.2330687,0.561975 Z m 1.5875,6.31692712 V 2.6458333 H 4.1010417 c -0.219075,0 -0.396875,-0.1778 -0.396875,-0.396875 V 0.52916667 H 0.52916667 V 6.8791667 Z M 1.5875,3.3072917 C 1.5875,3.2329437 1.6454437,3.175 1.7197917,3.175 H 4.6302083 C 4.7045562,3.175 4.7625,3.2329437 4.7625,3.3072917 V 3.571875 c 0,0.074348 -0.057944,0.1322917 -0.1322917,0.1322917 H 1.7197917 C 1.6454437,3.7041667 1.5875,3.6462229 1.5875,3.571875 Z m 3.0427083,0.9260416 c 0.074348,0 0.1322917,0.057944 0.1322917,0.1322917 V 4.6302083 C 4.7625,4.7045562 4.7045562,4.7625 4.6302083,4.7625 H 1.7197917 C 1.6454437,4.7625 1.5875,4.7045562 1.5875,4.6302083 V 4.365625 c 0,-0.074348 0.057944,-0.1322917 0.1322917,-0.1322917 z m 0,1.0583334 c 0.074348,0 0.1322917,0.057944 0.1322917,0.1322916 v 0.2645834 c 0,0.074348 -0.057944,0.1322916 -0.1322917,0.1322916 H 1.7197917 C 1.6454437,5.8208333 1.5875,5.7628896 1.5875,5.6885417 V 5.4239583 c 0,-0.074348 0.057944,-0.1322916 0.1322917,-0.1322916 z"
+         id="path69990" />
+    </symbol>
+    <symbol
+       id="icon-sticky-note"
+       viewBox="0 0 24 28">
+      <title
+         id="title71553">sticky-note</title>
+      <path
+         style="stroke-width:1"
+         inkscape:connector-curvature="0"
+         d="M 4.2333333,5.159375 V 6.8791667 H 0.396875 C 0.1778,6.8791667 0,6.7013667 0,6.4822917 V 0.92604167 c 0,-0.219075 0.1778,-0.396875 0.396875,-0.396875 h 5.55625 c 0.219075,0 0.396875,0.1778 0.396875,0.396875 V 4.7625 H 4.6302083 c -0.219075,0 -0.396875,0.1778 -0.396875,0.396875 z M 4.7625,5.2916667 H 6.3375646 C 6.3002583,5.4901042 6.1928375,5.7134125 6.0687479,5.8375021 L 5.3080708,6.5981792 C 5.1839812,6.7222687 4.9606729,6.8296896 4.7622354,6.8669958 V 5.2919312 Z"
+         id="path71555" />
+    </symbol>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.7"
+     inkscape:cx="615.24325"
+     inkscape:cy="427.57957"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     units="px"
+     inkscape:window-width="2517"
+     inkscape:window-height="1416"
+     inkscape:window-x="1403"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1"
+     inkscape:pagecheckerboard="false" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-58.874983)">
+    <use
+       id="use74331"
+       style="fill:#aac46b;fill-opacity:1;stroke:none;stroke-width:0.62366074"
+       xlink:href="#icon-table"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="matrix(1.6034358,0,0,1.6034358,-80.00944,78.117409)" />
+    <use
+       id="use74382"
+       transform="matrix(1.2598424,0,0,1.2598424,144.32726,85.333319)"
+       style="fill:#6095c9;fill-opacity:1;stroke:none;stroke-width:0.79375005"
+       xlink:href="#icon-file-text-o"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%" />
+    <rect
+       style="fill:#e0e0e0;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect74789"
+       width="2.6458333"
+       height="231.8884"
+       x="183.52461"
+       y="61.993286" />
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot74791"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24px;line-height:125%;font-family:Lato;-inkscape-font-specification:Lato;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       transform="matrix(0.26458333,0,0,0.26458333,-5.74992,50.862933)"><flowRegion
+         id="flowRegion74793"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Lato;-inkscape-font-specification:Lato"><rect
+           id="rect74795"
+           width="552.85706"
+           height="189.99998"
+           x="70"
+           y="525.71429"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Lato;-inkscape-font-specification:Lato" /></flowRegion><flowPara
+         id="flowPara74797"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:64px;line-height:125%;font-family:Lato;-inkscape-font-specification:'Lato Bold'">Relational Data Model</flowPara></flowRoot>    <flowRoot
+       transform="matrix(0.26458333,0,0,0.26458333,186.41657,50.862933)"
+       xml:space="preserve"
+       id="flowRoot74791-1"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24px;line-height:125%;font-family:Lato;-inkscape-font-specification:Lato;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"><flowRegion
+         id="flowRegion74793-2"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;font-family:Lato;-inkscape-font-specification:Lato"><rect
+           id="rect74795-0"
+           width="585.71423"
+           height="215.71428"
+           x="70"
+           y="525.71429"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;font-family:Lato;-inkscape-font-specification:Lato" /></flowRegion><flowPara
+         id="flowPara74797-0"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:64px;line-height:125%;font-family:Lato;-inkscape-font-specification:'Lato Bold'">Document Data Model</flowPara></flowRoot>    <flowRoot
+       transform="matrix(0.26458333,0,0,0.26458333,-6.794749,98.944789)"
+       xml:space="preserve"
+       id="flowRoot74791-0"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24px;line-height:125%;font-family:Lato;-inkscape-font-specification:Lato;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"><flowRegion
+         id="flowRegion74793-8"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Lato;-inkscape-font-specification:Lato"><rect
+           id="rect74795-3"
+           width="565.71423"
+           height="152.85712"
+           x="70"
+           y="525.71429"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Lato;-inkscape-font-specification:Lato" /></flowRegion><flowPara
+         id="flowPara74797-8"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:37.33333206px;line-height:125%;font-family:Lato;-inkscape-font-specification:Lato">Highly structured table organization with rigidly defined data formats and record structure</flowPara></flowRoot>    <flowRoot
+       transform="matrix(0.26458333,0,0,0.26458333,189.28447,97.221117)"
+       xml:space="preserve"
+       id="flowRoot74791-0-7"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24px;line-height:125%;font-family:Lato;-inkscape-font-specification:Lato;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"><flowRegion
+         id="flowRegion74793-8-3"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Lato;-inkscape-font-specification:Lato"><rect
+           id="rect74795-3-1"
+           width="568.57135"
+           height="262.85706"
+           x="70"
+           y="525.71429"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Lato;-inkscape-font-specification:Lato" /></flowRegion><flowPara
+         id="flowPara74797-8-0"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:37.33333206px;line-height:125%;font-family:Lato;-inkscape-font-specification:Lato">Collection of complex documents with arbitary, nested data formats and varying &quot;record&quot; format</flowPara></flowRoot>  </g>
+</svg>
