@@ -3,14 +3,19 @@ import Slide from './components/Slide';
 import Title from './components/Title';
 import CodeBlock from '../../lib/components/CodeBlock';
 
-const largeCode = '<img src="unicorn-large.png" />';
-const smallCode = '<img src="unicorn-small.png" />';
+const code =
+`<img srcset="unicorn-micro.png 480w,
+              unicorn-small.png 800w,
+              unicorn-large.png"
+      sizes="(min-width: 600px) 480px,
+             (min-width: 1024px) 800px,
+             75vw"
+      src="unicorn-large.png" />`;
 
 export default function() {
   return (
     <Slide>
       <Title>reduce file size</Title>
-      <CodeBlock>{ largeCode }</CodeBlock>
-      <CodeBlock>{ smallCode }</CodeBlock>
+      <CodeBlock>{ code }</CodeBlock>
     </Slide>);
 }

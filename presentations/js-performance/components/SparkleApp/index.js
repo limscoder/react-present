@@ -4,6 +4,11 @@ import glamorous from 'glamorous';
 import ParticleCloud from './ParticleCloud';
 import { initOptimized } from './initialize';
 
+const SparkleBox = glamorous.div({
+  margin: 'auto',
+  width: '500px'
+});
+
 const SparkleButton = glamorous.button({
   fontSize: '32px',
   backgroundColor: '#FF80E1',
@@ -71,13 +76,13 @@ export default class SparkleApp extends React.Component {
 
   render() {
     return (
-      <div>
-        <canvas ref={ this.canvasRef } height="500px" width="600px" />
+      <SparkleBox>
+        <canvas ref={ this.canvasRef } height="375px" width="450px" />
         <SparkleButton onClick={ this.onSparkleClick }
                        onKeyDown={ this.onSparkleClick }>
           Sparkle!
         </SparkleButton>
-      </div>
+      </SparkleBox>
     );
   }
 

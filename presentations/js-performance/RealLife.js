@@ -6,9 +6,9 @@ import Title from './components/Title';
 export default function () {
   return (
     <Slide>
-      <Title>IRL</Title>
-      <Statement>toolchain config</Statement>
+      <Title>IRL complications</Title>
+      <Statement>FAKE CODE!</Statement>
       <Statement>network config</Statement>
-      <Statement>browser config</Statement>
+      <Statement>hardware performance</Statement>
     </Slide>);
 }

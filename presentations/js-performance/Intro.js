@@ -1,13 +1,12 @@
 import React from 'react';
 import Slide from './components/Slide';
 import Link from './components/Link';
-import bunnySrc from './images/bunny.gif';
+import imgSrc from './images/hack.gif';
 
 export default function () {
   return (
     <Slide>
-      <img src={bunnySrc} alt="bunny" />
+      <img src={imgSrc} alt="hack" />
       <div><Link href="https://twitter.com/limscoder">@limscoder</Link></div>
-      <div><Link href="https://github.com/limscoder">github.com/limscoder</Link></div>
     </Slide>);
 }

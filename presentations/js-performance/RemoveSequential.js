@@ -7,7 +7,7 @@ import { initWithSequentialAudio } from './components/SparkleApp/initialize';
 export default function() {
   return (
     <Slide>
-      <Title>more load optimization</Title>
+      <Title>load optimization</Title>
       <SparkleApp initResources={ initWithSequentialAudio } />
     </Slide>);
 }

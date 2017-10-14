@@ -18,16 +18,12 @@ const code =
       });
     }    
   );
-}
-
-function fetchBitmap() { ... }
-
-function fetchAudio() { ... }`;
+}`;
 
 export default function() {
   return (
     <Slide>
-      <Title>use idle time to pre-fetch</Title>
+      <Title>use idle time</Title>
       <CodeBlock>{ code }</CodeBlock>
     </Slide>);
 }

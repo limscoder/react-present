@@ -1,13 +1,12 @@
 import React from 'react';
 import Slide from './components/Slide';
-import Statement from './components/Statement';
 import Title from './components/Title';
+import pstSrc from './images/lighthouse.png';
 
 export default function () {
   return (
     <Slide>
-      <Title>Framework Specific</Title>
-      <Statement>react-addons-perf</Statement>
-      <Statement>ng-stats</Statement>
+      <Title>Lighthouse Audit</Title>
+      <img src={ pstSrc } />
     </Slide>);
 }

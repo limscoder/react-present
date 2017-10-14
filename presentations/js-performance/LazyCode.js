@@ -11,11 +11,7 @@ const code =
 
   fetchBitmap().then(
     bitmap => renderApp(bitmap, playAudio));
-}
-
-function fetchBitmap() { ... }
-
-function fetchAudio() { ... }`;
+}`;
 
 export default function() {
   return (

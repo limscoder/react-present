@@ -7,7 +7,7 @@ import { initWithLargeImage } from './components/SparkleApp/initialize';
 export default function() {
   return (
     <Slide>
-      <Title>optimize load time</Title>
+      <Title>un-optimized</Title>
       <SparkleApp initResources={ initWithLargeImage } />
     </Slide>);
 }

@@ -10,6 +10,6 @@ export default function () {
     <Slide>
       <Title>Idle - maximize idle time</Title>
       <Statement>perform background tasks</Statement>
-      <Statement>pre-load resources</Statement>
+      <Statement>pre-fetch resources</Statement>
     </Slide>);
 }

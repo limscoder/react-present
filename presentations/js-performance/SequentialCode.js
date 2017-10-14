@@ -10,11 +10,7 @@ const code =
       renderApp(bitmap, audio);
     });
   });
-}
-
-function fetchBitmap() { ... }
-
-function fetchAudio() { ... }`;
+}`;
 
 export default function() {
   return (

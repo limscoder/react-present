@@ -7,11 +7,7 @@ const code =
 `function init() {
   Promise.all([fetchBitmap(), fetchAudio()])
     .then([bitmap, audio] => renderApp(bitmap, audio));
-}
-
-function fetchBitmap() { ... }
-
-function fetchAudio() { ... }`;
+}`;
 
 export default function() {
   return (

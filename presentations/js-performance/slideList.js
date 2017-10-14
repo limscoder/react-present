@@ -28,9 +28,10 @@ import OptimizeFramerate from './OptimizeFramerate';
 import SlowAnimationCode from './SlowAnimationCode';
 import FasterAnimationCode from './FasterAnimationCode';
 import OptimizedApp from './OptimizedApp';
+import Lighthouse from './Lighthouse';
 import WebPageTest from './WebPageTest';
-import PageSpeedTools from './PageSpeedTools';
 import RealLife from './RealLife';
+import Webpack from './Webpack';
 import FrameworkSpecific from './FrameworkSpecific';
 import Resources from './Resources';
 import Summary from './Summary';
@@ -43,7 +44,6 @@ const slideComponents = [
   CostGuesstimate,
   DaveQuote,
   Measurement,
-  UserExpectation,
   Rail,
   Sparkle,
   Load,
@@ -65,10 +65,10 @@ const slideComponents = [
   FasterAnimationCode,
   OptimizedApp,
   RealLife,
+  Webpack,
+  Lighthouse,
   WebPageTest,
-  PageSpeedTools,
   FrameworkSpecific,
-  Resources,
   Summary
 ];
 

@@ -62,7 +62,7 @@ function drawBackground(config) {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 
   ctx.globalAlpha = 1;
-  ctx.drawImage(backgroundBitmap, 50, 0, 386, 500);
+  ctx.drawImage(backgroundBitmap, 50, 0, 290, 375);
 }
 
 export default class ParticleCloud {
@@ -73,8 +73,8 @@ export default class ParticleCloud {
       longFrame,
       particleCount: 50,
       backgroundBitmap,
-      startX: 280,
-      startY: 320,
+      startX: 210,
+      startY: 240,
       velocity: 1
     };
 

@@ -4,23 +4,14 @@ import Title from './components/Title';
 import CodeBlock from '../../lib/components/CodeBlock';
 
 const code =
-`
-function animateParticles(activeParticles) {
+`function animateParticles(activeParticles) {
   const bounds = calculateBounds();
-  return activeParticles.filter(
-    particle => drawParticle(bounds, particle));
-}
 
-function drawParticle(bounds, particle) {
-  const newParticle = // position calc snipped
-  return isInBounds(bounds, newParticle);
-}
-
-function isInBounds(bounds, particle) {
-  return particle.x - particle.size < bounds.width &&
-    particle.x + particle.size > 0 &&
-    particle.y - particle.size < bounds.height &&
-    particle.y + particle.size > 0;
+  return activeParticles.forEach(particle => {
+    if (isInBounds(particle, bounds)) {
+      moveParticle(particle);
+    }
+  });
 }`;
 
 export default function() {

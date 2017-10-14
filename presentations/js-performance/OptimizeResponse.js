@@ -7,7 +7,7 @@ import { initWithLazyAudio } from './components/SparkleApp/initialize';
 export default function() {
   return (
     <Slide>
-      <Title>optimize response time</Title>
+      <Title>optimize response</Title>
       <SparkleApp initResources={ initWithLazyAudio } />
     </Slide>);
 }
