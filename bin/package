@@ -2,4 +2,5 @@
 
 rm -rf ./dist
 npm run build $1
-zip -r "./built-presentations/$1.zip" ./dist
+cd ./dist
+zip -r "../built-presentations/$1.zip" ./*
