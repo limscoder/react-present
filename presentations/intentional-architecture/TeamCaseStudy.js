@@ -3,11 +3,12 @@ import Slide from './components/Slide';
 import Title from './components/Title';
 import Statement from './components/Statement';
 import Attribution  from './components/Attribution';
+import imgSrc from './images/mineral.png';
 
 export default function () {
   return (
     <Slide>
       <Title>Case Study: relying on teams</Title>
-      <Statement>TODO: Mineral UI graphic</Statement>
+      <img src={ imgSrc } alt="mineral ui" />
     </Slide>);
 }

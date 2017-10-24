@@ -11,6 +11,6 @@ export default function () {
       <Statement>Manage communication channels</Statement>
       <Statement>Extend the scaling runway</Statement>
       <Statement>Enable expanding into new markets</Statement>
-      <Statement>Improve developer productivity</Statement>
+      <Statement>Improve r+d productivity</Statement>
     </Slide>);
 }

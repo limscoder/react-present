@@ -8,6 +8,6 @@ export default function () {
   return (
     <Slide>
       <Title>Architect team</Title>
-      <Statement>TODO: graphic showing architect team aligning Rally dev teams</Statement>
+      <Statement>TODO: graphic showing architect team aligning dev teams</Statement>
     </Slide>);
 }

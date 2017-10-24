@@ -11,5 +11,6 @@ export default function () {
       <Statement>Licensing and hosting costs</Statement>
       <Statement>Training and hiring requirements</Statement>
       <Statement>Implementation and maintenance effort</Statement>
+      <Statement>Simple solutions</Statement>
     </Slide>);
 }

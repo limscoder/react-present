@@ -35,6 +35,7 @@ import Webpack from './Webpack';
 import FrameworkSpecific from './FrameworkSpecific';
 import Resources from './Resources';
 import Summary from './Summary';
+import Summary from './Summary';
 
 const slideComponents = [
   Intro,

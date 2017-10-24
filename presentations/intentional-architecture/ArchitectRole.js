@@ -10,7 +10,7 @@ export default function () {
       <Title>Architect role</Title>
       <Statement>Rely on teams</Statement>
       <Statement>Shepherd tech rollouts</Statement>
-      <Statement>Maintain developer productivity and morale</Statement>
+      <Statement>Maintain r + d productivity and morale</Statement>
       <Statement>Plan for the future</Statement>
       <Statement>Ensure successful deployments</Statement>
     </Slide>);

@@ -9,6 +9,6 @@ export default function () {
   return (
     <Slide>
       <Title>The result</Title>
-      <Statement>TODO: Venn diagram of Rally's many different technologies</Statement>
+      <Statement>TODO: Venn diagram of many different technologies</Statement>
     </Slide>);
 }
