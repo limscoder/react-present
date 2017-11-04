@@ -1,8 +1,7 @@
 import React from 'react';
 import Slide from './components/Slide';
 import Title from './components/Title';
-import Statement from './components/Statement';
-import Attribution  from './components/Attribution';
+import imgSrc from './images/growing-team.png';
 
 export default function () {
   // Communication channels get more complicated as teams grow,
@@ -13,6 +12,6 @@ export default function () {
   return (
     <Slide>
       <Title>Outgrowing emergent architecture</Title>
-      <Statement>TODO: team growth graphic</Statement>
+      <img src={ imgSrc } alt="growing team" />
     </Slide>);
 }

@@ -23,7 +23,10 @@ import BottomUp from './BottomUp';
 import OrganizationConcerns from './OrganizationConcerns';
 import TeamCaseStudy from './TeamCaseStudy';
 import Shepherd from './Shepherd';
+import Migration from './Migration';
 import Support from './Support';
+import Simplicity from './Simplicity';
+import ClojureCaseStudy from './ClojureCaseStudy';
 import Retro from './Retro';
 import Rollback from './Rollback';
 import Flow from './Flow';
@@ -37,6 +40,8 @@ import Deployments from './Deployments';
 import ContinuousIntegration from './ContinuousIntegration';
 import Monitoring from './Monitoring';
 import SupportTeam from './SupportTeam';
+import Performance from './Performance';
+import MetricsCaseStudy from './MetricsCaseStudy';
 import PER from './PER';
 import Change from './Change';
 import Issues from './Issues';
@@ -57,16 +62,19 @@ const slideComponents = [
   TeamGrowth,
   ConwaysLaw,
   ConwaysResult,
-  IntentionalArchitecture,
   IntentionalGoals,
   ArchitectTeam,
   IvoryTower,
   ArchitectRole,
+  IntentionalArchitecture,
   BottomUp,
   OrganizationConcerns,
   TeamCaseStudy,
   Shepherd,
+  Migration,
   Support,
+  Simplicity,
+  ClojureCaseStudy,
   Retro,
   Rollback,
   Flow,
@@ -78,8 +86,10 @@ const slideComponents = [
   ArchitecturePlanning,
   Deployments,
   ContinuousIntegration,
-  Monitoring,
   SupportTeam,
+  Monitoring,
+  Performance,
+  MetricsCaseStudy,
   PER,
   Change,
   Issues,

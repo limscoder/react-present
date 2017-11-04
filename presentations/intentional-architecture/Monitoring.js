@@ -6,7 +6,7 @@ import Statement from './components/Statement';
 export default function () {
   return (
     <Slide>
-      <Title>Monitoring</Title>
+      <Title>Observability</Title>
       <Statement>Saturation</Statement>
       <Statement>Latency</Statement>
       <Statement>Throughput</Statement>

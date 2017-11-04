@@ -7,10 +7,10 @@ import Attribution  from './components/Attribution';
 export default function () {
   return (
     <Slide>
-      <Title>Goals</Title>
+      <Title>Intentional Architecture</Title>
       <Statement>Manage communication channels</Statement>
       <Statement>Extend the scaling runway</Statement>
-      <Statement>Enable expanding into new markets</Statement>
+      <Statement>Manage tech debt</Statement>
       <Statement>Improve r+d productivity</Statement>
     </Slide>);
 }
