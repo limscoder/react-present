@@ -8,6 +8,6 @@ export default function () {
     <Slide>
       <Title>When things go wrong</Title>
       <Statement>Retro every outage</Statement>
-      <Statement>Identify causes and solutions instead of blame</Statement>
+      <Statement>Identify solutions instead of blame</Statement>
     </Slide>);
 }

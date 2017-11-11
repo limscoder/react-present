@@ -7,9 +7,7 @@ export default function () {
   return (
     <Slide>
       <Title>Observability</Title>
-      <Statement>Saturation</Statement>
-      <Statement>Latency</Statement>
-      <Statement>Throughput</Statement>
-      <Statement>Errors</Statement>
+      <Statement>System metrics</Statement>
+      <Statement>User metrics</Statement>
     </Slide>);
 }

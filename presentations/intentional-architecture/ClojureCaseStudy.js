@@ -8,6 +8,8 @@ export default function () {
     <Slide>
       <Title>Case Study: Clojure</Title>
       <Statement>Team spike</Statement>
+      <Statement>Tech analysis</Statement>
+      <Statement>Template service</Statement>
       <Statement>Voluntary book club</Statement>
     </Slide>);
 }

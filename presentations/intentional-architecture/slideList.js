@@ -23,9 +23,8 @@ import BottomUp from './BottomUp';
 import OrganizationConcerns from './OrganizationConcerns';
 import TeamCaseStudy from './TeamCaseStudy';
 import Shepherd from './Shepherd';
-import Migration from './Migration';
+import Diligence from './Diligence';
 import Support from './Support';
-import Simplicity from './Simplicity';
 import ClojureCaseStudy from './ClojureCaseStudy';
 import Retro from './Retro';
 import Rollback from './Rollback';
@@ -56,9 +55,9 @@ const slideComponents = [
   DevopsDefinition1,
   DevopsDefinition2,
   Agile,
-  RallyOrg,
   EmergentArchitecture,
   EmergentRequirements,
+  RallyOrg,
   TeamGrowth,
   ConwaysLaw,
   ConwaysResult,
@@ -71,9 +70,9 @@ const slideComponents = [
   OrganizationConcerns,
   TeamCaseStudy,
   Shepherd,
-  Migration,
+  NewTech,
+  Diligence,
   Support,
-  Simplicity,
   ClojureCaseStudy,
   Retro,
   Rollback,
@@ -82,13 +81,10 @@ const slideComponents = [
   Frustrations,
   Tests,
   PlanForFuture,
-  NewTech,
   ArchitecturePlanning,
   Deployments,
-  ContinuousIntegration,
   SupportTeam,
   Monitoring,
-  Performance,
   MetricsCaseStudy,
   PER,
   Change,

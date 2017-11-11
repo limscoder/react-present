@@ -7,7 +7,7 @@ export default function () {
   return (
     <Slide>
       <Title>Case Study: DevOps teams</Title>
+      <Statement>Keep automated CI/CD pipelines healthy</Statement>
       <Statement>Develop and maintain developer tooling</Statement>
-      <Statement>Keep automated pipelines healthy</Statement>
     </Slide>);
 }

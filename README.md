@@ -8,6 +8,7 @@ Presentations can be controlled from a mobile device with the [remote control ap
 
 ## Presentations
 
+ * [Intentional Architecture](http://limscoder.github.io/react-present/pages/intentional-architecture)
  * [JS Performance](https://limscoder.github.io/react-present/pages/js-performance)
  * [Blockchain](https://limscoder.github.io/react-present/pages/blockchain)
  * [React Native](https://limscoder.github.io/react-present/pages/react-native)
