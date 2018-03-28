@@ -11,6 +11,7 @@
     "build": "./bin/build",
     "build-dev": "./bin/build-dev",
     "package": "./bin/package",
+    "ghpages": "./bin/ghpages",
     "start": "npm run build-dev",
     "test": "test"
   },
