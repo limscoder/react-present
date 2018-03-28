@@ -53,6 +53,18 @@ code {
   z-index: 10;
 }
 
+.rcp-Delay {
+  transition: opacity 0.5s ease-out;
+}
+
+.rcp-Delay--hidden {
+  opacity: 0;
+}
+
+.rcp-Delay--visible {
+  opacity: 1;
+}
+
 .nextSlide-enter {
   opacity: 0;
   transform: translateX(30px);
@@ -68,8 +80,6 @@ code {
   z-index: 1;
 }
 
-.nextSlide-leave.nextSlide-leave-active {}
-
 .rcp-SlideDeck-Body ul
 {
   list-style-type: none;
@@ -77,7 +87,7 @@ code {
 }
 
 .rcp-SlideDeck-Body li {
-  font-size: 40px;
+  font-size: 32px;
   margin: 1.5rem 0;
 }
 
@@ -129,7 +139,7 @@ code {
   background-color: #FF80E1;
 }
 
-# styles when displayed within remote mobile app
+/** displayed within remote mobile app */
 
 .remote {
   background-color: red;

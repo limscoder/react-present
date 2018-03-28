@@ -8,12 +8,11 @@ Presentations can be controlled from a mobile device with the [remote control ap
 
 ## Presentations
 
- * [Intentional Architecture](http://limscoder.github.io/react-present/pages/intentional-architecture)
- * [JS Performance](https://limscoder.github.io/react-present/pages/js-performance)
- * [Blockchain](https://limscoder.github.io/react-present/pages/blockchain)
- * [React Native](https://limscoder.github.io/react-present/pages/react-native)
- * [React Component Library](https://limscoder.github.io/react-present/pages/component-library)
- * [See it in action (video)](https://www.youtube.com/watch?v=nQo0EdHNjto)
+* [DevOps Enterprise Summit 2017 - Intentional Architecture](http://limscoder.github.io/react-present/pages/intentional-architecture)
+* [EmpireJS 2017 - JS Performance](https://limscoder.github.io/react-present/pages/js-performance)
+* [Agile Central 2017 - Blockchain Intro](https://limscoder.github.io/react-present/pages/blockchain)
+* [Nodevember 2016 - React Native](https://limscoder.github.io/react-present/pages/react-native)
+* [See it in action (video)](https://www.youtube.com/watch?v=nQo0EdHNjto)
 
 ## View example presentation locally
 
@@ -27,7 +26,7 @@ Open `http://localhost:9001` in your browser.
 Fork and clone the repo, then:
 
     > npm install
-    > cp -r ./presentations/component-library ./presentations/{your-presentation-directory}
+    > cp -r ./presentations/example ./presentations/{your-presentation-directory}
     > npm run build-dev {your-presentation-directory}
 
 Navigate to `http://localhost:9001` in your browser. Make changes to `{your-presentation-title}/slideList`, and they should be hot-loaded into your browser whenever you save.
@@ -52,8 +51,6 @@ Use the `CodeBlock` component to get js syntax highlighting and code editing.
       </CodeBlock>
     );
 
-Take a look at the [js performance slides](presentations/js-performance/slideList.js) for a best-practices example.
-
 ## Package presentation as zip file
 
 Create a zip file containing a presentation within the `built-presentations` directory.
@@ -64,4 +61,4 @@ Extract the zip file and open `index.html` to view the presentation.
 ## Screen sharing and remote meetings
 
 Slide transitions cause some screen sharing apps like WebEx to have significant lag.
-Disable transitions by pressing `ctrl-t`.
+Disable transitions by pressing `ctrl-t` while viewing the presentation in the browser.
