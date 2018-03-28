@@ -12,7 +12,7 @@ Presentations can be controlled from a mobile device with the [remote control ap
 * [EmpireJS 2017 - JS Performance](https://limscoder.github.io/react-present/pages/js-performance)
 * [Agile Central 2017 - Blockchain Intro](https://limscoder.github.io/react-present/pages/blockchain)
 * [Nodevember 2016 - React Native](https://limscoder.github.io/react-present/pages/react-native)
-* [See it in action (video)](https://www.youtube.com/watch?v=nQo0EdHNjto)
+* [See it in action (video)](https://youtu.be/Sb9fRAKdjkQ)
 
 ## View example presentation locally
 
