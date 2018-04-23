@@ -5,6 +5,7 @@ import {
   Delay,
   Highlight,
   List,
+  Slide,
   Statement,
   Title,
   Top
@@ -22,29 +23,35 @@ export default {
   title: 'Example Presentation',
   align: 'top',
   slides: [
-    <Title>Title: Monster Trucks are the best</Title>,
-    [
+    <Slide>
+      <Title>Title: Monster Trucks are the best</Title>
+    </Slide>,
+    <Slide>
       <Statement>A very long winded statement</Statement>,
       <Attribution>- from the author</Attribution>,
-    ],
-    [
+    </Slide>,
+    <Slide>
       <Title>!!!Monster Trucks!!!</Title>,
       <img src={ truckSrc } alt="image" />
-    ],
-    <List title="my rad wishlist" items={ ['truck', 'moto', 'jetski', 'snow machine'] } />,
-    [
+    </Slide>,
+    <List title="my rad wishlist" items={ [<Slide>]'truck', 'moto', 'jetski', 'snow machine'] } />,
+    <Slide>
       <Title>Some code</Title>,
       <Code>{ someCode }</Code>
-    ],
-    <Top>
-      <Title>Bikes at the top!</Title>
-      <img src={ bikeSrc } alt="image" />
-    </Top>,
-    <span><Highlight>highlighted</Highlight> text</span>,
-    [
+    </Slide>,
+    <Slide>
+      <Top>
+        <Title>Bikes at the top!</Title>
+        <img src={ bikeSrc } alt="image" />
+      </Top>
+    </Slide>,
+    <Slide>
+      <span><Highlight>highlighted</Highlight> text</span>
+    </Slide>,
+    <Slide>
       <Title>Click to animate item</Title>,
       <Delay>jump it!</Delay>,
       <Delay>jump it again!</Delay>
-    ]
+    </Slide>
   ]
 };
