@@ -8,10 +8,11 @@ Presentations can be controlled from a mobile device with the [remote control ap
 
 ## Presentations
 
-* [DevOps Enterprise Summit 2017 - Intentional Architecture](http://limscoder.github.io/react-present/docs/intentional-architecture/)
-* [EmpireJS 2017 - JS Performance](https://limscoder.github.io/react-present/docs/js-performance/)
-* [Agile Central 2017 - Blockchain Intro](https://limscoder.github.io/react-present/docs/blockchain/)
-* [Nodevember 2016 - React Native](https://limscoder.github.io/react-present/docs/react-native/)
+* [DevOps Enterprise Summit 2017 - Intentional Architecture](http://limscoder.github.io/react-present/intentional-architecture/)
+* [EmpireJS 2017 - JS Performance](https://limscoder.github.io/react-present/js-performance/)
+* [Agile Central 2017 - Blockchain Intro](https://limscoder.github.io/react-present/blockchain/)
+* [Nodevember 2016 - React Native](https://limscoder.github.io/react-present/react-native/)
+* [Example](https://limscoder.github.io/react-present/example/)
 * [See it in action (video)](https://youtu.be/Sb9fRAKdjkQ)
 
 ## View example presentation locally
