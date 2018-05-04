@@ -21,9 +21,22 @@ import techBleedSrc from './images/tech-overlap.png';
 import goalSrc from './images/architecture-goals.png';
 import ivorySrc from './images/ivory-tower.jpg';
 import arrowSrc from './images/arrow.png';
+import alignmentSrc from './images/alignment.png';
 import mineralSrc from './images/mineral.png'
 import howSrc from './images/board.png'
 import prSrc from './images/pr.png'
+import hypeSrc from './images/hype_cycle.png'
+import systemSrc from './images/system-graph.png'
+import spikeSrc from './images/spike.png'
+import improveSrc from './images/improve.png'
+import integrateSrc from './images/integrate.png'
+import gavelSrc from './images/gavel.png'
+
+const flowCode =
+`// @flow
+function concat(a: string, b: string): string {
+  return a + b;
+}`;
 
 export default {
   title: 'Intentional Architecture',
@@ -60,6 +73,7 @@ export default {
       <Statement>Architecture helps systems respond to change.</Statement>
     </Slide>,
     <Slide>
+      <Title>System changes</Title>
       <img src={goalSrc} alt="architecture goals" />
     </Slide>,
     <Slide>
@@ -74,6 +88,7 @@ export default {
       <Statement>Trust in dev team leads</Statement>
     </Slide>,
     <Slide>
+      <Title>Growing organizations</Title>
       <img src={largeTeamSrc} alt="large team" />
     </Slide>,
     <Slide>
@@ -104,10 +119,13 @@ export default {
       <Attribution>- Michael Vrazitoulis</Attribution>
     </Slide>,
     <Slide>
+      <img src={ alignmentSrc } alt="alignment" />
+    </Slide>,
+    <Slide>
       <Title>Bottom up architecture</Title>
       <Statement>Teams need room to innovate novel solutions</Statement>
       <Statement>Ideas bubble up to architecture team</Statement>
-      <img src={arrowSrc} alt="arrow" />
+      <img src={ arrowSrc } alt="arrow" />
     </Slide>,
     <Slide>
       <Title>Organizational impacts</Title>
@@ -143,9 +161,103 @@ export default {
       <img src={ mineralSrc } alt="mineral ui" />
     </Slide>,
     <Slide>
-      <Title>Shepherd new tech</Title>
-      <Statement>Avoid hype driven development</Statement>
-      <Statement>Due diligence instead</Statement>
-    </Slide>
+      <Title>Shepherd technology changes</Title>
+      <Statement>Respond to new technology, but...</Statement>
+      <Delay>
+        <Statement>Avoid hype driven development</Statement>
+        <Statement>Due diligence instead</Statement>
+        <img src={ improveSrc } alt="improve" />
+      </Delay>
+    </Slide>,
+    <Slide>
+      <Title>Evaluate new technologies and processes</Title>
+      <img src={ hypeSrc } alt="hype" />
+    </Slide>,
+    <Slide>
+      <Statement>Community support</Statement>
+      <Statement>Performance and scalability</Statement>
+      <Statement>Security</Statement>
+      <Statement>Backwards compatibility</Statement>
+      <Statement>Upgrade support</Statement>
+      <Statement>Developer tooling</Statement>
+      <Statement>Extensibility</Statement>
+    </Slide>,
+    <Slide>
+      <Title>Evaluate risk</Title>
+      <Statement>Cost of failure drives planning investment</Statement>
+    </Slide>,
+    <Slide>
+      <Title>Story the work</Title>
+      <img src={ spikeSrc } alt="spike" />
+    </Slide>,
+    <Slide>
+      <Title>Plan the rollout</Title>
+      <Statement>What need to be built?</Statement>
+      <Statement>What needs to be integrated?</Statement>
+      <Statement>What needs to be deprecated?</Statement>
+    </Slide>,
+    <Slide>
+      <Title>Keep it simple</Title>
+      <img src={ systemSrc } alt="system" />
+    </Slide>,
+    <Slide>
+      <Statement>Optimize for the whole</Statement>
+    </Slide>,
+    <Slide>
+      <Title>Take teams into account</Title>
+      <Statement>What are the mental models within the org?</Statement>
+      <Statement>What are the skill levels within the org?</Statement>
+      <Statement>What training does the org need?</Statement>
+    </Slide>,
+    <Slide>
+      <Title>Product/technology/pattern adoption</Title>
+      <Statement>Requires a compelling story</Statement>
+      <Statement>Teams <em>want</em> to use it</Statement>
+    </Slide>,
+    <Slide>
+      <Title>Case Study: Clojure</Title>
+      <Statement>Team spike</Statement>
+      <Statement>Tech analysis</Statement>
+      <Statement>Voluntary book club</Statement>
+      <Statement>Template service</Statement>
+    </Slide>,
+    <Slide>
+      <Title>Post-rollout retro</Title>
+      <Statement>What work is left?</Statement>
+      <Statement>How can we do better next time?</Statement>
+      <Statement>Is it working as expected?</Statement>
+    </Slide>,
+      <Slide>
+      <Title>Have a rollback plan</Title>
+    </Slide>,
+    <Slide>
+      <Title>Case Study: Flowtype</Title>
+      <Code>{ flowCode }</Code>
+    </Slide>,
+    // TODO dealing with conflict!
+    <Slide>
+      <Title>Making the decision</Title>
+      <img src={ gavelSrc } alt="gavel" />
+    </Slide>,
+    // --- conflict
+  
+
+    // TODO dev tools
+    // TODO dev ops
+    // TODO ops
+    // TODO planning
+    
+    <Slide>
+      <Statement>Bring intelligent architecture to your organization</Statement>
+      <Delay>
+        <Statement>Start small</Statement>
+        <Statement>Establish communication channels</Statement>
+        <Statement>Recognize and celebrate innovation</Statement>
+      </Delay>
+    </Slide>,
+    <Slide>
+      <Title>It's never perfect!</Title>
+      <Statement>quickly adapt > "the perfect architecture"</Statement>
+    </Slide>,
   ]
 };

@@ -34,7 +34,9 @@ export default {
       <Title>!!!Monster Trucks!!!</Title>,
       <img src={ truckSrc } alt="image" />
     </Slide>,
-    <List title="my rad wishlist" items={ [<Slide>]'truck', 'moto', 'jetski', 'snow machine'] } />,
+    <Slide>
+      <List title="my rad wishlist" items={ ['truck', 'moto', 'jetski', 'snow machine'] } />,
+    </Slide>
     <Slide>
       <Title>Some code</Title>,
       <Code>{ someCode }</Code>
