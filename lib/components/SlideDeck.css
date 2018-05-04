@@ -139,6 +139,11 @@ code {
   background-color: #FF80E1;
 }
 
+.rcp-ProgressIndicator-cell--deck {
+  background-color: #80FFBB;
+  width: 40px;
+}
+
 /** displayed within remote mobile app */
 
 .remote {
