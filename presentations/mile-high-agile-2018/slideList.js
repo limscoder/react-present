@@ -36,6 +36,7 @@ import teslaSrc from './images/tesla.png'
 import surveySrc from './images/devsurvey.png'
 import planningSrc from './images/planning.png'
 import testSrc from './images/tests.png'
+import performanceSrc from './images/perf-chart.png'
 
 const flowCode =
 `// @flow
@@ -49,10 +50,10 @@ export default {
   slides: [
     <Slide>
       <Title>Intentional Architecture</Title>
+      <Statement>Dave Thompson</Statement>
+      <Statement>@limscoder</Statement>
     </Slide>,
     <Slide>
-      <Title>Dave Thompson</Title>
-      <Statement>@limscoder</Statement>
       <div><img src={ beakerSrc } alt="beaker" /></div>
       <div><img src={ agileSrc } alt="agile" /></div>
       <div><img src={ ftSrc } alt="freshtracks.io" /></div>
@@ -65,17 +66,10 @@ export default {
       <Statement>trust &gt; control</Statement>
     </Slide>,
     <Slide>
-      <Title>Respond to change</Title>
+      <Statement>Agile helps <Highlight>organizations</Highlight> continuously improve in dynamic environments</Statement>
       <Delay>
-        <Statement>market change</Statement>
-        <Statement>product change</Statement>
-        <Statement>customer change</Statement>
-        <Statement>technology change</Statement>
+        <Statement>Architecture helps <Highlight>systems</Highlight> continuously improve in dynamic environments</Statement>
       </Delay>
-    </Slide>,
-    <Slide>
-      <Statement>Agile helps organizations respond to change.</Statement>
-      <Statement>Architecture helps systems respond to change.</Statement>
     </Slide>,
     <Slide>
       <Title>System changes</Title>
@@ -87,18 +81,12 @@ export default {
       <img src={cfTeamSrc} alt="small team" />
     </Slide>,
     <Slide>
-      <Title>Success requirements</Title>
-      <Statement>Small number of teams</Statement>
-      <Statement>Limited communication paths</Statement>
-      <Statement>Trust in dev team leads</Statement>
+      <Title>Conway's Law</Title>
+      <img src={ graphSrc } alt="graph" />
     </Slide>,
     <Slide>
       <Title>Growing organizations</Title>
       <img src={largeTeamSrc} alt="large team" />
-    </Slide>,
-    <Slide>
-      <Title>Conway's Law</Title>
-      <img src={ graphSrc } alt="graph" />
     </Slide>,
     <Slide>
       <Title>Case Study: too many cooks</Title>
@@ -106,10 +94,11 @@ export default {
     </Slide>,
     <Slide>
       <Title>Intentional Architecture</Title>
-      <Statement>Manage communication channels</Statement>
-      <Statement>Extend the runway</Statement>
-      <Statement>Improve velocity</Statement>
-      <Statement>Manage tech debt</Statement>
+      <Statement>Manage <Highlight>communication channels</Highlight></Statement>
+      <Statement>Respond to <Highlight>new technologies</Highlight></Statement>
+      <Statement>Manage <Highlight>tech debt</Highlight></Statement>
+      <Statement>Improve <Highlight>velocity</Highlight></Statement>
+      <Statement>Ensure <Highlight>rapid code delivery</Highlight></Statement>
     </Slide>,
     <Slide>
       <Title>Who's an architect?</Title>
@@ -129,7 +118,6 @@ export default {
     <Slide>
       <Title>Bottom up architecture</Title>
       <Statement>Teams need room to innovate novel solutions</Statement>
-      <Statement>Ideas bubble up to architecture team</Statement>
       <img src={ arrowSrc } alt="arrow" />
     </Slide>,
     <Slide>
@@ -140,19 +128,14 @@ export default {
       <Statement>Disaster recover, security, internationalization, performance</Statement>
     </Slide>,
     <Slide>
-      <Title>Architect role</Title>
-      <Statement>Support team work</Statement>
-      <Statement>Shepherd tech rollouts</Statement>
-      <Statement>Manage tech debt</Statement>
-      <Statement>Ensure successful deployments</Statement>
-      <Statement>Nurture development environment</Statement>
+      <Title>Establish <Highlight>communication channels</Highlight> within development workflow</Title>
     </Slide>,
     <Slide>
       <Title>How?</Title>
       <img src={ howSrc } alt="how?" />
     </Slide>,
     <Slide>
-      <Title>Pull request</Title>
+      <Title>Pull Requests</Title>
       <img src={ prSrc } alt="pull requests" />
     </Slide>,
     <Slide>
@@ -160,70 +143,68 @@ export default {
       <Statement>Encourage individuals to propose solutions</Statement>
       <Statement>Empower teams with time to research</Statement>
       <Statement>Volunteer for pair programming</Statement>
-    </Slide>,   
-    <Slide>
-      <Title>Case Study: team driven architecture</Title>
-      <img src={ mineralSrc } alt="mineral ui" />
     </Slide>,
     <Slide>
-      <Title>Shepherd technology changes</Title>
-      <Statement>Respond to new technology, but...</Statement>
-      <Delay>
-        <Statement>Avoid hype driven development</Statement>
-        <Statement>Due diligence instead</Statement>
-        <img src={ improveSrc } alt="improve" />
-      </Delay>
-    </Slide>,
-    <Slide>
-      <Title>Evaluate new technologies and processes</Title>
-      <img src={ hypeSrc } alt="hype" />
-    </Slide>,
-    <Slide>
-      <Statement>Community support</Statement>
-      <Statement>Performance and scalability</Statement>
-      <Statement>Security</Statement>
-      <Statement>Backwards compatibility</Statement>
-      <Statement>Upgrade support</Statement>
-      <Statement>Developer tooling</Statement>
-      <Statement>Extensibility</Statement>
+      <Title><Highlight>New technologies</Highlight> drive innovation</Title>
+      <img src={ improveSrc } alt="improve" />
     </Slide>,
     <Slide>
       <Title>Evaluate risk</Title>
       <Statement>Cost of failure drives planning investment</Statement>
+      <img src={ hypeSrc } alt="hype" />
     </Slide>,
     <Slide>
-      <Title>Story the work</Title>
+      <Statement>Community support</Statement>
+      <Statement>Backwards compatibility and upgrade support</Statement>
+      <Statement>Developer tooling</Statement>
+      <Statement>Extensibility</Statement>
+    </Slide>,
+    <Slide>
+      <Title>Performance</Title>
+      <img src={ performanceSrc } alt="performance" />
+    </Slide>,
+    <Slide>
+      <Title>Minimize Complexity</Title>
+      <img src={ systemSrc } alt="system" />
+    </Slide>,
+
+    <Slide>
+      <Title>Story the questions</Title>
       <img src={ spikeSrc } alt="spike" />
     </Slide>,
     <Slide>
+      <Title>Dealing with <Highlight>conflict</Highlight></Title>
+      <img src={ pieSrc } alt="pie" />
+    </Slide>,
+    <Slide>
+      <Title>Explain the decision</Title>
+      <Statement>Present from authority</Statement>
+      <Statement>Relate to larger goals</Statement>
+      <Statement>Be specific</Statement>
+      <Statement>Respond to questions and feedback</Statement>
+    </Slide>,
+    <Slide>
       <Title>Plan the rollout</Title>
-      <Statement>What need to be built?</Statement>
+      <Statement>What needs to be built?</Statement>
       <Statement>What needs to be integrated?</Statement>
       <Statement>What needs to be deprecated?</Statement>
     </Slide>,
     <Slide>
-      <Title>Keep it simple</Title>
-      <img src={ systemSrc } alt="system" />
-    </Slide>,
-    <Slide>
+      <Title>Drive adoption</Title>
       <Statement>Optimize for the whole</Statement>
+      <Statement>Requires a compelling story</Statement>
+      <Statement>Teams <em>want</em> to use it</Statement>
     </Slide>,
     <Slide>
-      <Title>Take teams into account</Title>
       <Statement>What are the mental models within the org?</Statement>
       <Statement>What are the skill levels within the org?</Statement>
       <Statement>What training does the org need?</Statement>
     </Slide>,
     <Slide>
-      <Title>Product/technology/pattern adoption</Title>
-      <Statement>Requires a compelling story</Statement>
-      <Statement>Teams <em>want</em> to use it</Statement>
-    </Slide>,
-    <Slide>
       <Title>Case Study: Clojure</Title>
       <Statement>Team spike</Statement>
       <Statement>Tech analysis</Statement>
-      <Statement>Voluntary book club</Statement>
+      <Statement>Voluntary training</Statement>
       <Statement>Template service</Statement>
     </Slide>,
     <Slide>
@@ -240,71 +221,37 @@ export default {
       <Code>{ flowCode }</Code>
     </Slide>,
     <Slide>
-      <Title>Making contentious decisions</Title>
-      <img src={ gavelSrc } alt="gavel" />
-    </Slide>,
-    <Slide>
-      <Title>Consensus breaks down</Title>
-      <img src={ pieSrc } alt="pie" />
-    </Slide>,
-    <Slide>
-      <Title>Get personal</Title>
-      <Statement>Teams and 1 - 1</Statement>
-    </Slide>,
-    <Slide>
-      <Title>Explain the decision</Title>
-      <Statement>Present from authority</Statement>
-      <Statement>Relate to larger goals</Statement>
-      <Statement>Be specific</Statement>
-      <Statement>Respond to questions and feedback</Statement>
-    </Slide>,
-    <Slide>
-      <Title>Ensure r + d morale</Title>
-      <Statement>Everyone wants to get features shipped</Statement>
-      <Statement>Devs want to work on career relevant tech</Statement>
-    </Slide>,
-    <Slide>
-      <Title>Frustrations</Title>
-      <Statement>Tech debt + legacy tech</Statement>
+      <Title><Highlight>Tech debt</Highlight> frustrations</Title>
       <Statement>Long lead times</Statement>
-      <Statement>Cumbersome or slow tooling</Statement>
+      <Statement>Expensive features</Statement>
+      <Statement>Low morale</Statement>
     </Slide>,
     <Slide>
-      <Title>Support the developer environment</Title>
-      <img src={ teslaSrc } alt="tesla" />
-    </Slide>,
-    <Slide>
-      <Title>Larger issues</Title>
-      <Statement>Business wants to know roi</Statement>
+      <Title>How to prioritize tech debt?</Title>
+      <Statement>challenge: validating roi</Statement>
       <Delay>
         <img src={ surveySrc } alt="survey" />
       </Delay>
-    </Slide>,
-    <Slide>
-      <Title>Plan it!</Title>
-      <Statement>Architecture team plans techdebt work</Statement>
-      <img src={ planningSrc } alt="planning board" />
     </Slide>,
     <Slide>
       <Title>Case Study: too many tests</Title>
       <img src={ testSrc } alt="tests" />
     </Slide>,
     <Slide>
+      <Title>Support the developer environment to improve <Highlight>velocity</Highlight></Title>
+      <img src={ teslaSrc } alt="tesla" />
+    </Slide>,
+    <Slide>
+      <Title>Case Study: UI components</Title>
+      <img src={ mineralSrc } alt="mineral ui" />
+    </Slide>,
+    <Slide>
       <Title>Measuring velocity</Title>
       <Statement>completed work / time increment</Statement>
     </Slide>,
     <Slide>
-      <Title>DevOps</Title>
+      <Title><Highlight>DevOps</Highlight></Title>
       <Statement>Development teams are responsible for when and how their features are deployed to customers.</Statement>
-    </Slide>,
-    <Slide>
-      <Title>DevOps drives agile transformations</Title>
-    </Slide>,
-    <Slide>
-      <Title>Ensure rapid and safe deployments</Title>
-      <Statement>Rapid deployments reduce lead time</Statement>
-      <Statement>Safety improves user experience</Statement>
-      <Statement>Robust + repeatable CI/CD > more automation</Statement>
     </Slide>,
     <Slide>
       <Title>Culture of responsibility</Title>
@@ -312,22 +259,16 @@ export default {
       <img src={ ftSrc } alt="freshtracks" />
     </Slide>,
     <Slide>
-      <Title>When deployments break</Title>
-      <Statement>Plan for quick reaction</Statement>
-      <Statement>Seek process and technical improvements instead of blame</Statement>
-      <Statement>Identify what went right the other times</Statement>
-    </Slide>,
-    <Slide>
       <Title>Case Study: recent outage</Title>
       <Delay>
         <Statement>Notified by alerts</Statement>
         <Statement>Used metrics to evaluate severity</Statement>
         <Statement>Debugged and remedied issue</Statement>
-        <Statement>Retro: tests and protections for high customer load</Statement>
+        <Statement>Retro: identified missing tests and alerts + code remediations</Statement>
       </Delay>
     </Slide>,
     <Slide>
-      <Title>Bring intelligent architecture to your organization</Title>
+      <Title>Bring intentional architecture to your organization</Title>
       <Delay>
         <Statement>Start small</Statement>
         <Statement>Establish communication channels</Statement>
@@ -337,6 +278,9 @@ export default {
     <Slide>
       <Title>It's never perfect!</Title>
       <Statement>quickly adapt > "the perfect architecture"</Statement>
+    </Slide>,
+    <Slide>
+      <Title>http://github.com/limscoder/react-present</Title>
     </Slide>,
   ]
 };
