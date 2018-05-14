@@ -8557,6 +8557,8 @@ class Slide extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
       } else if (e.button === 1) {
         this.props.onPrev();
       }
+
+      e.stopPropagation();
     }, this._onKeyDown = e => {
       const keyCode = e.keyCode || e.which;
 
@@ -8611,9 +8613,9 @@ class Slide extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
 /* harmony export (immutable) */ __webpack_exports__["a"] = Slide;
 
 Slide.propTypes = {
-  backgroundColor: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.string.isRequired,
-  onNext: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.func.isRequired,
-  onPrev: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.func.isRequired
+  backgroundColor: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.string,
+  onNext: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.func,
+  onPrev: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.func
 };
 
 /***/ }),
@@ -32889,6 +32891,10 @@ class App extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
     const children = this.props.children;
     if (children.slides) {
       return children.slides.map((slide, idx) => {
+        if (slide.type === __WEBPACK_IMPORTED_MODULE_4__Slide__["a" /* default */]) {
+          return __WEBPACK_IMPORTED_MODULE_0_react___default.a.cloneElement(slide, { key: idx });
+        }
+
         const parts = Array.isArray(slide) ? slide : [slide];
         return parts.map((part, idx) => {
           return __WEBPACK_IMPORTED_MODULE_0_react___default.a.cloneElement(part, { key: idx });
@@ -33027,6 +33033,13 @@ class ProgressIndicator extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Co
           this.props.onSlideChange(i);
         } }));
     }
+
+    cells.push(__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div', { key: 'deck-link',
+      className: 'rcp-ProgressIndicator-cell rcp-ProgressIndicator-cell--deck',
+      title: 'slide deck',
+      onClick: () => {
+        window.open('https://github.com/limscoder/react-present', '_blank');
+      } }));
 
     return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
       'div',
@@ -33177,13 +33190,21 @@ class SlideDeck extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component 
 
   _renderSlide(slideIdx) {
     const activeSlide = this.props.children[slideIdx];
+    const props = {
+      key: slideIdx,
+      backgroundColor: this._getColor(slideIdx),
+      onNext: this._onNextSlide,
+      onPrev: this._onPrevSlide
+    };
 
+    if (activeSlide.type === __WEBPACK_IMPORTED_MODULE_6__Slide__["a" /* default */]) {
+      return __WEBPACK_IMPORTED_MODULE_0_react___default.a.cloneElement(activeSlide, props);
+    }
+
+    console.log('foo?', activeSlide);
     return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
       __WEBPACK_IMPORTED_MODULE_6__Slide__["a" /* default */],
-      { key: slideIdx,
-        backgroundColor: this._getColor(slideIdx),
-        onNext: this._onNextSlide,
-        onPrev: this._onPrevSlide },
+      props,
       activeSlide
     );
   }
@@ -35512,7 +35533,7 @@ exports = module.exports = __webpack_require__(167)(undefined);
 
 
 // module
-exports.push([module.i, "body {\n  background-color: #1c1c1c;\n  margin: 0;\n  overflow: hidden;\n}\n\na, a:hover, a:visited {\n  color: #555;\n  text-decoration: none;\n}\n\nh1 {\n  font-size: 70px;\n}\n\ncode {\n  color: #222;\n}\n\n.rcp-SlideDeck .ace_gutter-cell, .rcp-SlideDeck .ace_content {\n  background-color: #1c1c1c;\n}\n\n.rcp-SlideDeck .ace-cobalt .ace_marker-layer .ace_active-line {\n  background: none;\n}\n\n.rcp-Highlight {\n  color: #80FFBB\n}\n\n.rcp-SlideDeck {\n  height: 100vh;\n  width: 100vw;\n  overflow: hidden;\n}\n\n.rcp-SlideDeck-Body {\n  align-items: center;\n  color: white;\n  display: flex;\n  font-family: helvetica;\n  font-size: 28px;\n  justify-content: center;\n  overflow: hidden;\n  position: absolute;\n  top: 0;\n  bottom: 0;\n  right: 0;\n  left: 0;\n  padding: 1.5rem 1rem;\n  text-align: center;\n  z-index: 10;\n}\n\n.rcp-Delay {\n  transition: opacity 0.5s ease-out;\n}\n\n.rcp-Delay--hidden {\n  opacity: 0;\n}\n\n.rcp-Delay--visible {\n  opacity: 1;\n}\n\n.nextSlide-enter {\n  opacity: 0;\n  transform: translateX(30px);\n  transition: transform .75s ease-out, opacity .75s ease-out;\n}\n\n.nextSlide-enter.nextSlide-enter-active {\n  opacity: 1;\n  transform: translateX(0);\n}\n\n.nextSlide-leave {\n  z-index: 1;\n}\n\n.rcp-SlideDeck-Body ul\n{\n  list-style-type: none;\n  text-align: left;\n}\n\n.rcp-SlideDeck-Body li {\n  font-size: 32px;\n  margin: 1.5rem 0;\n}\n\n.rcp-ListBlock--List li:before {\n  content: \"\\25C8   \";\n  color: #80FFBB;\n}\n\n.rcp-ListBlock--Title {\n  border-bottom: solid #5b5b5b 1px;\n  padding: 0 2rem 0.3rem 1rem;\n  text-align: left;\n}\n\n.rcp-ListBlock--List {\n  padding: 0 1rem;\n}\n\n.rcp-CodeBlock {\n  margin: 1.5rem auto 1.5rem auto;\n  padding: 0;\n  text-align: left;\n  width: 50rem;\n}\n\n.rcp-CodeBlock .ace_editor {\n  font-size: 22px;\n}\n\n.rcp-ProgressIndicator {\n  background-color: lightgray;\n  display: flex;\n  flex-direction: row;\n  height: 0.5rem;\n  padding: 0;\n  position: fixed;\n  width: 100%;\n  z-index: 100;\n}\n\n.rcp-ProgressIndicator-cell {\n  cursor: pointer;\n  flex-grow: 1;\n  margin: 0;\n  transition: background-color .75s ease-out;\n}\n\n.rcp-ProgressIndicator-cell--active {\n  background-color: #FF80E1;\n}\n\n/** displayed within remote mobile app */\n\n.remote {\n  background-color: red;\n}\n\n.remote img {\n  background-color: magenta;\n  border: 1px solid grey;\n  width: 40px;\n  height: 40px;\n}\n\n.remote .rcp-SlideDeck-Body {\n  position: relative;\n  width: 100%;\n  margin: 0;\n  padding: 0;\n}\n\n.remote .rcp-SlideDeck-Body h1 {\n  font-size: 16px;\n}\n\n.remote .rcp-SlideDeck-Body,\n.remote .rcp-SlideDeck-Body li,\n.remote .rcp-ListBlock--List li {\n  font-size: 14px;\n}\n\n.remote .rcp-ListBlock--List li:before {\n  content: ''\n}\n\n.remote .rcp-CodeBlock {\n  background-color: blue;\n  border: 1px solid grey;\n  width: 40px;\n  height: 40px;\n}\n", ""]);
+exports.push([module.i, "body {\n  background-color: #1c1c1c;\n  margin: 0;\n  overflow: hidden;\n}\n\na, a:hover, a:visited {\n  color: #555;\n  text-decoration: none;\n}\n\nh1 {\n  font-size: 70px;\n}\n\ncode {\n  color: #222;\n}\n\n.rcp-SlideDeck .ace_gutter-cell, .rcp-SlideDeck .ace_content {\n  background-color: #1c1c1c;\n}\n\n.rcp-SlideDeck .ace-cobalt .ace_marker-layer .ace_active-line {\n  background: none;\n}\n\n.rcp-Highlight {\n  color: #80FFBB\n}\n\n.rcp-SlideDeck {\n  height: 100vh;\n  width: 100vw;\n  overflow: hidden;\n}\n\n.rcp-SlideDeck-Body {\n  align-items: center;\n  color: white;\n  display: flex;\n  font-family: helvetica;\n  font-size: 28px;\n  justify-content: center;\n  overflow: hidden;\n  position: absolute;\n  top: 0;\n  bottom: 0;\n  right: 0;\n  left: 0;\n  padding: 1.5rem 1rem;\n  text-align: center;\n  z-index: 10;\n}\n\n.rcp-Delay {\n  transition: opacity 0.5s ease-out;\n}\n\n.rcp-Delay--hidden {\n  opacity: 0;\n}\n\n.rcp-Delay--visible {\n  opacity: 1;\n}\n\n.nextSlide-enter {\n  opacity: 0;\n  transform: translateX(30px);\n  transition: transform .75s ease-out, opacity .75s ease-out;\n}\n\n.nextSlide-enter.nextSlide-enter-active {\n  opacity: 1;\n  transform: translateX(0);\n}\n\n.nextSlide-leave {\n  z-index: 1;\n}\n\n.rcp-SlideDeck-Body ul\n{\n  list-style-type: none;\n  text-align: left;\n}\n\n.rcp-SlideDeck-Body li {\n  font-size: 32px;\n  margin: 1.5rem 0;\n}\n\n.rcp-ListBlock--List li:before {\n  content: \"\\25C8   \";\n  color: #80FFBB;\n}\n\n.rcp-ListBlock--Title {\n  border-bottom: solid #5b5b5b 1px;\n  padding: 0 2rem 0.3rem 1rem;\n  text-align: left;\n}\n\n.rcp-ListBlock--List {\n  padding: 0 1rem;\n}\n\n.rcp-CodeBlock {\n  margin: 1.5rem auto 1.5rem auto;\n  padding: 0;\n  text-align: left;\n  width: 50rem;\n}\n\n.rcp-CodeBlock .ace_editor {\n  font-size: 22px;\n}\n\n.rcp-ProgressIndicator {\n  background-color: lightgray;\n  display: flex;\n  flex-direction: row;\n  height: 0.5rem;\n  padding: 0;\n  position: fixed;\n  width: 100%;\n  z-index: 100;\n}\n\n.rcp-ProgressIndicator-cell {\n  cursor: pointer;\n  flex-grow: 1;\n  margin: 0;\n  transition: background-color .75s ease-out;\n}\n\n.rcp-ProgressIndicator-cell--active {\n  background-color: #FF80E1;\n}\n\n.rcp-ProgressIndicator-cell--deck {\n  background-color: #80FFBB;\n  width: 40px;\n}\n\n/** displayed within remote mobile app */\n\n.remote {\n  background-color: red;\n}\n\n.remote img {\n  background-color: magenta;\n  border: 1px solid grey;\n  width: 40px;\n  height: 40px;\n}\n\n.remote .rcp-SlideDeck-Body {\n  position: relative;\n  width: 100%;\n  margin: 0;\n  padding: 0;\n}\n\n.remote .rcp-SlideDeck-Body h1 {\n  font-size: 16px;\n}\n\n.remote .rcp-SlideDeck-Body,\n.remote .rcp-SlideDeck-Body li,\n.remote .rcp-ListBlock--List li {\n  font-size: 14px;\n}\n\n.remote .rcp-ListBlock--List li:before {\n  content: ''\n}\n\n.remote .rcp-CodeBlock {\n  background-color: blue;\n  border: 1px solid grey;\n  width: 40px;\n  height: 40px;\n}\n", ""]);
 
 // exports
 
@@ -44365,7 +44386,7 @@ exports.stringify = function (obj, opts) {
 /* 210 */
 /***/ (function(module, exports) {
 
-module.exports = "body {\n  background-color: #1c1c1c;\n  margin: 0;\n  overflow: hidden;\n}\n\na, a:hover, a:visited {\n  color: #555;\n  text-decoration: none;\n}\n\nh1 {\n  font-size: 70px;\n}\n\ncode {\n  color: #222;\n}\n\n.rcp-SlideDeck .ace_gutter-cell, .rcp-SlideDeck .ace_content {\n  background-color: #1c1c1c;\n}\n\n.rcp-SlideDeck .ace-cobalt .ace_marker-layer .ace_active-line {\n  background: none;\n}\n\n.rcp-Highlight {\n  color: #80FFBB\n}\n\n.rcp-SlideDeck {\n  height: 100vh;\n  width: 100vw;\n  overflow: hidden;\n}\n\n.rcp-SlideDeck-Body {\n  align-items: center;\n  color: white;\n  display: flex;\n  font-family: helvetica;\n  font-size: 28px;\n  justify-content: center;\n  overflow: hidden;\n  position: absolute;\n  top: 0;\n  bottom: 0;\n  right: 0;\n  left: 0;\n  padding: 1.5rem 1rem;\n  text-align: center;\n  z-index: 10;\n}\n\n.rcp-Delay {\n  transition: opacity 0.5s ease-out;\n}\n\n.rcp-Delay--hidden {\n  opacity: 0;\n}\n\n.rcp-Delay--visible {\n  opacity: 1;\n}\n\n.nextSlide-enter {\n  opacity: 0;\n  transform: translateX(30px);\n  transition: transform .75s ease-out, opacity .75s ease-out;\n}\n\n.nextSlide-enter.nextSlide-enter-active {\n  opacity: 1;\n  transform: translateX(0);\n}\n\n.nextSlide-leave {\n  z-index: 1;\n}\n\n.rcp-SlideDeck-Body ul\n{\n  list-style-type: none;\n  text-align: left;\n}\n\n.rcp-SlideDeck-Body li {\n  font-size: 32px;\n  margin: 1.5rem 0;\n}\n\n.rcp-ListBlock--List li:before {\n  content: \"◈ \";\n  color: #80FFBB;\n}\n\n.rcp-ListBlock--Title {\n  border-bottom: solid #5b5b5b 1px;\n  padding: 0 2rem 0.3rem 1rem;\n  text-align: left;\n}\n\n.rcp-ListBlock--List {\n  padding: 0 1rem;\n}\n\n.rcp-CodeBlock {\n  margin: 1.5rem auto 1.5rem auto;\n  padding: 0;\n  text-align: left;\n  width: 50rem;\n}\n\n.rcp-CodeBlock .ace_editor {\n  font-size: 22px;\n}\n\n.rcp-ProgressIndicator {\n  background-color: lightgray;\n  display: flex;\n  flex-direction: row;\n  height: 0.5rem;\n  padding: 0;\n  position: fixed;\n  width: 100%;\n  z-index: 100;\n}\n\n.rcp-ProgressIndicator-cell {\n  cursor: pointer;\n  flex-grow: 1;\n  margin: 0;\n  transition: background-color .75s ease-out;\n}\n\n.rcp-ProgressIndicator-cell--active {\n  background-color: #FF80E1;\n}\n\n/** displayed within remote mobile app */\n\n.remote {\n  background-color: red;\n}\n\n.remote img {\n  background-color: magenta;\n  border: 1px solid grey;\n  width: 40px;\n  height: 40px;\n}\n\n.remote .rcp-SlideDeck-Body {\n  position: relative;\n  width: 100%;\n  margin: 0;\n  padding: 0;\n}\n\n.remote .rcp-SlideDeck-Body h1 {\n  font-size: 16px;\n}\n\n.remote .rcp-SlideDeck-Body,\n.remote .rcp-SlideDeck-Body li,\n.remote .rcp-ListBlock--List li {\n  font-size: 14px;\n}\n\n.remote .rcp-ListBlock--List li:before {\n  content: ''\n}\n\n.remote .rcp-CodeBlock {\n  background-color: blue;\n  border: 1px solid grey;\n  width: 40px;\n  height: 40px;\n}\n"
+module.exports = "body {\n  background-color: #1c1c1c;\n  margin: 0;\n  overflow: hidden;\n}\n\na, a:hover, a:visited {\n  color: #555;\n  text-decoration: none;\n}\n\nh1 {\n  font-size: 70px;\n}\n\ncode {\n  color: #222;\n}\n\n.rcp-SlideDeck .ace_gutter-cell, .rcp-SlideDeck .ace_content {\n  background-color: #1c1c1c;\n}\n\n.rcp-SlideDeck .ace-cobalt .ace_marker-layer .ace_active-line {\n  background: none;\n}\n\n.rcp-Highlight {\n  color: #80FFBB\n}\n\n.rcp-SlideDeck {\n  height: 100vh;\n  width: 100vw;\n  overflow: hidden;\n}\n\n.rcp-SlideDeck-Body {\n  align-items: center;\n  color: white;\n  display: flex;\n  font-family: helvetica;\n  font-size: 28px;\n  justify-content: center;\n  overflow: hidden;\n  position: absolute;\n  top: 0;\n  bottom: 0;\n  right: 0;\n  left: 0;\n  padding: 1.5rem 1rem;\n  text-align: center;\n  z-index: 10;\n}\n\n.rcp-Delay {\n  transition: opacity 0.5s ease-out;\n}\n\n.rcp-Delay--hidden {\n  opacity: 0;\n}\n\n.rcp-Delay--visible {\n  opacity: 1;\n}\n\n.nextSlide-enter {\n  opacity: 0;\n  transform: translateX(30px);\n  transition: transform .75s ease-out, opacity .75s ease-out;\n}\n\n.nextSlide-enter.nextSlide-enter-active {\n  opacity: 1;\n  transform: translateX(0);\n}\n\n.nextSlide-leave {\n  z-index: 1;\n}\n\n.rcp-SlideDeck-Body ul\n{\n  list-style-type: none;\n  text-align: left;\n}\n\n.rcp-SlideDeck-Body li {\n  font-size: 32px;\n  margin: 1.5rem 0;\n}\n\n.rcp-ListBlock--List li:before {\n  content: \"◈ \";\n  color: #80FFBB;\n}\n\n.rcp-ListBlock--Title {\n  border-bottom: solid #5b5b5b 1px;\n  padding: 0 2rem 0.3rem 1rem;\n  text-align: left;\n}\n\n.rcp-ListBlock--List {\n  padding: 0 1rem;\n}\n\n.rcp-CodeBlock {\n  margin: 1.5rem auto 1.5rem auto;\n  padding: 0;\n  text-align: left;\n  width: 50rem;\n}\n\n.rcp-CodeBlock .ace_editor {\n  font-size: 22px;\n}\n\n.rcp-ProgressIndicator {\n  background-color: lightgray;\n  display: flex;\n  flex-direction: row;\n  height: 0.5rem;\n  padding: 0;\n  position: fixed;\n  width: 100%;\n  z-index: 100;\n}\n\n.rcp-ProgressIndicator-cell {\n  cursor: pointer;\n  flex-grow: 1;\n  margin: 0;\n  transition: background-color .75s ease-out;\n}\n\n.rcp-ProgressIndicator-cell--active {\n  background-color: #FF80E1;\n}\n\n.rcp-ProgressIndicator-cell--deck {\n  background-color: #80FFBB;\n  width: 40px;\n}\n\n/** displayed within remote mobile app */\n\n.remote {\n  background-color: red;\n}\n\n.remote img {\n  background-color: magenta;\n  border: 1px solid grey;\n  width: 40px;\n  height: 40px;\n}\n\n.remote .rcp-SlideDeck-Body {\n  position: relative;\n  width: 100%;\n  margin: 0;\n  padding: 0;\n}\n\n.remote .rcp-SlideDeck-Body h1 {\n  font-size: 16px;\n}\n\n.remote .rcp-SlideDeck-Body,\n.remote .rcp-SlideDeck-Body li,\n.remote .rcp-ListBlock--List li {\n  font-size: 14px;\n}\n\n.remote .rcp-ListBlock--List li:before {\n  content: ''\n}\n\n.remote .rcp-CodeBlock {\n  background-color: blue;\n  border: 1px solid grey;\n  width: 40px;\n  height: 40px;\n}\n"
 
 /***/ }),
 /* 211 */

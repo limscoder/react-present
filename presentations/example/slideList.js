@@ -36,7 +36,7 @@ export default {
     </Slide>,
     <Slide>
       <List title="my rad wishlist" items={ ['truck', 'moto', 'jetski', 'snow machine'] } />,
-    </Slide>
+    </Slide>,
     <Slide>
       <Title>Some code</Title>,
       <Code>{ someCode }</Code>
