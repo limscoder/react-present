@@ -234,7 +234,7 @@ export default {
       </Delay>
     </Slide>,
     <Slide>
-      <Title>Support the developer environment to improve<Highlight>velocity</Highlight></Title>
+      <Title>Support the developer environment to improve <Highlight>velocity</Highlight></Title>
       <img src={ teslaSrc } alt="tesla" />
     </Slide>,
     <Slide>
