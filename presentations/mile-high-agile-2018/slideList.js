@@ -234,16 +234,12 @@ export default {
       </Delay>
     </Slide>,
     <Slide>
-      <Title>Case Study: too many tests</Title>
-      <img src={ testSrc } alt="tests" />
-    </Slide>,
-    <Slide>
-      <Title>Support the developer environment to improve <Highlight>velocity</Highlight></Title>
+      <Title>Support the developer environment to improve<Highlight>velocity</Highlight></Title>
       <img src={ teslaSrc } alt="tesla" />
     </Slide>,
     <Slide>
-      <Title>Case Study: UI components</Title>
-      <img src={ mineralSrc } alt="mineral ui" />
+      <Title>Case Study: too many tests</Title>
+      <img src={ testSrc } alt="tests" />
     </Slide>,
     <Slide>
       <Title>Measuring velocity</Title>
