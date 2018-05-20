@@ -255,15 +255,6 @@ export default {
       <img src={ ftSrc } alt="freshtracks" />
     </Slide>,
     <Slide>
-      <Title>Case Study: recent outage</Title>
-      <Delay>
-        <Statement>Notified by alerts</Statement>
-        <Statement>Used metrics to evaluate severity</Statement>
-        <Statement>Debugged and remedied issue</Statement>
-        <Statement>Retro: identified missing tests and alerts + code remediations</Statement>
-      </Delay>
-    </Slide>,
-    <Slide>
       <Title>Bring intentional architecture to your organization</Title>
       <Delay>
         <Statement>Start small</Statement>

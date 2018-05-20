@@ -35666,38 +35666,6 @@ function concat(a: string, b: string): string {
     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
       __WEBPACK_IMPORTED_MODULE_1__lib_components_presentation_Parts__["b" /* Title */],
       null,
-      'Case Study: recent outage'
-    ),
-    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-      __WEBPACK_IMPORTED_MODULE_1__lib_components_presentation_Parts__["e" /* Delay */],
-      null,
-      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-        __WEBPACK_IMPORTED_MODULE_1__lib_components_presentation_Parts__["c" /* Statement */],
-        null,
-        'Notified by alerts'
-      ),
-      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-        __WEBPACK_IMPORTED_MODULE_1__lib_components_presentation_Parts__["c" /* Statement */],
-        null,
-        'Used metrics to evaluate severity'
-      ),
-      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-        __WEBPACK_IMPORTED_MODULE_1__lib_components_presentation_Parts__["c" /* Statement */],
-        null,
-        'Debugged and remedied issue'
-      ),
-      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-        __WEBPACK_IMPORTED_MODULE_1__lib_components_presentation_Parts__["c" /* Statement */],
-        null,
-        'Retro: identified missing tests and alerts + code remediations'
-      )
-    )
-  ), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-    __WEBPACK_IMPORTED_MODULE_1__lib_components_presentation_Parts__["a" /* Slide */],
-    null,
-    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-      __WEBPACK_IMPORTED_MODULE_1__lib_components_presentation_Parts__["b" /* Title */],
-      null,
       'Bring intentional architecture to your organization'
     ),
     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
