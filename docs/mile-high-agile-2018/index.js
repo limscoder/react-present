@@ -35351,9 +35351,27 @@ function concat(a: string, b: string): string {
     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
       __WEBPACK_IMPORTED_MODULE_1__lib_components_presentation_Parts__["b" /* Title */],
       null,
-      'Minimize Complexity'
+      'Minimize complexity'
     ),
     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: __WEBPACK_IMPORTED_MODULE_17__images_system_graph_png___default.a, alt: 'system' })
+  ), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+    __WEBPACK_IMPORTED_MODULE_1__lib_components_presentation_Parts__["a" /* Slide */],
+    null,
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+      __WEBPACK_IMPORTED_MODULE_1__lib_components_presentation_Parts__["b" /* Title */],
+      null,
+      'Plan for integration'
+    ),
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+      __WEBPACK_IMPORTED_MODULE_1__lib_components_presentation_Parts__["c" /* Statement */],
+      null,
+      'What needs to be built?'
+    ),
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+      __WEBPACK_IMPORTED_MODULE_1__lib_components_presentation_Parts__["c" /* Statement */],
+      null,
+      'What needs to be deprecated?'
+    )
   ), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
     __WEBPACK_IMPORTED_MODULE_1__lib_components_presentation_Parts__["a" /* Slide */],
     null,
@@ -35411,55 +35429,13 @@ function concat(a: string, b: string): string {
     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
       __WEBPACK_IMPORTED_MODULE_1__lib_components_presentation_Parts__["b" /* Title */],
       null,
-      'Plan the rollout'
-    ),
-    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-      __WEBPACK_IMPORTED_MODULE_1__lib_components_presentation_Parts__["c" /* Statement */],
-      null,
-      'What needs to be built?'
-    ),
-    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-      __WEBPACK_IMPORTED_MODULE_1__lib_components_presentation_Parts__["c" /* Statement */],
-      null,
-      'What needs to be integrated?'
-    ),
-    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-      __WEBPACK_IMPORTED_MODULE_1__lib_components_presentation_Parts__["c" /* Statement */],
-      null,
-      'What needs to be deprecated?'
-    )
-  ), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-    __WEBPACK_IMPORTED_MODULE_1__lib_components_presentation_Parts__["a" /* Slide */],
-    null,
-    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-      __WEBPACK_IMPORTED_MODULE_1__lib_components_presentation_Parts__["b" /* Title */],
-      null,
       'Drive adoption'
-    ),
-    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-      __WEBPACK_IMPORTED_MODULE_1__lib_components_presentation_Parts__["c" /* Statement */],
-      null,
-      'Optimize for the whole'
     ),
     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
       __WEBPACK_IMPORTED_MODULE_1__lib_components_presentation_Parts__["c" /* Statement */],
       null,
       'Requires a compelling story'
     ),
-    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-      __WEBPACK_IMPORTED_MODULE_1__lib_components_presentation_Parts__["c" /* Statement */],
-      null,
-      'Teams ',
-      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-        'em',
-        null,
-        'want'
-      ),
-      ' to use it'
-    )
-  ), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-    __WEBPACK_IMPORTED_MODULE_1__lib_components_presentation_Parts__["a" /* Slide */],
-    null,
     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
       __WEBPACK_IMPORTED_MODULE_1__lib_components_presentation_Parts__["c" /* Statement */],
       null,

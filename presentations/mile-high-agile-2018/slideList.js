@@ -164,10 +164,14 @@ export default {
       <img src={ performanceSrc } alt="performance" />
     </Slide>,
     <Slide>
-      <Title>Minimize Complexity</Title>
+      <Title>Minimize complexity</Title>
       <img src={ systemSrc } alt="system" />
     </Slide>,
-
+    <Slide>
+      <Title>Plan for integration</Title>
+      <Statement>What needs to be built?</Statement>
+      <Statement>What needs to be deprecated?</Statement>
+    </Slide>,
     <Slide>
       <Title>Story the questions</Title>
       <img src={ spikeSrc } alt="spike" />
@@ -184,18 +188,8 @@ export default {
       <Statement>Respond to questions and feedback</Statement>
     </Slide>,
     <Slide>
-      <Title>Plan the rollout</Title>
-      <Statement>What needs to be built?</Statement>
-      <Statement>What needs to be integrated?</Statement>
-      <Statement>What needs to be deprecated?</Statement>
-    </Slide>,
-    <Slide>
       <Title>Drive adoption</Title>
-      <Statement>Optimize for the whole</Statement>
       <Statement>Requires a compelling story</Statement>
-      <Statement>Teams <em>want</em> to use it</Statement>
-    </Slide>,
-    <Slide>
       <Statement>What are the mental models within the org?</Statement>
       <Statement>What are the skill levels within the org?</Statement>
       <Statement>What training does the org need?</Statement>

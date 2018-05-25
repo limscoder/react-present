@@ -8,6 +8,7 @@ Presentations can be controlled from a mobile device with the [remote control ap
 
 ## Presentations
 
+* [Mile High Agile 2018 - Intentional Architecture](http://limscoder.github.io/react-present/mile-high-agile-2018/)
 * [DevOps Enterprise Summit 2017 - Intentional Architecture](http://limscoder.github.io/react-present/intentional-architecture/)
 * [EmpireJS 2017 - JS Performance](https://limscoder.github.io/react-present/js-performance/)
 * [Agile Central 2017 - Blockchain Intro](https://limscoder.github.io/react-present/blockchain/)
