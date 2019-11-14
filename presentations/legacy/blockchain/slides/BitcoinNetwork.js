@@ -1,8 +1,8 @@
 import React from 'react';
 
-import Background from '../../../lib/components/presentation/Background';
-import Title from '../../../lib/components/presentation/Title';
-import Atribution from '../../../lib/components/presentation/Attribution';
+import Background from '../../../../lib/components/presentation/Background';
+import Title from '../../../../lib/components/presentation/Title';
+import Atribution from '../../../../lib/components/presentation/Attribution';
 
 import imgSrc from '../images/peer_to_peer.png';
 

@@ -1,8 +1,8 @@
 import React from 'react';
 import glamorous from 'glamorous';
 
-import Background from '../../../lib/components/presentation/Background';
-import Title from '../../../lib/components/presentation/Title';
+import Background from '../../../../lib/components/presentation/Background';
+import Title from '../../../../lib/components/presentation/Title';
 
 import bitSrc from '../images/bitcoin.png';
 import etherSrc from '../images/ether.png';

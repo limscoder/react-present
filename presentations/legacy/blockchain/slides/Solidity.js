@@ -1,8 +1,8 @@
 import React from 'react';
 
-import Background from '../../../lib/components/presentation/Background';
-import Title from '../../../lib/components/presentation/Title';
-import CodeBlock from '../../../lib/components/CodeBlock';
+import Background from '../../../../lib/components/presentation/Background';
+import Title from '../../../../lib/components/presentation/Title';
+import CodeBlock from '../../../../lib/components/CodeBlock';
 
 const code = `contract GoatCoinContract {
   string public name = "GoatCoin";

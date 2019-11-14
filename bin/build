@@ -1,10 +1,9 @@
 #!/bin/bash
 
-SLIDE_LIST="$1"
-if [ -z $SLIDE_LIST ]
-then
-  SLIDE_LIST="component-library"
-fi
-
-sed "s|--slide-list-dir--|../presentations/$SLIDE_LIST|g" ./lib/index.tpl.js > ./lib/index.js
-webpack
+dist="$(dirname ${1})/dist/$(basename ${1})"
+zipDist="${dist}/$(basename ${1}).zip"
+echo "building presentation ${1} -> ${dist}"
+rm -rf ${dist}
+webpack --config="webpack.config.js" --entry="${1}/index.js" --output-path="${dist}" --output-filename="index.js" && \
+echo "zipping presentation ${dist}/* -> ${zipDist}" && \
+zip -r "${zipDist}" "${dist}/"

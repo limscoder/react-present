@@ -9,7 +9,7 @@ import {
   Statement,
   Title,
   Top
-} from '../../lib/components/presentation/Parts';
+} from '../../../lib/components/presentation/Parts';
 
 import beakerSrc from './images/beaker.png';
 import agileSrc from './images/agile.png';

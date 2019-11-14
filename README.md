@@ -25,19 +25,17 @@ Open `http://localhost:9001` in your browser.
 
 ## Create your presentation
 
-Fork and clone the repo, then:
+Clone the repo, then:
 
     > npm install
-    > cp -r ./presentations/example ./presentations/{your-presentation-directory}
+    > cp -r presentations/example {your-presentation-directory}
     > npm run build-dev {your-presentation-directory}
 
-Navigate to `http://localhost:9001` in your browser. Make changes to `{your-presentation-title}/slideList`, and they should be hot-loaded into your browser whenever you save.
+Navigate to `http://localhost:9001` in your browser. Make changes to `{your-presentation-directory}/index.js`, and they should be hot-loaded into your browser whenever you save.
 
 ## Create your slides
 
 Slides are normal React components that can be written with JSX and ES6. You're free to include whatever markup and styles you'd like.
-
-Include and order slides within `{your-presentation-title}/slideList`.
 
 I recommend using [glamorous](https://github.com/paypal/glamorous) to style slides, but CSS can also be imported from within slide source code.
 
@@ -53,22 +51,7 @@ Use the `CodeBlock` component to get js syntax highlighting and code editing.
       </CodeBlock>
     );
 
-## Publishing to Github pages
-
-Generate pages locally, push to master, and then [enable serving pages from master:docs/](https://help.github.com/articles/configuring-a-publishing-source-for-github-pages/#publishing-your-github-pages-site-from-a-docs-folder-on-your-master-branch).
-
-```bash
-npm run ghpages
-```
-
-## Package presentation as zip file
-
-Create a zip file containing a presentation within the `built-presentations` directory.
-Extract the zip file and open `index.html` to view the presentation.
-
-    > npm run package {your-presentation-directory}
-
 ## Screen sharing and remote meetings
 
-Slide transitions cause some screen sharing apps like WebEx to have significant lag.
+Slide transitions cause some screen sharing apps to have significant lag.
 Disable transitions by pressing `ctrl-t` while viewing the presentation in the browser.

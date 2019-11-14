@@ -1,7 +1,7 @@
 import React from 'react';
 
-import Background from '../../../lib/components/presentation/Background';
-import Title from '../../../lib/components/presentation/Title';
+import Background from '../../../../lib/components/presentation/Background';
+import Title from '../../../../lib/components/presentation/Title';
 
 import imgSrc from '../images/ethereum.png';
 

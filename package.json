@@ -12,7 +12,7 @@
     "build-dev": "./bin/build-dev",
     "package": "./bin/package",
     "ghpages": "./bin/ghpages",
-    "start": "npm run build-dev",
+    "start": "npm run build-dev ./presentations/example",
     "test": "test"
   },
   "keywords": [

@@ -1,5 +1,5 @@
 import React from 'react';
-import CodeBlock from '../../lib/components/CodeBlock';
+import CodeBlock from '../../../lib/components/CodeBlock';
 
 const htmlCode = `const options = this.props.pets.map(
   (val, idx) => {return <option value={ idx }>val</option>}

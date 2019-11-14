@@ -1,6 +1,0 @@
-#!/bin/bash
-
-rm -rf ./dist
-npm run build $1
-cd ./dist
-zip -r "../built-presentations/$1.zip" ./*

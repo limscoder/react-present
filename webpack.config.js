@@ -5,18 +5,6 @@ var ExtractTextPlugin = require("extract-text-webpack-plugin");
 module.exports = {
   context: __dirname,
 
-  entry: {
-    index: "./lib/index.js"
-  },
-
-  output: {
-    publicPath: "",
-    path: path.join(__dirname, "dist/"),
-    filename: "index.js",
-    library: "index",
-    libraryTarget: "var"
-  },
-
   devServer: {
     historyApiFallback: true
   },
@@ -28,8 +16,11 @@ module.exports = {
   },
 
   resolve: {
+    alias: {
+      'react-present': path.join(__dirname, "lib")
+    },
     modules: [
-      path.join(__dirname, "lib"),
+      // path.join(__dirname, "lib"),
       path.join(__dirname, "node_modules")
     ],
     extensions: [".js", ".html"]
@@ -44,7 +35,18 @@ module.exports = {
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        loaders: ["babel-loader"]
+        use: {
+          loader: 'babel-loader',
+          options: {
+            "presets": [
+              path.join(__dirname, "node_modules", "babel-preset-react")
+            ],
+            "plugins": [
+              path.join(__dirname, "node_modules", "babel-plugin-transform-object-rest-spread"),
+              path.join(__dirname, "node_modules", "babel-plugin-transform-class-properties")
+            ]
+          }
+        }
       },
       {
         test: /\.((gif)|(png)|(jpg)|(html)|(mp4)|(mov)|(m4a))$/,
@@ -54,9 +56,6 @@ module.exports = {
   },
 
   plugins: [
-    new webpack.LoaderOptionsPlugin({
-      debug: true
-    }),
     new webpack.optimize.AggressiveMergingPlugin()
   ]
 };
