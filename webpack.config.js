@@ -20,7 +20,6 @@ module.exports = {
       'react-present': path.join(__dirname, "lib")
     },
     modules: [
-      // path.join(__dirname, "lib"),
       path.join(__dirname, "node_modules")
     ],
     extensions: [".js", ".html"]

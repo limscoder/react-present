@@ -1,5 +1,4 @@
 #!/bin/bash
 
-npm run build $1
-dist="$(dirname ${1})/dist/$(basename ${1})"
-webpack-dev-server --debug --entry=${1}/index.js --output-path=${dist} --output-filename=index.js --contentBase="${dist}/" --port 9001 --host 0.0.0.0 --inline true
+dev="$(dirname ${1})/dev/$(basename ${1})"
+webpack-dev-server --debug --entry=${1}/index.js --output-path=${dev} --output-filename=index.js --contentBase="${dev}/" --port 9001 --host 0.0.0.0 --inline true

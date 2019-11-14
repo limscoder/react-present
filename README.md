@@ -1,49 +1,79 @@
 # react-present
 
-A simple, lightweight framework for creating presentations quickly using React components for slides.
+A lightweight framework for creating presentations using simple React components.
 
-Uses hot module loading via `webpack` for easy presentation development. Keyboard, mouse, gui, and url navigation between slides via `react-router`. Code highlighting and editing via `react-ace`. Presentation app can be viewed entirely from static files without running a webserver, and can be easily hosted via [github pages](https://pages.github.com/).
+Keyboard, mouse, gui, and url navigation between slides via `react-router`. Code highlighting and editing via `react-ace`. Presentation app can be viewed entirely from static files without running a webserver, and can be easily hosted via [github pages](https://pages.github.com/).
 
 Presentations can be controlled from a mobile device with the [remote control app](remote/README.md).
 
 ## Presentations
 
-* [Mile High Agile 2018 - Intentional Architecture](http://limscoder.github.io/react-present/mile-high-agile-2018/)
-* [DevOps Enterprise Summit 2017 - Intentional Architecture](http://limscoder.github.io/react-present/intentional-architecture/)
-* [EmpireJS 2017 - JS Performance](https://limscoder.github.io/react-present/js-performance/)
-* [Agile Central 2017 - Blockchain Intro](https://limscoder.github.io/react-present/blockchain/)
-* [Nodevember 2016 - React Native](https://limscoder.github.io/react-present/react-native/)
-* [Example](https://limscoder.github.io/react-present/example/)
+* [Example presentation](https://limscoder.github.io/react-present/example/)
+* [Conference presentations made with react-present](https://github.com/limscoder/present)
 * [See it in action (video)](https://youtu.be/Sb9fRAKdjkQ)
 
 ## View example presentation locally
 
+Recommended node/npm version: `8.*/6.*`.
+
+    > git clone https://github.com/limscoder/react-present.git
     > npm install
     > npm start
 
-Open `http://localhost:9001` in your browser.
+Open `http://localhost:9001` in a browser.
 
-## Create your presentation
+## Create a presentation
 
-Clone the repo, then:
+Create a new git repo for your presentation.
 
-    > npm install
-    > cp -r presentations/example {your-presentation-directory}
-    > npm run build-dev {your-presentation-directory}
+    > mkdir {your-presentation-repo}
+    > git init {your-presentation-repo}
 
-Navigate to `http://localhost:9001` in your browser. Make changes to `{your-presentation-directory}/index.js`, and they should be hot-loaded into your browser whenever you save.
+Copy the example presentation into your presentation repo.
 
-## Create your slides
+    > cp -r presentations/example {your-presentation-repo}/{your-presentation-name}
+    > npm run build-dev {your-presentation-repo}/{your-presentation-name}
 
-Slides are normal React components that can be written with JSX and ES6. You're free to include whatever markup and styles you'd like.
+Navigate to `http://localhost:9001` in your browser. Changes made to `{your-presentation-repo}/{your-presentation-name}/index.js` will be hot-loaded into the browser.
 
-I recommend using [glamorous](https://github.com/paypal/glamorous) to style slides, but CSS can also be imported from within slide source code.
+## Customize a presentation
+
+Customize the slides defined in `index.js`.
+
+```javascript
+import React from 'react';
+import { renderPresentation } from 'react-present';
+import { Slide, Title } from 'react-present/components/content';
+
+import imgSrc from './images/bikes.gif'
+
+renderPresentation({
+  title: 'Example Presentation',
+  align: 'top',
+  slides: [
+    <Slide>
+      <Title>Use pre-built components like "Title"</Title>
+    </Slide>,
+    <Slide>
+      <p>Use standard HTML components</p>
+    </Slide>,
+    <Slide>
+      <Title>Include an image</Title>
+      <img src={ imgSrc } alt="image" />
+    </Slide>
+  ]
+});
+```
+
+## Style slides
+
+I recommend using [glamorous](https://github.com/paypal/glamorous) to style slides, but standard CSS can also be imported from within slide source code.
 
     import './my-slide-styles.css';
 
-Use the `CodeBlock` component to get js syntax highlighting and code editing.
+Use the `CodeBlock` component to get syntax highlighting and code editing.
 
-    import CodeBlock from '../components/CodeBlock';
+    import CodeBlock from 'react-present/components/CodeBlock';
 
     const block = (
       <CodeBlock>
@@ -51,7 +81,8 @@ Use the `CodeBlock` component to get js syntax highlighting and code editing.
       </CodeBlock>
     );
 
-## Screen sharing and remote meetings
+## Publish a presentation
 
-Slide transitions cause some screen sharing apps to have significant lag.
-Disable transitions by pressing `ctrl-t` while viewing the presentation in the browser.
+    > npm run build {your-presentation-repo}/{your-presentation-name}
+
+The `build` command will create a `docs` directory containing `index.html` and all required resources for your presentaion. Open `index.html` in a browser to display your presentation locally. Commit the `docs` directory to your git repo and host your presentation with [github pages](https://help.github.com/en/github/working-with-github-pages/creating-a-github-pages-site). The presentation is also packaged in a `.zip` file within the `docs` directory for easy sharing.

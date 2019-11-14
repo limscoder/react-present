@@ -1,9 +1,13 @@
 #!/bin/bash
 
-dist="$(dirname ${1})/dist/$(basename ${1})"
-zipDist="${dist}/$(basename ${1}).zip"
-echo "building presentation ${1} -> ${dist}"
-rm -rf ${dist}
-webpack --config="webpack.config.js" --entry="${1}/index.js" --output-path="${dist}" --output-filename="index.js" && \
-echo "zipping presentation ${dist}/* -> ${zipDist}" && \
-zip -r "${zipDist}" "${dist}/"
+if [[ ${1} =~ ^(./)?presentations ]]; then
+  docs="docs/$(basename ${1})"
+else
+  docs="$(dirname ${1})/docs/$(basename ${1})"
+fi
+zip="${docs}/$(basename ${1}).zip"
+echo "building presentation ${1} -> ${docs}"
+rm -rf ${docs}
+webpack --config="webpack.config.js" --entry="${1}/index.js" --output-path="${docs}" --output-filename="index.js" && \
+echo "zipping presentation ${docs}/* -> ${zip}" && \
+zip -r "${zip}" "${docs}/"

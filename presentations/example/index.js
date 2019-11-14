@@ -1,5 +1,5 @@
 import React from 'react';
-import { renderSlideList } from 'react-present';
+import { renderPresentation } from 'react-present';
 import {
   Attribution,
   Code,
@@ -10,7 +10,7 @@ import {
   Statement,
   Title,
   Top
-} from 'react-present/components/presentation/Parts';
+} from 'react-present/components/content';
 
 import truckSrc from './images/monster-trucks.gif'
 import bikeSrc from './images/bikes.gif'
@@ -20,7 +20,7 @@ const someCode = `function crush(truckId, carId) {
     land(carId);
 }`
 
-const slideList = {
+renderPresentation({
   title: 'Example Presentation',
   align: 'top',
   slides: [
@@ -57,8 +57,4 @@ const slideList = {
       <Delay>jump it again!</Delay>
     </Slide>
   ]
-};
-
-(() => {
-  renderSlideList(slideList);
-})();
+});
