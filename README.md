@@ -2,7 +2,7 @@
 
 A lightweight framework for creating presentations using simple React components.
 
-Keyboard, mouse, gui, and url navigation between slides via `react-router`. Code highlighting and editing via `react-ace`. Presentation app can be viewed entirely from static files without running a webserver, and can be easily hosted via [github pages](https://pages.github.com/).
+Keyboard, mouse, gui, and url navigation between slides via [react-router](https://reactrouter.com/). Code highlighting and editing via [react-ace](https://github.com/securingsincity/react-ace). Presentation app can be viewed entirely from static files without running a webserver, and can be easily hosted via [github pages](https://pages.github.com/).
 
 Presentations can be controlled from a mobile device with the [remote control app](remote/README.md).
 
@@ -14,7 +14,7 @@ Presentations can be controlled from a mobile device with the [remote control ap
 
 ## View example presentation locally
 
-Recommended node/npm version: `8.*/6.*`.
+Recommended node/npm version (configure with [nvm](https://github.com/nvm-sh/nvm)): `8.*/6.*`.
 
     > git clone https://github.com/limscoder/react-present.git
     > npm install

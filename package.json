@@ -1,7 +1,7 @@
 {
   "name": "react-present",
   "version": "0.2.1",
-  "description": "A simple, lightweight framework for creating presentations quickly using React components for slides.",
+  "description": "A lightweight framework for creating presentations quickly using React components for slides.",
   "main": "lib/index.html",
   "repository": {
     "type": "git",
@@ -23,37 +23,37 @@
   "license": "MIT",
   "dependencies": {
     "brace": "^0.5.1",
-    "classnames": "^2.1.2",
-    "glamor": "^3.0.0-2",
-    "glamorous": "^3.23.5",
+    "classnames": "^2.3.1",
+    "glamor": "^3.0.0-3",
+    "glamorous": "^3.25.0",
     "history": "^3.3.0",
     "markdown": "^0.5.0",
-    "prop-types": "^15.5.10",
-    "pubnub": "^3.7.18",
-    "react": "^15.6.1",
+    "prop-types": "^15.8.1",
+    "pubnub": "^3.16.5",
+    "react": "^15.7.0",
     "react-ace": "^3.4.1",
     "react-addons-css-transition-group": "^15.0.2",
-    "react-dom": "^15.6.1",
-    "react-router": "^3.0.5"
+    "react-dom": "^15.7.0",
+    "react-router": "^3.2.6"
   },
   "devDependencies": {
     "autoprefixer-loader": "^3.2.0",
-    "babel-cli": "^6.24.1",
-    "babel-core": "^6.25.0",
-    "babel-loader": "^7.1.1",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-plugin-transform-object-rest-spread": "^6.23.0",
     "babel-preset-react": "^6.24.1",
     "babel-runtime": "^6.23.0",
-    "css-loader": "^0.28.4",
+    "css-loader": "^0.28.11",
     "extract-text-webpack-plugin": "^2.1.2",
     "file-loader": "^0.11.2",
-    "node-libs-browser": "^2.0.0",
-    "node-sass": "^4.5.3",
+    "node-libs-browser": "^2.2.1",
+    "node-sass": "^4.14.1",
     "raw-loader": "^0.5.1",
-    "sass-loader": "^6.0.6",
+    "sass-loader": "^6.0.7",
     "style-loader": "^0.18.2",
-    "webpack": "^2.6.1",
-    "webpack-dev-server": "^2.5.1"
+    "webpack": "^2.7.0",
+    "webpack-dev-server": "^2.11.5"
   }
 }
